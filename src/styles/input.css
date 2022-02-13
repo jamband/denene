@@ -1,0 +1,36 @@
+fieldset {
+  border: 1px solid #4c566a;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  margin-left: 0.1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: #1d232f;
+  border: 1px solid #4c566a;
+  border-radius: 0.25rem;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+input::placeholder {
+  color: #5d677b;
+}
+
+progress,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: var(--primary);
+}

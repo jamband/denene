@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "overrides": [
+    {
+      "files": "src/**/*.svelte",
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "declaration-colon-newline-after": null,
+    "order/properties-alphabetical-order": true
+  }
+}

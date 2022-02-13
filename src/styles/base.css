@@ -1,0 +1,95 @@
+html,
+body {
+  background-color: #242933;
+  color: #d8dee9;
+  cursor: default;
+  font-family: var(--font-sans);
+  font-size: 1.025rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h1::before,
+h2::before {
+  color: #b2bcd0;
+  content: "#";
+  font-size: 70%;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+a {
+  color: var(--primary);
+  cursor: default;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.25em;
+}
+
+a:active {
+  color: #b48ead;
+}
+
+button {
+  background: #88c0d0;
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.1rem 0 #4c566a;
+  color: #eceff4;
+  font-weight: bold;
+  padding: 0.3rem 0.75rem;
+}
+
+hr {
+  border-top: 1px solid #4c566a;
+  margin: 3rem auto;
+  width: 20%;
+}
+
+blockquote {
+  color: #b2bcd0;
+  margin-bottom: 2rem;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+dialog {
+  background: #3b4252;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.1rem 0.25rem #1d232f;
+  color: #d8dee9;
+  width: 85%;
+}
+
+@media only screen and (min-width: 640px) {
+  dialog {
+    width: 35rem;
+  }
+}
+
+dialog::backdrop {
+  background: #2e3440;
+  opacity: 0.5;
+}

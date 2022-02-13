@@ -1,0 +1,15 @@
+@import "../../node_modules/the-new-css-reset/css/reset.css";
+
+dialog,
+summary,
+progress,
+input::placeholder,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  all: revert;
+}
+
+:focus {
+  outline: revert;
+}

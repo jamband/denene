@@ -1,0 +1,121 @@
+<script>
+  import BrowserSupport from "../components/BrowserSupport.svelte";
+  import Example from "../components/Example.svelte";
+  import MdnDoc from "../components/MdnDoc.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
+  import Page from "../layouts/Page.svelte";
+
+  const title = "flexbox";
+</script>
+
+<svelte:head>
+  <meta name="description" content={APP_DESCRIPTION} />
+  <meta property="og:title" content="{title} ･ {APP_NAME}" />
+  <meta property="og:description" content={APP_DESCRIPTION} />
+  <meta property="og:url" content="{APP_URL}/{title}/" />
+</svelte:head>
+
+<Page {title} />
+<h1>{title}</h1>
+<MdnDoc path="Learn/CSS/CSS_layout/Flexbox" text={title}>
+  {title} is a one-dimensional layout method for arranging items in rows or columns.
+  items flex (expand) to fill additional space or shrink to fit into smaller spaces.
+  this article explains all the fundamentals.
+</MdnDoc>
+<section>
+  <h2>row <Example>navigation header</Example></h2>
+  <div class="row-container">
+    <a href="/" class="row-box">home</a>
+    <a href="/about" class="row-box">about</a>
+    <a href="/contact" class="row-box">contact</a>
+  </div>
+</section>
+<section>
+  <div class="anonymous-container">
+    <div class="anonymous-box">
+      <h2>column <Example>side navigation</Example></h2>
+      <div class="column-container">
+        <a href="/" class="column-box">home</a>
+        <a href="/about" class="column-box">about</a>
+        <a href="/contact" class="column-box">contact</a>
+      </div>
+    </div>
+    <div class="anonymous-box">
+      <h2>grids and flexbox</h2>
+      <MdnDoc
+        path="Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#grid_and_flexbox"
+        text="grids and flexbox"
+      >
+        the basic difference between css grid layout and css flexbox layout is
+        that flexbox was designed for layout in one dimension - either a row or
+        a column. grid was designed for two-dimensional layout - rows, and
+        columns at the same time.
+      </MdnDoc>
+    </div>
+  </div>
+</section>
+<BrowserSupport
+  items={[
+    {
+      value: "display: flex",
+      chrome: "29",
+      firefox: "20",
+      safari: "9",
+    },
+  ]}
+/>
+
+<style>
+  .row-container {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-around;
+  }
+
+  .row-box {
+    border-bottom: 1px solid #434c5e;
+    border-top: 1px solid #434c5e;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 640px) {
+    .anonymous-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .anonymous-box {
+      width: 100%;
+    }
+
+    .anonymous-box:first-child {
+      padding-right: 1rem;
+    }
+
+    .anonymous-box:last-child {
+      padding-left: 1rem;
+    }
+  }
+
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .column-box {
+    border-bottom: 1px solid #434c5e;
+    padding: 0.75em 1rem;
+    text-decoration: none;
+  }
+
+  .row-box:active,
+  .column-box:active {
+    background: #3b4252;
+    color: #d6aecf;
+  }
+</style>
