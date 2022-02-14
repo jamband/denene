@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-9a51934e.js",
+    "file": "start-a8ad77b0.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,7 +27,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-8eafdb3a.js",
+    "file": "pages/__layout.svelte-ae93b3eb.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -50,7 +50,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-5c9ebd34.js",
+    "file": "pages/index.svelte-7fd279b1.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -176,11 +176,11 @@
       "_IconExternalLink-f4eb5b3c.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-5fa5f57e.css"
+      "assets/pages/about.svelte-48df80f7.css"
     ]
   },
   "src/routes/details.svelte": {
-    "file": "pages/details.svelte-a6937d64.js",
+    "file": "pages/details.svelte-56233233.js",
     "src": "src/routes/details.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -197,7 +197,7 @@
     ]
   },
   "src/routes/flexbox.svelte": {
-    "file": "pages/flexbox.svelte-3420b4d3.js",
+    "file": "pages/flexbox.svelte-12864e2f.js",
     "src": "src/routes/flexbox.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -246,7 +246,7 @@
       "_IconExternalLink-f4eb5b3c.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-5fa5f57e.css"
+      "assets/pages/about.svelte-48df80f7.css"
     ]
   },
   "src/routes/grids.svelte": {
