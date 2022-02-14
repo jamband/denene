@@ -1,8 +1,8 @@
 <script>
   import "../styles/app.css";
+  import { APP_NAME } from "../constants";
   import Footer from "../layouts/Footer.svelte";
   import Header from "../layouts/Header.svelte";
-  import { APP_NAME } from "../constants";
 </script>
 
 <svelte:head>

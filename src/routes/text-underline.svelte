@@ -12,7 +12,7 @@
   <meta name="description" content={APP_DESCRIPTION} />
   <meta property="og:title" content="{title} ･ {APP_NAME}" />
   <meta property="og:description" content={APP_DESCRIPTION} />
-  <meta property="og:url" content="{APP_URL}/text-underline/" />
+  <meta property="og:url" content="{APP_URL}text-underline/" />
 </svelte:head>
 
 <Page {title} />

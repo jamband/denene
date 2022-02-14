@@ -1,10 +1,11 @@
 <script>
+  import { base } from "$app/paths";
   import { APP_NAME } from "../constants";
 </script>
 
 <header>
   <nav aria-label="header navigation">
-    <a href="/">{APP_NAME}</a>
+    <a href="{base}/">{APP_NAME}</a>
   </nav>
 </header>
 

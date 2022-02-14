@@ -1,6 +1,8 @@
 <script>
+  import { base } from "$app/paths";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
+
   const title = "home";
 </script>
 
@@ -14,16 +16,16 @@
 <Page />
 <h1>{title}</h1>
 <ul>
-  <li><a href="/introduction">introduction</a></li>
-  <li><a href="/grids">grids</a></li>
-  <li><a href="/flexbox">flexbox</a></li>
-  <li><a href="/center-an-element">center an element</a></li>
-  <li><a href="/transition">transition</a></li>
-  <li><a href="/focus-within">:focus-within</a></li>
-  <li><a href="/accent-color">accent-color</a></li>
-  <li><a href="/text-underline">text underline</a></li>
-  <li><a href="/details">&lt;details&gt;</a></li>
-  <li><a href="/dialog">&lt;dialog&gt;</a></li>
+  <li><a href="{base}/introduction">introduction</a></li>
+  <li><a href="{base}/grids">grids</a></li>
+  <li><a href="{base}/flexbox">flexbox</a></li>
+  <li><a href="{base}/center-an-element">center an element</a></li>
+  <li><a href="{base}/transition">transition</a></li>
+  <li><a href="{base}/focus-within">:focus-within</a></li>
+  <li><a href="{base}/accent-color">accent-color</a></li>
+  <li><a href="{base}/text-underline">text underline</a></li>
+  <li><a href="{base}/details">&lt;details&gt;</a></li>
+  <li><a href="{base}/dialog">&lt;dialog&gt;</a></li>
 </ul>
 
 <style>

@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
 
@@ -16,7 +17,7 @@
 <h1>404</h1>
 <section>
   <p>this page does not exist.</p>
-  <a href="/">← back to home</a>
+  <a href="{base}/">← back to home</a>
 </section>
 
 <style>

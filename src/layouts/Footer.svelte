@@ -1,13 +1,14 @@
 <script>
+  import { base } from "$app/paths";
   import { APP_NAME } from "../constants";
 </script>
 
 <footer>
   <nav aria-label="footer navigation">
-    <a href="/about">about</a>
-    <a href="/contact">contact</a>
+    <a href="{base}/about">about</a>
+    <a href="{base}/contact">contact</a>
     <a
-      href="https://github.com/jamband/{APP_NAME}"
+      href="https://github.com/{APP_NAME}"
       rel="noopener noreferrer"
       target="_blank">github</a
     >

@@ -11,7 +11,7 @@
   <meta name="description" content={APP_DESCRIPTION} />
   <meta property="og:title" content="{title} ･ {APP_NAME}" />
   <meta property="og:description" content={APP_DESCRIPTION} />
-  <meta property="og:url" content="{APP_URL}/focus-within/" />
+  <meta property="og:url" content="{APP_URL}focus-within/" />
 </svelte:head>
 
 <Page {title} />

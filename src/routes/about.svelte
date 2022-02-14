@@ -10,7 +10,7 @@
   <meta name="description" content={APP_DESCRIPTION} />
   <meta property="og:title" content="{title} ･ {APP_NAME}" />
   <meta property="og:description" content={APP_DESCRIPTION} />
-  <meta property="og:url" content="{APP_URL}/{title}/" />
+  <meta property="og:url" content="{APP_URL}{title}/" />
 </svelte:head>
 
 <Page {title} />
@@ -19,8 +19,8 @@
   <p>{APP_DESCRIPTION}.</p>
   <p>
     this website is an open source project. see
-    <ExternalLink href="https://github.com/jamband/{APP_NAME}"
-      >github jamband/{APP_NAME}</ExternalLink
+    <ExternalLink href="https://github.com/{APP_NAME}"
+      >github {APP_NAME}</ExternalLink
     >
     for details.
   </p>

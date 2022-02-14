@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import Example from "../components/Example.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
@@ -12,7 +13,7 @@
   <meta name="description" content={APP_DESCRIPTION} />
   <meta property="og:title" content="{title} ･ {APP_NAME}" />
   <meta property="og:description" content={APP_DESCRIPTION} />
-  <meta property="og:url" content="{APP_URL}/{title}/" />
+  <meta property="og:url" content="{APP_URL}{title}/" />
 </svelte:head>
 
 <Page {title} />
@@ -25,9 +26,9 @@
 <section>
   <h2>row <Example>navigation header</Example></h2>
   <div class="row-container">
-    <a href="/" class="row-box">home</a>
-    <a href="/about" class="row-box">about</a>
-    <a href="/contact" class="row-box">contact</a>
+    <a href="{base}/" class="row-box">home</a>
+    <a href="{base}/about" class="row-box">about</a>
+    <a href="{base}/contact" class="row-box">contact</a>
   </div>
 </section>
 <section>
@@ -35,9 +36,9 @@
     <div class="anonymous-box">
       <h2>column <Example>side navigation</Example></h2>
       <div class="column-container">
-        <a href="/" class="column-box">home</a>
-        <a href="/about" class="column-box">about</a>
-        <a href="/contact" class="column-box">contact</a>
+        <a href="{base}/" class="column-box">home</a>
+        <a href="{base}/about" class="column-box">about</a>
+        <a href="{base}/contact" class="column-box">contact</a>
       </div>
     </div>
     <div class="anonymous-box">
