@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "svelte-kit dev",
+    "postbuild": "mv build/404/index.html build/404.html && rmdir build/404",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "stylelint": "stylelint \"src/**/*.{css,svelte}\"",
