@@ -27,8 +27,9 @@
   <details>
     <summary>hosting</summary>
     <p>
-      <span class="tool">cloudflare pages</span> » cloudflare pages is a jamstack
-      platform for frontend developers to collaborate and deploy websites.
+      <span class="tool">github pages</span> » you can use github pages to host a
+      website about yourself, your organization, or your project directly from a
+      repository on github.com.
     </p>
   </details>
   <details>
