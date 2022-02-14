@@ -16,16 +16,16 @@
 <Page />
 <h1>{title}</h1>
 <ul>
-  <li><a href="{base}/introduction">introduction</a></li>
-  <li><a href="{base}/grids">grids</a></li>
-  <li><a href="{base}/flexbox">flexbox</a></li>
-  <li><a href="{base}/center-an-element">center an element</a></li>
-  <li><a href="{base}/transition">transition</a></li>
-  <li><a href="{base}/focus-within">:focus-within</a></li>
-  <li><a href="{base}/accent-color">accent-color</a></li>
-  <li><a href="{base}/text-underline">text underline</a></li>
-  <li><a href="{base}/details">&lt;details&gt;</a></li>
-  <li><a href="{base}/dialog">&lt;dialog&gt;</a></li>
+  <li><a href="{base}/introduction/">introduction</a></li>
+  <li><a href="{base}/grids/">grids</a></li>
+  <li><a href="{base}/flexbox/">flexbox</a></li>
+  <li><a href="{base}/center-an-element/">center an element</a></li>
+  <li><a href="{base}/transition/">transition</a></li>
+  <li><a href="{base}/focus-within/">:focus-within</a></li>
+  <li><a href="{base}/accent-color/">accent-color</a></li>
+  <li><a href="{base}/text-underline/">text underline</a></li>
+  <li><a href="{base}/details/">&lt;details&gt;</a></li>
+  <li><a href="{base}/dialog/">&lt;dialog&gt;</a></li>
 </ul>
 
 <style>
