@@ -3,8 +3,9 @@
   "type": "module",
   "scripts": {
     "dev": "svelte-kit dev",
-    "postbuild": "mv build/404/index.html build/404.html && rmdir build/404",
+    "checks": "svelte-check",
     "build": "svelte-kit build",
+    "postbuild": "mv build/404/index.html build/404.html && rmdir build/404",
     "preview": "svelte-kit preview",
     "stylelint": "stylelint \"src/**/*.{css,svelte}\"",
     "clear": "rm -rf .svelte-kit build",
@@ -20,6 +21,7 @@
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
     "svelte": "^3.46.4",
+    "svelte-check": "^2.4.3",
     "the-new-css-reset": "^1.4.9"
   }
 }

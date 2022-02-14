@@ -1,5 +1,4 @@
 <script>
-  /** @type {<Array.<Object.<value:string, chrome:string, firefox:string, safari:string>>} */
   export let items;
 </script>
 
