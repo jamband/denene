@@ -11,6 +11,9 @@ const config = {
       hydrate: dev || false,
     },
     inlineStyleThreshold: 1024,
+    paths: {
+      base: process.env["VITE_GITHUB_ACTIONS"] ? "/denene" : "",
+    },
     trailingSlash: "always",
   },
 };
