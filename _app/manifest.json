@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-cba9185f.js",
+    "file": "start-9ccb7434.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,7 +27,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-ae93b3eb.js",
+    "file": "pages/__layout.svelte-94878349.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
       "_paths-4b3c6e7e.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-1daabb86.css"
+      "assets/pages/__layout.svelte-f8d27a8a.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -176,7 +176,7 @@
       "_IconExternalLink-f4eb5b3c.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-5fa5f57e.css"
+      "assets/pages/about.svelte-48df80f7.css"
     ]
   },
   "src/routes/details.svelte": {
@@ -246,7 +246,7 @@
       "_IconExternalLink-f4eb5b3c.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-5fa5f57e.css"
+      "assets/pages/about.svelte-48df80f7.css"
     ]
   },
   "src/routes/grids.svelte": {
