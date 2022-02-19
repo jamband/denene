@@ -15,6 +15,12 @@ const config = {
       base: process.env["VITE_GITHUB_ACTIONS"] ? "/denene" : "",
     },
     trailingSlash: "always",
+    vite: {
+      optimizeDeps: {
+        include: ["svelte/internal"],
+        exclude: ["svelte/store", "svelte/animate", "svelte/easing"],
+      },
+    },
   },
 };
 
