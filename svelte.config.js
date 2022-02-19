@@ -18,7 +18,7 @@ const config = {
     vite: {
       optimizeDeps: {
         include: ["svelte/internal"],
-        exclude: ["svelte/store", "svelte/animate", "svelte/easing"],
+        exclude: ["svelte/animate", "svelte/store"],
       },
     },
   },
