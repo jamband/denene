@@ -18,10 +18,12 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Web/HTML/Element/dialog" text={title}>
-  the <code>&lt;dialog&gt;</code> html element represents a dialog box or other interactive
-  component, such as a dismissible alert, inspector, or subwindow.
-</MdnDoc>
+<section>
+  <MdnDoc path="Web/HTML/Element/dialog" text={title}>
+    the <code>&lt;dialog&gt;</code> html element represents a dialog box or other
+    interactive component, such as a dismissible alert, inspector, or subwindow.
+  </MdnDoc>
+</section>
 <section>
   <h2>1 <Example>simple alert</Example></h2>
   <button onclick="getElementById('example1').showModal();">press me</button>

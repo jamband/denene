@@ -16,11 +16,13 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Web/CSS/Layout_cookbook/Center_an_element" text={title}>
-  in this recipe you will see how to center one box inside another. centering
-  both horizontally and vertically was difficult before flexbox, with the box
-  alignment properties it is now straightforward.
-</MdnDoc>
+<section>
+  <MdnDoc path="Web/CSS/Layout_cookbook/Center_an_element" text={title}>
+    in this recipe you will see how to center one box inside another. centering
+    both horizontally and vertically was difficult before flexbox, with the box
+    alignment properties it is now straightforward.
+  </MdnDoc>
+</section>
 <section>
   <h2>with flexbox</h2>
   <div class="container flex">

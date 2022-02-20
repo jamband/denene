@@ -16,12 +16,14 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Web/HTML/Element/details" text={title}>
-  the <code>{title}</code> html element creates a disclosure widget in which
-  information is visible only when the widget is toggled into an "open" state. a
-  summary or label must be provided using the
-  <code>&lt;summary&gt;</code> element.
-</MdnDoc>
+<section>
+  <MdnDoc path="Web/HTML/Element/details" text={title}>
+    the <code>{title}</code> html element creates a disclosure widget in which
+    information is visible only when the widget is toggled into an "open" state.
+    a summary or label must be provided using the
+    <code>&lt;summary&gt;</code> element.
+  </MdnDoc>
+</section>
 <section>
   <h2>what tools do you use to build this site?</h2>
   <details>

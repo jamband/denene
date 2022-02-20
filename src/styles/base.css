@@ -12,7 +12,7 @@ h1 {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -31,7 +31,7 @@ h2::before {
 }
 
 section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 a {

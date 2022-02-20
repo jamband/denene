@@ -16,12 +16,14 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Web/CSS/CSS_Transitions" text={title}>
-  css transitions is a module of css that lets you create gradual transitions
-  between the values of specific css properties. the behavior of these
-  transitions can be controlled by specifying their timing function, duration,
-  and other attributes.
-</MdnDoc>
+<section>
+  <MdnDoc path="Web/CSS/CSS_Transitions" text={title}>
+    css transitions is a module of css that lets you create gradual transitions
+    between the values of specific css properties. the behavior of these
+    transitions can be controlled by specifying their timing function, duration,
+    and other attributes.
+  </MdnDoc>
+</section>
 <section>
   <h2 id="progressbar">width <Example>loading indicator</Example></h2>
   <div class="example1">

@@ -16,12 +16,14 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Learn/CSS/CSS_layout/Grids" text={title}>
-  css grid layout is a two-dimensional layout system for the web. it lets you
-  lay content out in rows and columns. it has many features that make building
-  complex layouts straightforward. this article will explain all you need to
-  know to get started with page layout.
-</MdnDoc>
+<section>
+  <MdnDoc path="Learn/CSS/CSS_layout/Grids" text={title}>
+    css grid layout is a two-dimensional layout system for the web. it lets you
+    lay content out in rows and columns. it has many features that make building
+    complex layouts straightforward. this article will explain all you need to
+    know to get started with page layout.
+  </MdnDoc>
+</section>
 <div class="container">
   <div class="box box1">one</div>
   <div class="box box2">two</div>

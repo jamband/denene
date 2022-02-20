@@ -17,11 +17,13 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Web/CSS/text-decoration" text="text-decoration">
-  the <code>text-decoration</code> shorthand css property sets the appearance of
-  decorative lines on text. it is a shorthand for text-decoration-line, text-decoration-color,
-  text-decoration-style, and the newer text-decoration-thickness property.
-</MdnDoc>
+<section>
+  <MdnDoc path="Web/CSS/text-decoration" text="text-decoration">
+    the <code>text-decoration</code> shorthand css property sets the appearance of
+    decorative lines on text. it is a shorthand for text-decoration-line, text-decoration-color,
+    text-decoration-style, and the newer text-decoration-thickness property.
+  </MdnDoc>
+</section>
 <section>
   <h2>1</h2>
   <pre><code>text-decoration: underline;</code></pre>

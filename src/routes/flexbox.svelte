@@ -18,11 +18,13 @@
 
 <Page {title} />
 <h1>{title}</h1>
-<MdnDoc path="Learn/CSS/CSS_layout/Flexbox" text={title}>
-  {title} is a one-dimensional layout method for arranging items in rows or columns.
-  items flex (expand) to fill additional space or shrink to fit into smaller spaces.
-  this article explains all the fundamentals.
-</MdnDoc>
+<section>
+  <MdnDoc path="Learn/CSS/CSS_layout/Flexbox" text={title}>
+    {title} is a one-dimensional layout method for arranging items in rows or columns.
+    items flex (expand) to fill additional space or shrink to fit into smaller spaces.
+    this article explains all the fundamentals.
+  </MdnDoc>
+</section>
 <section>
   <h2>row <Example>navigation header</Example></h2>
   <div class="row-container">
