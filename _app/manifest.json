@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-23eab72f.js",
+    "file": "start-8daab3fa.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,7 +27,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-94878349.js",
+    "file": "pages/__layout.svelte-c71ea655.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
       "_paths-4b3c6e7e.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-f8d27a8a.css"
+      "assets/pages/__layout.svelte-64d036ac.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -65,7 +65,7 @@
     ]
   },
   "src/routes/center-an-element.svelte": {
-    "file": "pages/center-an-element.svelte-e4fc7c13.js",
+    "file": "pages/center-an-element.svelte-49bb3ec4.js",
     "src": "src/routes/center-an-element.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -82,7 +82,7 @@
     ]
   },
   "src/routes/text-underline.svelte": {
-    "file": "pages/text-underline.svelte-503b342a.js",
+    "file": "pages/text-underline.svelte-5c635c8f.js",
     "src": "src/routes/text-underline.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -99,7 +99,7 @@
     ]
   },
   "src/routes/accent-color.svelte": {
-    "file": "pages/accent-color.svelte-8e19fedf.js",
+    "file": "pages/accent-color.svelte-7d6efb5b.js",
     "src": "src/routes/accent-color.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -116,7 +116,7 @@
     ]
   },
   "src/routes/focus-within.svelte": {
-    "file": "pages/focus-within.svelte-3f6cf489.js",
+    "file": "pages/focus-within.svelte-c5cd9735.js",
     "src": "src/routes/focus-within.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -147,7 +147,7 @@
     ]
   },
   "src/routes/transition.svelte": {
-    "file": "pages/transition.svelte-65e365c6.js",
+    "file": "pages/transition.svelte-fb493109.js",
     "src": "src/routes/transition.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -180,7 +180,7 @@
     ]
   },
   "src/routes/details.svelte": {
-    "file": "pages/details.svelte-6b78fd65.js",
+    "file": "pages/details.svelte-4769abb9.js",
     "src": "src/routes/details.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -197,7 +197,7 @@
     ]
   },
   "src/routes/flexbox.svelte": {
-    "file": "pages/flexbox.svelte-9e95d61e.js",
+    "file": "pages/flexbox.svelte-29302166.js",
     "src": "src/routes/flexbox.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -216,7 +216,7 @@
     ]
   },
   "src/routes/dialog.svelte": {
-    "file": "pages/dialog.svelte-6015c56b.js",
+    "file": "pages/dialog.svelte-3160bd2e.js",
     "src": "src/routes/dialog.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -250,7 +250,7 @@
     ]
   },
   "src/routes/grids.svelte": {
-    "file": "pages/grids.svelte-5ce484e8.js",
+    "file": "pages/grids.svelte-87a9aa45.js",
     "src": "src/routes/grids.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
