@@ -21,6 +21,7 @@
     font-family: var(--font-mono);
     position: fixed;
     width: 100%;
+    z-index: 1;
   }
 
   nav {
