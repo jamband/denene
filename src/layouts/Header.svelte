@@ -44,7 +44,7 @@
   }
 
   .account {
-    color: #909aae;
+    color: #b2bcd0;
     font-size: 0.85rem;
   }
 
