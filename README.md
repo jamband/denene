@@ -1,6 +1,6 @@
 # jamband/denene
 
-jamband/denene is my private playground for html and css.
+[jamband/denene](https://jamband.github.io/denene/) is my private playground for html and css.
 
 ## tools
 
