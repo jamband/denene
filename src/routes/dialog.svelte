@@ -69,8 +69,8 @@
     {
       value: title,
       chrome: "37",
-      firefox: "no",
-      safari: "tp",
+      firefox: "98",
+      safari: "15.4",
     },
   ]}
 />

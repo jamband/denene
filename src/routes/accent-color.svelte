@@ -117,7 +117,7 @@
       value: "accent-color",
       chrome: "93",
       firefox: "92",
-      safari: "tp",
+      safari: "15.4",
     },
   ]}
 />
