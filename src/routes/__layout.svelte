@@ -28,7 +28,7 @@
   main {
     flex-grow: 1;
     margin: 0 auto;
-    padding: 8rem 1rem;
+    padding: 7rem 1rem;
     width: 100%;
   }
 
