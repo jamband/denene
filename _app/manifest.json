@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c988c98b.js",
+    "file": "start-42e10386.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -27,7 +27,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-40c125f2.js",
+    "file": "pages/__layout.svelte-c44aa753.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
       "_paths-4b3c6e7e.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-2f97df20.css"
+      "assets/pages/__layout.svelte-bf676d9f.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -99,7 +99,7 @@
     ]
   },
   "src/routes/accent-color.svelte": {
-    "file": "pages/accent-color.svelte-7d6efb5b.js",
+    "file": "pages/accent-color.svelte-168ed10e.js",
     "src": "src/routes/accent-color.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -216,7 +216,7 @@
     ]
   },
   "src/routes/dialog.svelte": {
-    "file": "pages/dialog.svelte-3160bd2e.js",
+    "file": "pages/dialog.svelte-5f704537.js",
     "src": "src/routes/dialog.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
