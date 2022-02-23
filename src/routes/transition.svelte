@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import Example from "../components/Example.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -55,6 +56,7 @@
     <div class="example2-content">{APP_DESCRIPTION}.</div>
   </div>
 </section>
+<BackToHomeLink />
 
 <style>
   label[role="button"] {

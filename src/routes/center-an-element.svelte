@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -43,34 +44,37 @@
     </div>
   </div>
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: "display: flex",
-      chrome: "29",
-      firefox: "20",
-      safari: "9",
-    },
-    {
-      value: "display: grid",
-      chrome: "57",
-      firefox: "52",
-      safari: "10.1",
-    },
-    {
-      value: "transform",
-      chrome: "36",
-      firefox: "16",
-      safari: "9",
-    },
-    {
-      value: "aspect-ratio",
-      chrome: "88",
-      firefox: "89",
-      safari: "15",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: "display: flex",
+        chrome: "29",
+        firefox: "20",
+        safari: "9",
+      },
+      {
+        value: "display: grid",
+        chrome: "57",
+        firefox: "52",
+        safari: "10.1",
+      },
+      {
+        value: "transform",
+        chrome: "36",
+        firefox: "16",
+        safari: "9",
+      },
+      {
+        value: "aspect-ratio",
+        chrome: "88",
+        firefox: "89",
+        safari: "15",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   .container {

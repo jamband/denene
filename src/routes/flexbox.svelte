@@ -1,5 +1,6 @@
 <script>
   import { base } from "$app/paths";
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import Example from "../components/Example.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
@@ -57,16 +58,19 @@
     </div>
   </div>
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: "display: flex",
-      chrome: "29",
-      firefox: "20",
-      safari: "9",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: "display: flex",
+        chrome: "29",
+        firefox: "20",
+        safari: "9",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   .row-container {

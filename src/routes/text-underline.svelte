@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -74,23 +75,25 @@ text-decoration: none;</code
     target="_blank">mdn web docs <IconExternalLink /></a
   >
 </section>
-
-<BrowserSupport
-  items={[
-    {
-      value: "text-underline-offset",
-      chrome: "87",
-      firefox: "70",
-      safari: "12.1",
-    },
-    {
-      value: "text-decoration-thickness",
-      chrome: "89",
-      firefox: "70",
-      safari: "12.1",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: "text-underline-offset",
+        chrome: "87",
+        firefox: "70",
+        safari: "12.1",
+      },
+      {
+        value: "text-decoration-thickness",
+        chrome: "89",
+        firefox: "70",
+        safari: "12.1",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   .example {

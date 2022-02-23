@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -50,22 +51,25 @@
     </p>
   </details>
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: title,
-      chrome: "12",
-      firefox: "49",
-      safari: "6",
-    },
-    {
-      value: "<summary>",
-      chrome: "12",
-      firefox: "49",
-      safari: "6",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: title,
+        chrome: "12",
+        firefox: "49",
+        safari: "6",
+      },
+      {
+        value: "<summary>",
+        chrome: "12",
+        firefox: "49",
+        safari: "6",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   details {

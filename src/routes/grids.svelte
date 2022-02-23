@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -36,16 +37,19 @@
   <div class="box box9">nine</div>
   <div class="box box10">ten</div>
 </div>
-<BrowserSupport
-  items={[
-    {
-      value: "display: grid",
-      chrome: "57",
-      firefox: "52",
-      safari: "10.1",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: "display: grid",
+        chrome: "57",
+        firefox: "52",
+        safari: "10.1",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   .container {

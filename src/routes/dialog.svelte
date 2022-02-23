@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import Example from "../components/Example.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
@@ -64,16 +65,19 @@
   </dialog>
   <p class="dialog-action" />
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: title,
-      chrome: "37",
-      firefox: "98",
-      safari: "15.4",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: title,
+        chrome: "37",
+        firefox: "98",
+        safari: "15.4",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   .dialog-header {

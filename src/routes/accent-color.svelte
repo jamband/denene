@@ -1,4 +1,6 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
+
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -111,16 +113,19 @@
     </div>
   </fieldset>
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: "accent-color",
-      chrome: "93",
-      firefox: "92",
-      safari: "15.4",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: "accent-color",
+        chrome: "93",
+        firefox: "92",
+        safari: "15.4",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   fieldset {

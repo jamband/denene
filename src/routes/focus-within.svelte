@@ -1,4 +1,5 @@
 <script>
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -84,16 +85,19 @@
     </fieldset>
   </form>
 </section>
-<BrowserSupport
-  items={[
-    {
-      value: ":focus-within",
-      chrome: "60",
-      firefox: "52",
-      safari: "10.1",
-    },
-  ]}
-/>
+<section>
+  <BrowserSupport
+    items={[
+      {
+        value: ":focus-within",
+        chrome: "60",
+        firefox: "52",
+        safari: "10.1",
+      },
+    ]}
+  />
+</section>
+<BackToHomeLink />
 
 <style>
   form {

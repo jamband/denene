@@ -1,5 +1,5 @@
 <script>
-  import { base } from "$app/paths";
+  import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
 
@@ -17,20 +17,11 @@
 <h1>404</h1>
 <section>
   <p>this page does not exist.</p>
-  <a href="{base}/">← back to home</a>
 </section>
+<BackToHomeLink />
 
 <style>
   section {
     text-align: center;
-  }
-
-  p {
-    margin-bottom: 0.25rem;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0.75rem 1rem;
   }
 </style>
