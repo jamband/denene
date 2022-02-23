@@ -8,6 +8,7 @@
 
 <style>
   section {
+    margin-bottom: 0;
     text-align: center;
   }
 
