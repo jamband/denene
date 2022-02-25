@@ -66,6 +66,12 @@
         safari: "10.1",
       },
       {
+        value: "place-items",
+        chrome: "59",
+        firefox: "45",
+        safari: "11",
+      },
+      {
         value: "transform",
         chrome: "36",
         firefox: "16",
