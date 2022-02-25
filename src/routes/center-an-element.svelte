@@ -48,6 +48,12 @@
   <BrowserSupport
     items={[
       {
+        value: "aspect-ratio",
+        chrome: "88",
+        firefox: "89",
+        safari: "15",
+      },
+      {
         value: "display: flex",
         chrome: "29",
         firefox: "20",
@@ -64,12 +70,6 @@
         chrome: "36",
         firefox: "16",
         safari: "9",
-      },
-      {
-        value: "aspect-ratio",
-        chrome: "88",
-        firefox: "89",
-        safari: "15",
       },
     ]}
   />
