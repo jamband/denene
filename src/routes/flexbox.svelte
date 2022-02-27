@@ -88,7 +88,7 @@
     width: 100%;
   }
 
-  @media only screen and (min-width: 640px) {
+  @media (min-width: 640px) {
     .anonymous-container {
       display: flex;
       justify-content: space-between;

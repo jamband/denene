@@ -109,7 +109,7 @@
     background: #81a1c1;
   }
 
-  @media only screen and (max-width: 640px) {
+  @media (max-width: 640px) {
     .container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -132,7 +132,7 @@
     }
   }
 
-  @media only screen and (min-width: 640px) {
+  @media (min-width: 640px) {
     .container {
       grid-template-columns: repeat(3, 1fr);
     }
