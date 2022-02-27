@@ -1,9 +1,9 @@
 <script>
   import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
+  import CloudyImage from "../components/CloudyImage.svelte";
   import ExternalLink from "../components/ExternalLink.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
-  import WaveLineImage from "../components/WaveLineImage.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
 
@@ -33,7 +33,7 @@
     <code>position: absolute;</code>.
   </p>
   <div class="example1">
-    <WaveLineImage />
+    <CloudyImage />
     <p class="example1-text">
       free svg background by
       <ExternalLink href="https://bgjar.com">bgjar</ExternalLink>
