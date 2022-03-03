@@ -9,6 +9,5 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "stylelint.validate": ["css", "svelte"],
-  "svelte.enable-ts-plugin": false
+  "stylelint.validate": ["css", "svelte"]
 }
