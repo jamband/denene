@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-4c126c0a.js",
+    "file": "start-299f13f5.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -211,7 +211,7 @@
       "_IconExternalLink-32cb0a66.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-3205c765.css"
+      "assets/pages/404.svelte-eb7f1040.css"
     ]
   },
   "src/routes/details.svelte": {
@@ -288,7 +288,7 @@
       "_IconExternalLink-32cb0a66.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-3205c765.css"
+      "assets/pages/404.svelte-eb7f1040.css"
     ]
   },
   "src/routes/grids.svelte": {
@@ -323,7 +323,7 @@
       "_paths-4b3c6e7e.js"
     ],
     "css": [
-      "assets/pages/contact.svelte-3205c765.css"
+      "assets/pages/404.svelte-eb7f1040.css"
     ]
   },
   "_vendor-9973133c.js": {
