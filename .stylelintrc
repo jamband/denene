@@ -9,7 +9,6 @@
   ],
   "rules": {
     "declaration-colon-newline-after": null,
-    "value-no-vendor-prefix": null,
     "order/properties-alphabetical-order": true
   }
 }

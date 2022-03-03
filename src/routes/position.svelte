@@ -112,7 +112,6 @@
     font-weight: bold;
     height: 3.5em;
     padding: 1rem;
-    position: -webkit-sticky;
     position: sticky;
     top: 5em;
     width: 40%;
