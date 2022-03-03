@@ -9,5 +9,6 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
   "stylelint.validate": ["css", "svelte"]
 }
