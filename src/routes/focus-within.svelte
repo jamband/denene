@@ -94,6 +94,12 @@
         firefox: "52",
         safari: "10.1",
       },
+      {
+        value: "::placeholder",
+        chrome: "57",
+        firefox: "51",
+        safari: "10.1",
+      },
     ]}
   />
 </section>
