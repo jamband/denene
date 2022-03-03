@@ -24,13 +24,13 @@ input[type="password"] {
   padding: 0.5rem 1rem;
 }
 
-input::placeholder {
-  color: #5d677b;
-}
-
 progress,
 input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
   accent-color: var(--primary);
+}
+
+::placeholder {
+  color: #5d677b;
 }
