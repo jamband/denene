@@ -38,9 +38,9 @@
       class="example1-content"
       role="progressbar"
       aria-labelledby="progressbar"
-      aria-valuenow="0"
-      aria-valuemin="0"
-      aria-valuemax="100"
+      aria-valuenow={0}
+      aria-valuemin={0}
+      aria-valuemax={100}
     />
   </div>
 </section>
