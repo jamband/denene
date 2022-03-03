@@ -1,0 +1,19 @@
+import{S as N,i as R,s as W,e as i,g as b,q as y,a as f,A as P,c as l,r as A,m as C,k as S,f as t,w as k,t as E}from"../chunks/vendor-9973133c.js";import{B as F}from"../chunks/BackToHomeLink-d42cfbbc.js";import{B as O}from"../chunks/BrowserSupport-cfaceca3.js";import{M as U}from"../chunks/MdnDoc-f1cd2145.js";import{a as I,A as j,b as z}from"../chunks/constants-f1c7d45b.js";import{P as G}from"../chunks/Page-4ee4de0a.js";import"../chunks/paths-4b3c6e7e.js";import"../chunks/IconExternalLink-32cb0a66.js";function J(M){let n,a,m,r,u;return{c(){n=E("the "),a=i("code"),a.textContent=":focus-within",m=E(` css pseudo-class matches an element if the
+    element or any of its descendants are focused. in other words, it represents
+    an element that is itself matched by the :focus pseudo-class or has a
+    descendant that is matched by `),r=i("code"),r.textContent=":focus",u=E(`. (this includes
+    descendants in shadow trees.)`)},m(s,p){l(s,n,p),l(s,a,p),l(s,m,p),l(s,r,p),l(s,u,p)},d(s){s&&t(n),s&&t(a),s&&t(m),s&&t(r),s&&t(u)}}}function K(M){let n,a,m,r,u,s,p,v,L,w,c,T,_,q,x,d,D,$,h;return s=new G({props:{title:B}}),c=new U({props:{path:"Web/CSS/:focus-within",text:B,$$slots:{default:[J]},$$scope:{ctx:M}}}),d=new O({props:{items:[{value:":focus-within",chrome:"60",firefox:"52",safari:"10.1"},{value:"::placeholder",chrome:"57",firefox:"51",safari:"10.1"}]}}),$=new F({}),{c(){n=i("meta"),a=i("meta"),m=i("meta"),r=i("meta"),u=b(),y(s.$$.fragment),p=b(),v=i("h1"),v.textContent=`${B}`,L=b(),w=i("section"),y(c.$$.fragment),T=b(),_=i("section"),_.innerHTML=`<form class="svelte-b6vitn"><fieldset class="example1 svelte-b6vitn"><legend class="svelte-b6vitn">#1</legend> 
+      <label for="username1">username</label> 
+      <input type="text" id="username1" placeholder="focus here" autocomplete="username" class="svelte-b6vitn"/> 
+      <label for="password1">password</label> 
+      <input type="password" id="password1" placeholder="focus here" autocomplete="current-password"/></fieldset></form> 
+  <form class="svelte-b6vitn"><fieldset class="example2 svelte-b6vitn"><legend class="svelte-b6vitn">#2</legend> 
+      <label for="username2">username</label> 
+      <input type="text" id="username2" placeholder="focus here" autocomplete="username" class="svelte-b6vitn"/> 
+      <label for="password2">password</label> 
+      <input type="password" id="password2" placeholder="focus here" autocomplete="current-password"/></fieldset></form> 
+  <form class="svelte-b6vitn"><fieldset class="example3 svelte-b6vitn"><legend class="svelte-b6vitn">#3</legend> 
+      <label for="username3">username</label> 
+      <input type="text" id="username3" placeholder="focus here" autocomplete="username" class="svelte-b6vitn"/> 
+      <label for="password3">password</label> 
+      <input type="password" id="password3" placeholder="focus here" autocomplete="current-password"/></fieldset></form>`,q=b(),x=i("section"),y(d.$$.fragment),D=b(),y($.$$.fragment),f(n,"name","description"),f(n,"content",I),f(a,"property","og:title"),f(a,"content",B+" \uFF65 "+j),f(m,"property","og:description"),f(m,"content",I),f(r,"property","og:url"),f(r,"content",z+"focus-within/")},m(e,o){P(document.head,n),P(document.head,a),P(document.head,m),P(document.head,r),l(e,u,o),A(s,e,o),l(e,p,o),l(e,v,o),l(e,L,o),l(e,w,o),A(c,w,null),l(e,T,o),l(e,_,o),l(e,q,o),l(e,x,o),A(d,x,null),l(e,D,o),A($,e,o),h=!0},p(e,[o]){const H={};o&1&&(H.$$scope={dirty:o,ctx:e}),c.$set(H)},i(e){h||(C(s.$$.fragment,e),C(c.$$.fragment,e),C(d.$$.fragment,e),C($.$$.fragment,e),h=!0)},o(e){S(s.$$.fragment,e),S(c.$$.fragment,e),S(d.$$.fragment,e),S($.$$.fragment,e),h=!1},d(e){t(n),t(a),t(m),t(r),e&&t(u),k(s,e),e&&t(p),e&&t(v),e&&t(L),e&&t(w),k(c),e&&t(T),e&&t(_),e&&t(q),e&&t(x),k(d),e&&t(D),k($,e)}}}const B=":focus-within";class se extends N{constructor(n){super();R(this,n,null,K,W,{})}}export{se as default};
