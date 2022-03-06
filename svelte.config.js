@@ -20,6 +20,9 @@ const config = {
     paths: {
       base: process.env["VITE_GITHUB_ACTIONS"] ? "/denene" : "",
     },
+    prerender: {
+      default: true,
+    },
     trailingSlash: "always",
     vite: {
       optimizeDeps: {
