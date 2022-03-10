@@ -65,25 +65,6 @@
       />
     </fieldset>
   </form>
-  <form>
-    <fieldset class="example3">
-      <legend>#3</legend>
-      <label for="username3">username</label>
-      <input
-        type="text"
-        id="username3"
-        placeholder="focus here"
-        autocomplete="username"
-      />
-      <label for="password3">password</label>
-      <input
-        type="password"
-        id="password3"
-        placeholder="focus here"
-        autocomplete="current-password"
-      />
-    </fieldset>
-  </form>
 </section>
 <section>
   <BrowserSupport
@@ -115,26 +96,18 @@
   }
 
   .example1:focus-within {
-    border: 1px solid #a3be8c;
+    border: 1px solid #93c5fd;
   }
 
   .example1:focus-within > legend {
-    color: #a3be8c;
+    color: #93c5fd;
   }
 
   .example2:focus-within {
-    border: 1px solid #ebcb8b;
+    border: 1px solid var(--primary);
   }
 
   .example2:focus-within > legend {
-    color: #ebcb8b;
-  }
-
-  .example3:focus-within {
-    border: 1px solid #bf616a;
-  }
-
-  .example3:focus-within > legend {
-    color: #bf616a;
+    color: var(--primary);
   }
 </style>

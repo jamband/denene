@@ -9,7 +9,7 @@
 
 <style>
   small {
-    color: #b2bcd0;
+    color: var(--body-color);
     display: inline;
     font-size: 50%;
   }

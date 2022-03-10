@@ -53,22 +53,22 @@
   <div class="example2">
     <input type="checkbox" id="example2-action" />
     <label for="example2-action" role="button">press me</label>
-    <div class="example2-content">{APP_DESCRIPTION}.</div>
+    <div class="example2-content">fade in / fade out</div>
   </div>
 </section>
 <BackToHomeLink />
 
 <style>
   label[role="button"] {
-    background: #88c0d0;
+    background: #24222b;
     border-radius: 0.25rem;
-    box-shadow: 0.1rem 0.1rem 0 #434c5e;
+    box-shadow: 0.05rem 0.1rem 0.1rem #020009;
     color: #eceff4;
     display: inline-block;
     font-weight: bold;
     margin-bottom: 1rem;
     margin-right: 0.25rem;
-    padding: 0.3rem 0.75rem;
+    padding: 0.5rem 1.1rem;
   }
 
   input[type="checkbox"] {
@@ -89,9 +89,9 @@
   }
 
   .example1-content {
-    background: #88c0d0;
-    border-top: 1px soild red;
+    background: var(--primary);
     height: 3px;
+    opacity: 0.8;
     transition: width 3s cubic-bezier(0.1, 0.05, 0, 1);
     width: 0%;
   }
@@ -101,8 +101,9 @@
   }
 
   .example2-content {
-    background: #434c5e;
+    background: #24222b;
     border-radius: 0.25rem;
+    color: #c8c5d8;
     opacity: 0;
     padding: 1rem;
     transition: opacity 0.3s;

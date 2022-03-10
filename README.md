@@ -6,7 +6,7 @@
 
 - hosting: github pages
 - building: sveltekit
-- palettes: nord
+- color palette: tailwind css
 
 ## license
 

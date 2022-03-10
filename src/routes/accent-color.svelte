@@ -1,6 +1,5 @@
 <script>
   import BackToHomeLink from "../components/BackToHomeLink.svelte";
-
   import BrowserSupport from "../components/BrowserSupport.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
@@ -83,35 +82,6 @@
       <span>50%</span>
     </div>
   </fieldset>
-  <fieldset class="example3">
-    <legend>#3</legend>
-    <div>
-      <input type="checkbox" id="checkbox3-1" checked />
-      <label for="checkbox3-1">checkbox1</label>
-    </div>
-    <div>
-      <input type="radio" id="radio3-1" name="radio3" checked />
-      <label for="radio3-1">radio1</label>
-      <input type="radio" id="radio3-2" name="radio3" />
-      <label for="radio3-2">radio2</label>
-    </div>
-    <div>
-      <label for="range3-1">range1</label>
-      <input
-        type="range"
-        id="range3-1"
-        min={0}
-        max={100}
-        step={10}
-        value={50}
-      />
-    </div>
-    <div>
-      <label for="progress3-1">progress1</label>
-      <progress id="progress3-1" max={100} value={50}>50%</progress>
-      <span>50%</span>
-    </div>
-  </fieldset>
 </section>
 <section>
   <BrowserSupport
@@ -137,13 +107,8 @@
     margin-left: 0.25rem;
   }
 
-  .example2 input,
-  .example2 progress {
-    accent-color: #81a1c1;
-  }
-
-  .example3 input,
-  .example3 progress {
-    accent-color: #ebcb8b;
+  .example1 input,
+  .example1 progress {
+    accent-color: #93c5fd;
   }
 </style>

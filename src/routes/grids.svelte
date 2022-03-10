@@ -62,51 +62,11 @@
   }
 
   .box {
+    background: #24222b;
     border-radius: 0.25rem;
-    color: #eceff4;
     display: grid;
     font-size: 0.9rem;
     place-items: center;
-  }
-
-  .box1 {
-    background: #88c0d0;
-  }
-
-  .box2 {
-    background: #b48ead;
-  }
-
-  .box3 {
-    background: #3b4252;
-  }
-
-  .box4 {
-    background: #a3be8c;
-  }
-
-  .box5 {
-    background: #ebcb8b;
-  }
-
-  .box6 {
-    background: #d08770;
-  }
-
-  .box7 {
-    background: #bf616a;
-  }
-
-  .box8 {
-    background: #4c566a;
-  }
-
-  .box9 {
-    background: #8fbcbb;
-  }
-
-  .box10 {
-    background: #81a1c1;
   }
 
   @media (max-width: 640px) {

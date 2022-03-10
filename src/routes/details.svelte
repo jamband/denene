@@ -44,10 +44,11 @@
     </p>
   </details>
   <details>
-    <summary>palettes</summary>
+    <summary>color palette</summary>
     <p>
-      <span class="tool">nord</span> » a total of sixteen, carefully selected, dimmed
-      pastel colors for a eye-comfortable, but yet colorful ambiance.
+      <span class="tool">tailwind css</span> » tailwind includes an expertly-crafted
+      default color palette out-of-the-box that is a great starting point if you
+      don't have your own specific branding in mind.
     </p>
   </details>
 </section>
@@ -81,14 +82,14 @@
   }
 
   details > p {
-    background: #3b4252;
+    background: #24222b;
     border-radius: 0.25rem;
     margin-top: 0.5rem;
     padding: 1rem;
   }
 
   .tool {
-    color: #88c0d0;
+    color: #eceff4;
     font-weight: bold;
   }
 </style>

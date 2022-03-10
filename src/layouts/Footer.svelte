@@ -18,8 +18,9 @@
 <style>
   footer {
     align-items: center;
-    background-color: #2e3440;
+    background-color: #24222b;
     bottom: 0;
+    box-shadow: 0 0 0.1rem 0.05rem #020009;
     display: flex;
     justify-content: center;
     padding: 1.25rem 0;
@@ -28,14 +29,14 @@
   }
 
   a {
-    color: #ddd;
+    border-radius: 0.25rem;
+    color: var(--body-color);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
   }
 
   a:active {
-    background-color: #3b4252;
-    border-radius: 0.25rem;
-    color: #fff;
+    background-color: #35333c;
+    color: #eceff4;
   }
 </style>

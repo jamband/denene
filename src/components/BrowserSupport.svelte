@@ -36,7 +36,7 @@
   }
 
   thead {
-    border-bottom: 1px solid #505662;
+    border-bottom: 1px solid #35333c;
   }
 
   tr,

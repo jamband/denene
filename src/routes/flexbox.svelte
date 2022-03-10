@@ -80,8 +80,8 @@
   }
 
   .row-box {
-    border-bottom: 1px solid #434c5e;
-    border-top: 1px solid #434c5e;
+    border-bottom: 1px solid #35333c;
+    border-top: 1px solid #35333c;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -115,14 +115,13 @@
   }
 
   .column-box {
-    border-bottom: 1px solid #434c5e;
+    border-bottom: 1px solid #35333c;
     padding: 0.75em 1rem;
     text-decoration: none;
   }
 
   .row-box:active,
   .column-box:active {
-    background: #3b4252;
-    color: #d6aecf;
+    background: #24222b;
   }
 </style>

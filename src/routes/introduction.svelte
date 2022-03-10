@@ -50,9 +50,3 @@
   </section>
 </article>
 <BackToHomeLink />
-
-<style>
-  p {
-    color: #b2bcd0;
-  }
-</style>

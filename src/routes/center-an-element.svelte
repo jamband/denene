@@ -1,6 +1,7 @@
 <script>
   import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
+  import Example from "../components/Example.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
@@ -25,19 +26,19 @@
   </MdnDoc>
 </section>
 <section>
-  <h2>with flexbox</h2>
+  <h2>with <Example prefix={false}>flexbox</Example></h2>
   <div class="container flex">
     <div>center an element with flexbox</div>
   </div>
 </section>
 <section>
-  <h2>with grid</h2>
+  <h2>with <Example prefix={false}>grid</Example></h2>
   <div class="container grid">
     <div>center an element with grid</div>
   </div>
 </section>
 <section>
-  <h2>with position and transform</h2>
+  <h2>with <Example prefix={false}>position and transform</Example></h2>
   <div class="container position-transform">
     <div class="position-transform-box">
       center an element with position and transform
@@ -84,31 +85,48 @@
 
 <style>
   .container {
-    aspect-ratio: 1;
     border-radius: 0.25rem;
-    font-weight: bold;
     margin-bottom: 1rem;
     padding: 0.75rem;
     text-align: center;
-    width: 12rem;
   }
 
   .flex {
     align-items: center;
-    background: #88c0d0;
+    aspect-ratio: 1 / 1;
+    background: #24222b;
     display: flex;
     justify-content: center;
+    width: 25%;
   }
 
   .grid {
-    background: #bf616a;
+    aspect-ratio: 4 / 3;
+    background: #24222b;
     display: grid;
     place-items: center;
+    width: 50%;
   }
 
   .position-transform {
-    background: #b48ead;
+    aspect-ratio: 16 / 9;
+    background: #24222b;
     position: relative;
+    width: 75%;
+  }
+
+  @media (max-width: 640px) {
+    .flex {
+      width: 50%;
+    }
+
+    .grid {
+      width: 75%;
+    }
+
+    .position-transform {
+      width: 100%;
+    }
   }
 
   .position-transform-box {

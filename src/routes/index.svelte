@@ -31,18 +31,11 @@
 
 <style>
   ul {
-    font-size: 200%;
+    font-size: 2.1rem;
   }
 
   li {
     margin-bottom: 1rem;
-  }
-
-  li::before {
-    color: #b48ead;
-    content: "#";
-    font-size: 60%;
-    padding-right: 0.25rem;
   }
 
   a {

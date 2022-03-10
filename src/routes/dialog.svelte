@@ -87,7 +87,7 @@
 
 <style>
   .dialog-header {
-    border-bottom: 1px solid #4c566a;
+    border-bottom: 1px solid #35333c;
     display: flex;
     font-size: 1.5rem;
     font-weight: bold;
@@ -113,23 +113,23 @@
   }
 
   .dialog-footer > button {
-    box-shadow: 0.1rem 0.1rem 0 #2e3440;
+    background: #35333c;
+    box-shadow: 0.05rem 0.1rem 0.1rem #13111a;
   }
 
   .dialog-action {
-    color: #ebcb8b;
+    color: var(--primary);
     font-weight: bold;
     margin: 0.5rem 0;
   }
 
   .dialog-action::before {
-    color: #4c566a;
+    color: var(--body-color);
     content: "» ";
     margin-left: 0.25rem;
   }
 
   .cancel {
-    background: #5d677b;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
   }
 </style>

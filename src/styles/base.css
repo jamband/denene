@@ -1,7 +1,7 @@
 html,
 body {
-  background-color: #242933;
-  color: #d8dee9;
+  background-color: #13111a;
+  color: var(--body-color);
   cursor: default;
   font-family: var(--font-sans);
   font-size: 1.025rem;
@@ -9,6 +9,7 @@ body {
 }
 
 h1 {
+  color: #eceff4;
   font-size: 3rem;
   font-weight: 500;
   line-height: 1;
@@ -17,17 +18,11 @@ h1 {
 }
 
 h2 {
+  color: #eceff4;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0.5rem;
-}
-
-h1::before,
-h2::before {
-  color: #b2bcd0;
-  content: "# ";
-  font-size: 70%;
 }
 
 section {
@@ -43,26 +38,19 @@ a {
 }
 
 a:active {
-  color: #b48ead;
+  color: #f472b6;
 }
 
 button {
-  background: #88c0d0;
+  background: #24222b;
   border-radius: 0.25rem;
-  box-shadow: 0.1rem 0.1rem 0 #4c566a;
-  color: #eceff4;
+  box-shadow: 0.05rem 0.1rem 0.1rem #020009;
+  color: #d8d6e8;
   font-weight: bold;
-  padding: 0.3rem 0.75rem;
-}
-
-hr {
-  border-top: 1px solid #4c566a;
-  margin: 3rem auto;
-  width: 20%;
+  padding: 0.5rem 1.1rem;
 }
 
 blockquote {
-  color: #b2bcd0;
   margin-bottom: 2rem;
 }
 
@@ -75,10 +63,9 @@ blockquote p::after {
 }
 
 dialog {
-  background: #3b4252;
+  background: #24222b;
   border: none;
   border-radius: 0.25rem;
-  box-shadow: 0.1rem 0.1rem 0.25rem #1d232f;
   color: #d8dee9;
   width: 85%;
 }
@@ -90,6 +77,6 @@ dialog {
 }
 
 dialog::backdrop {
-  background: #2e3440;
-  opacity: 0.5;
+  background: #13111a;
+  opacity: 0.6;
 }

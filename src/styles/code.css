@@ -1,6 +1,7 @@
 pre {
-  background: #3b4252;
+  background: #24222b;
   border-radius: 0.25rem;
+  color: #d9d6e9;
   display: block;
   font-family: var(--font-mono);
   font-size: 0.9rem;
@@ -11,9 +12,9 @@ pre {
 }
 
 :not(pre) > code {
-  background: #4c566a;
+  background: #35333c;
   border-radius: 0.25em;
-  color: #e5e9f0;
+  color: #eae7fa;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   padding: 0.075rem 0.25rem;

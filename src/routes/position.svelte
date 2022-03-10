@@ -1,13 +1,13 @@
 <script>
   import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
-  import CloudyImage from "../components/CloudyImage.svelte";
-  import ExternalLink from "../components/ExternalLink.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
+  import StarImage from "../components/StarImage.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
   import Page from "../layouts/Page.svelte";
 
   const title = "position";
+  const [account, repository] = APP_NAME.split("/");
 </script>
 
 <svelte:head>
@@ -33,10 +33,11 @@
     <code>position: absolute;</code>.
   </p>
   <div class="example1">
-    <CloudyImage />
+    <StarImage />
     <p class="example1-text">
-      free svg background by
-      <ExternalLink href="https://bgjar.com">bgjar</ExternalLink>
+      <span class="account">{account}/</span><span class="repository"
+        >{repository}</span
+      >
     </p>
   </div>
 </section>
@@ -74,7 +75,7 @@
   }
 
   .example1-text {
-    font-weight: bold;
+    font-family: var(--font-mono);
     left: 50%;
     position: absolute;
     text-align: center;
@@ -82,10 +83,13 @@
     transform: translate(-50%, -50%);
   }
 
-  @media (min-width: 640px) {
-    .example1-text {
-      font-size: 1.5rem;
-    }
+  .example1-text > .account {
+    font-size: 0.85rem;
+  }
+
+  .example1-text > .repository {
+    color: #eceff4;
+    font-weight: bold;
   }
 
   .example2 {
@@ -96,7 +100,7 @@
   }
 
   .example2-main {
-    background: #3b4252;
+    background: #24222b;
     border-radius: 0.25rem;
     font-family: var(--font-mono);
     font-weight: bold;
@@ -106,7 +110,7 @@
   }
 
   .example2-side {
-    background: #3b4252;
+    background: #24222b;
     border-radius: 0.25rem;
     font-family: var(--font-mono);
     font-weight: bold;
