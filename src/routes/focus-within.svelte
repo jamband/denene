@@ -96,18 +96,18 @@
   }
 
   .example1:focus-within {
-    border: 1px solid #93c5fd;
+    border: 1px solid var(--blue-300);
   }
 
   .example1:focus-within > legend {
-    color: #93c5fd;
+    color: var(--blue-300);
   }
 
   .example2:focus-within {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--pink-300);
   }
 
   .example2:focus-within > legend {
-    color: var(--primary);
+    color: var(--pink-300);
   }
 </style>

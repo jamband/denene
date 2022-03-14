@@ -23,7 +23,14 @@
     "Liberation Mono",
     "Courier New",
     monospace;
-  --primary: #d786b2;
-  --body-color: #b7b4c7;
-  --outline: 0 0 0 0.15rem var(--body-color);
+  --gray-100: #eceff4;
+  --gray-400: #b7b4c7;
+  --gray-600: #35333c;
+  --gray-700: #24222b;
+  --gray-800: #13111a;
+  --gray-900: #020009;
+  --pink-300: #d786b2;
+  --pink-400: #f472b6;
+  --blue-300: #93c5fd;
+  --outline: 0 0 0 0.15rem var(--gray-400);
 }

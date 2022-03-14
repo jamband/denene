@@ -88,7 +88,7 @@
   }
 
   .example1-text > .repository {
-    color: #eceff4;
+    color: var(--gray-100);
     font-weight: bold;
   }
 
@@ -100,7 +100,7 @@
   }
 
   .example2-main {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     font-family: var(--font-mono);
     font-weight: bold;
@@ -110,7 +110,7 @@
   }
 
   .example2-side {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     font-family: var(--font-mono);
     font-weight: bold;

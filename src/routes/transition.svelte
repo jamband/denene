@@ -60,10 +60,10 @@
 
 <style>
   label[role="button"] {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
-    box-shadow: 0.05rem 0.1rem 0.1rem #020009;
-    color: #eceff4;
+    box-shadow: 0.05rem 0.1rem 0.1rem var(--gray-900);
+    color: var(--gray-100);
     display: inline-block;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -89,7 +89,7 @@
   }
 
   .example1-content {
-    background: var(--primary);
+    background: var(--pink-300);
     height: 3px;
     opacity: 0.8;
     transition: width 3s cubic-bezier(0.1, 0.05, 0, 1);
@@ -101,7 +101,7 @@
   }
 
   .example2-content {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     color: #c8c5d8;
     opacity: 0;

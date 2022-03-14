@@ -32,7 +32,8 @@
     <form method="dialog">
       <div class="dialog-header">
         <h3 id="example1-title">simple alert</h3>
-        <button type="submit" aria-label="close"><IconX /></button>
+        <button type="submit" class="close" aria-label="close"><IconX /></button
+        >
       </div>
       <div class="dialog-body">
         <p>press the [x] button or the <code>esc</code> key to close it.</p>
@@ -87,7 +88,8 @@
 
 <style>
   .dialog-header {
-    border-bottom: 1px solid #35333c;
+    border-bottom: 1px solid var(--gray-600);
+    color: var(--gray-100);
     display: flex;
     font-size: 1.5rem;
     font-weight: bold;
@@ -113,20 +115,28 @@
   }
 
   .dialog-footer > button {
-    background: #35333c;
-    box-shadow: 0.05rem 0.1rem 0.1rem #13111a;
+    background: var(--gray-600);
+    box-shadow: 0.05rem 0.1rem 0.1rem var(--gray-800);
   }
 
   .dialog-action {
-    color: var(--primary);
+    color: var(--pink-300);
     font-weight: bold;
     margin: 0.5rem 0;
   }
 
   .dialog-action::before {
-    color: var(--body-color);
+    color: var(--gray-400);
     content: "» ";
     margin-left: 0.25rem;
+  }
+
+  .close {
+    color: var(--gray-400);
+  }
+
+  .close:active {
+    color: var(--gray-100);
   }
 
   .cancel {

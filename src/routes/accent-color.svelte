@@ -109,6 +109,6 @@
 
   .example1 input,
   .example1 progress {
-    accent-color: #93c5fd;
+    accent-color: var(--blue-300);
   }
 </style>

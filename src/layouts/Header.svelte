@@ -17,8 +17,8 @@
 
 <style>
   header {
-    background-color: #24222b;
-    box-shadow: 0 0.05rem 0.1rem #020009;
+    background-color: var(--gray-700);
+    box-shadow: 0 0.05rem 0.1rem var(--gray-900);
     font-family: var(--font-mono);
     position: fixed;
     width: 100%;
@@ -34,17 +34,17 @@
 
   a {
     border-radius: 0.25rem;
-    color: #eceff4;
+    color: var(--gray-100);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
   }
 
   a:active {
-    background-color: #35333c;
+    background-color: var(--gray-600);
   }
 
   .account {
-    color: var(--body-color);
+    color: var(--gray-400);
     font-size: 0.85rem;
   }
 

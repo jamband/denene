@@ -62,7 +62,7 @@
   }
 
   .box {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     display: grid;
     font-size: 0.9rem;

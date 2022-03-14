@@ -94,7 +94,7 @@
   .flex {
     align-items: center;
     aspect-ratio: 1 / 1;
-    background: #24222b;
+    background: var(--gray-700);
     display: flex;
     justify-content: center;
     width: 25%;
@@ -102,7 +102,7 @@
 
   .grid {
     aspect-ratio: 4 / 3;
-    background: #24222b;
+    background: var(--gray-700);
     display: grid;
     place-items: center;
     width: 50%;
@@ -110,7 +110,7 @@
 
   .position-transform {
     aspect-ratio: 16 / 9;
-    background: #24222b;
+    background: var(--gray-700);
     position: relative;
     width: 75%;
   }

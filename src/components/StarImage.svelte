@@ -118,7 +118,7 @@
 
 <style>
   svg {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     height: 100%;
     width: 100%;

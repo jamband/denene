@@ -82,14 +82,14 @@
   }
 
   details > p {
-    background: #24222b;
+    background: var(--gray-700);
     border-radius: 0.25rem;
     margin-top: 0.5rem;
     padding: 1rem;
   }
 
   .tool {
-    color: #eceff4;
+    color: var(--gray-100);
     font-weight: bold;
   }
 </style>

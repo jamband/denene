@@ -18,9 +18,9 @@
 <style>
   footer {
     align-items: center;
-    background-color: #24222b;
+    background-color: var(--gray-700);
     bottom: 0;
-    box-shadow: 0 0 0.1rem 0.05rem #020009;
+    box-shadow: 0 0 0.1rem 0.05rem var(--gray-900);
     display: flex;
     justify-content: center;
     padding: 1.25rem 0;
@@ -30,13 +30,13 @@
 
   a {
     border-radius: 0.25rem;
-    color: var(--body-color);
+    color: var(--gray-400);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
   }
 
   a:active {
-    background-color: #35333c;
-    color: #eceff4;
+    background-color: var(--gray-600);
+    color: var(--gray-100);
   }
 </style>

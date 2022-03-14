@@ -1,7 +1,7 @@
 html,
 body {
-  background-color: #13111a;
-  color: var(--body-color);
+  background-color: var(--gray-800);
+  color: var(--gray-400);
   cursor: default;
   font-family: var(--font-sans);
   font-size: 1.025rem;
@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  color: #eceff4;
+  color: var(--gray-100);
   font-size: 3rem;
   font-weight: 500;
   line-height: 1;
@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  color: #eceff4;
+  color: var(--gray-100);
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
@@ -30,7 +30,7 @@ section {
 }
 
 a {
-  color: var(--primary);
+  color: var(--pink-300);
   cursor: default;
   text-decoration: underline;
   text-decoration-thickness: 0.1em;
@@ -38,14 +38,14 @@ a {
 }
 
 a:active {
-  color: #f472b6;
+  color: var(--pink-400);
 }
 
 button {
-  background: #24222b;
+  background: var(--gray-700);
   border-radius: 0.25rem;
-  box-shadow: 0.05rem 0.1rem 0.1rem #020009;
-  color: #d8d6e8;
+  box-shadow: 0.05rem 0.1rem 0.1rem var(--gray-900);
+  color: var(--gray-100);
   font-weight: bold;
   padding: 0.5rem 1.1rem;
 }
@@ -63,10 +63,10 @@ blockquote p::after {
 }
 
 dialog {
-  background: #24222b;
+  background: var(--gray-700);
   border: none;
   border-radius: 0.25rem;
-  color: #d8dee9;
+  color: var(--gray-400);
   width: 85%;
 }
 

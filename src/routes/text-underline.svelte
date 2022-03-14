@@ -39,7 +39,7 @@
   <h2>2</h2>
   <pre><code
       >text-decoration: none;
-border-bottom: 1px solid var(--primary);</code
+border-bottom: 1px solid var(--pink-300);</code
     ></pre>
   <a
     href="https://developer.mozilla.org/en-US/"
@@ -65,7 +65,7 @@ text-underline-offset: 0.25em;</code
 <section>
   <h2>4</h2>
   <pre><code
-      >background-image: linear-gradient(transparent 95%, var(--primary) 0);
+      >background-image: linear-gradient(transparent 95%, var(--pink-300) 0);
 text-decoration: none;</code
     ></pre>
   <a
@@ -109,7 +109,7 @@ text-decoration: none;</code
   }
 
   .example2-link {
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--pink-300);
     text-decoration: none;
   }
 
@@ -120,7 +120,7 @@ text-decoration: none;</code
   }
 
   .example4-link {
-    background-image: linear-gradient(transparent 95%, var(--primary) 0);
+    background-image: linear-gradient(transparent 95%, var(--pink-300) 0);
     text-decoration: none;
   }
 </style>
