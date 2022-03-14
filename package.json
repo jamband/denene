@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.29",
-    "@sveltejs/kit": "^1.0.0-next.295",
+    "@sveltejs/kit": "^1.0.0-next.296",
     "autoprefixer": "^10.4.2",
     "html-minifier-terser": "^6.1.0",
     "postcss": "^8.4.8",
@@ -24,7 +24,7 @@
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
     "svelte": "^3.46.4",
-    "svelte-check": "^2.4.5",
+    "svelte-check": "^2.4.6",
     "svelte-preprocess": "^4.10.4",
     "the-new-css-reset": "^1.5.1"
   },
