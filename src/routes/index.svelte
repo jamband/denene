@@ -25,6 +25,7 @@
   <li><a href="{base}/focus-within/">:focus-within</a></li>
   <li><a href="{base}/accent-color/">accent-color</a></li>
   <li><a href="{base}/text-underline/">text underline</a></li>
+  <li><a href="{base}/img/">&lt;img&gt;</a></li>
   <li><a href="{base}/details/">&lt;details&gt;</a></li>
   <li><a href="{base}/dialog/">&lt;dialog&gt;</a></li>
 </ul>
