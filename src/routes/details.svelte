@@ -74,18 +74,27 @@
 
 <style>
   details {
-    margin-bottom: 0.25rem;
-  }
-
-  summary {
-    padding: 0.25rem 0;
+    border: 1px solid var(--gray-600);
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
   }
 
   details > p {
     background: var(--gray-700);
     border-radius: 0.25rem;
+    color: var(--gray-400);
     margin-top: 0.5rem;
     padding: 1rem;
+  }
+
+  details[open] {
+    color: var(--gray-100);
+    padding-bottom: 0.5rem;
+  }
+
+  summary {
+    padding: 0.25rem 0;
   }
 
   .tool {
