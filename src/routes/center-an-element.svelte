@@ -104,6 +104,7 @@
     aspect-ratio: 4 / 3;
     background: var(--gray-700);
     display: grid;
+    grid-template-rows: 1fr;
     place-items: center;
     width: 50%;
   }
