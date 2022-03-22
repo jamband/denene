@@ -6,6 +6,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1.025rem;
   line-height: 1.5;
+  text-size-adjust: 100%;
 }
 
 h1 {
