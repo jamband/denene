@@ -26,6 +26,7 @@
     padding: 1.25rem 0;
     position: fixed;
     width: 100%;
+    z-index: 100;
   }
 
   a {

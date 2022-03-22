@@ -32,5 +32,5 @@
   --pink-300: #d786b2;
   --pink-400: #f472b6;
   --blue-300: #93c5fd;
-  --outline: 0 0 0 0.15rem var(--gray-400);
+  --outline: 0 0 0 0.125rem var(--gray-400);
 }

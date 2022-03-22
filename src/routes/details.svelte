@@ -1,8 +1,12 @@
 <script>
   import BackToHomeLink from "../components/BackToHomeLink.svelte";
   import BrowserSupport from "../components/BrowserSupport.svelte";
+  import Dropdown from "../components/Dropdown.svelte";
+  import DropdownDivider from "../components/DropdownDivider.svelte";
+  import DropdownLink from "../components/DropdownLink.svelte";
   import MdnDoc from "../components/MdnDoc.svelte";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
+  import IconExternalLink from "../icons/IconExternalLink.svelte";
   import Page from "../layouts/Page.svelte";
 
   const title = "<details>";
@@ -53,6 +57,40 @@
   </details>
 </section>
 <section>
+  <h2>dropdown</h2>
+  <p>
+    it can also create something like dropdown as an alternative to
+    <code>&lt;select&gt;</code>. considering accessibility and semantics, it
+    would be better if there was something like <code>&lt;dropdown&gt;</code>.
+  </p>
+  <Dropdown
+    id="more-links"
+    label="press me"
+    style="margin-right: 0.5rem;"
+    buttonStyle="background: var(--gray-700); border: 1px solid var(--gray-600);"
+  >
+    <DropdownLink href="/">home</DropdownLink>
+    <DropdownLink href="/about">about</DropdownLink>
+    <DropdownLink href="/contact">contact</DropdownLink>
+    <DropdownDivider />
+    <DropdownLink href="https://github.com/jamband/denene" external
+      >github <IconExternalLink style="margin-left: 0.25rem;" /></DropdownLink
+    >
+  </Dropdown>
+  <Dropdown
+    id="more-links-without-label"
+    buttonStyle="background: var(--gray-700); border: 1px solid var(--gray-600);"
+  >
+    <DropdownLink href="/">home</DropdownLink>
+    <DropdownLink href="/about">about</DropdownLink>
+    <DropdownLink href="/contact">contact</DropdownLink>
+    <DropdownDivider />
+    <DropdownLink href="https://github.com/jamband/denene" external
+      >github <IconExternalLink style="margin-left: 0.25rem;" /></DropdownLink
+    >
+  </Dropdown>
+</section>
+<section>
   <BrowserSupport
     items={[
       {
@@ -73,6 +111,10 @@
 <BackToHomeLink />
 
 <style>
+  p {
+    margin-bottom: 1rem;
+  }
+
   details {
     border: 1px solid var(--gray-600);
     border-radius: 0.25rem;
