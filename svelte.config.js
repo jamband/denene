@@ -24,12 +24,6 @@ const config = {
       default: true,
     },
     trailingSlash: "always",
-    vite: {
-      optimizeDeps: {
-        include: ["svelte/internal"],
-        exclude: ["svelte/animate", "svelte/store"],
-      },
-    },
   },
 };
 
