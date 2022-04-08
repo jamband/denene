@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.29",
-    "@sveltejs/kit": "^1.0.0-next.307",
+    "@sveltejs/kit": "^1.0.0-next.310",
     "autoprefixer": "^10.4.4",
     "html-minifier-terser": "^6.1.0",
     "postcss": "^8.4.12",
@@ -23,8 +23,8 @@
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
-    "svelte": "^3.46.6",
-    "svelte-check": "^2.4.6",
+    "svelte": "^3.47.0",
+    "svelte-check": "^2.5.0",
     "svelte-preprocess": "^4.10.5",
     "the-new-css-reset": "^1.5.1"
   },
