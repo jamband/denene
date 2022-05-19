@@ -5,8 +5,8 @@
 
 <footer>
   <nav aria-label="footer navigation">
-    <a href="{base}/about/">about</a>
-    <a href="{base}/contact/">contact</a>
+    <a href="{base}/about">about</a>
+    <a href="{base}/contact">contact</a>
     <a
       href="https://github.com/{APP_NAME}"
       rel="noopener noreferrer"
