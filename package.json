@@ -6,7 +6,6 @@
     "dev": "svelte-kit dev",
     "checks": "svelte-check",
     "build": "svelte-kit build",
-    "postbuild": "mv build/404/index.html build/404.html && rmdir build/404",
     "preview": "svelte-kit preview",
     "stylelint": "stylelint \"src/**/*.{css,svelte}\"",
     "clear": "rm -rf .svelte-kit build",
