@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-3c5363fe.js",
+    "file": "start-d21bcd84.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -29,7 +29,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-854e7617.js",
+    "file": "pages/__layout.svelte-67bf7861.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -64,7 +64,7 @@
       "_paths-396f020f.js"
     ],
     "css": [
-      "assets/pages/404.svelte-eb7f1040.css"
+      "assets/pages/about.svelte-6b7e666f.css"
     ]
   },
   "src/routes/about.svelte": {
@@ -82,7 +82,7 @@
       "_IconExternalLink-9f7f4044.js"
     ],
     "css": [
-      "assets/pages/404.svelte-eb7f1040.css"
+      "assets/pages/about.svelte-6b7e666f.css"
     ]
   },
   "src/routes/accent-color.svelte": {
@@ -139,7 +139,7 @@
       "_IconExternalLink-9f7f4044.js"
     ],
     "css": [
-      "assets/pages/404.svelte-eb7f1040.css"
+      "assets/pages/about.svelte-6b7e666f.css"
     ]
   },
   "src/routes/details.svelte": {
@@ -182,7 +182,7 @@
     ]
   },
   "src/routes/flexbox.svelte": {
-    "file": "pages/flexbox.svelte-a7efc651.js",
+    "file": "pages/flexbox.svelte-c7d9914d.js",
     "src": "src/routes/flexbox.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
