@@ -30,8 +30,8 @@
   <h2>row <Example>navigation header</Example></h2>
   <div class="row-container">
     <a href="{base}/" class="row-box">home</a>
-    <a href="{base}/about" class="row-box">about</a>
-    <a href="{base}/contact" class="row-box">contact</a>
+    <a href="{base}/about/" class="row-box">about</a>
+    <a href="{base}/contact/" class="row-box">contact</a>
   </div>
 </section>
 <section>
@@ -40,8 +40,8 @@
       <h2>column <Example>side navigation</Example></h2>
       <div class="column-container">
         <a href="{base}/" class="column-box">home</a>
-        <a href="{base}/about" class="column-box">about</a>
-        <a href="{base}/contact" class="column-box">contact</a>
+        <a href="{base}/about/" class="column-box">about</a>
+        <a href="{base}/contact/" class="column-box">contact</a>
       </div>
     </div>
     <div class="anonymous-box">

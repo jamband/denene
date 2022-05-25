@@ -23,6 +23,7 @@ const config = {
     prerender: {
       default: true,
     },
+    trailingSlash: "always",
   },
 };
 
