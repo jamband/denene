@@ -12,19 +12,19 @@
     "clean": "rm -rf .svelte-kit build node_modules"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.32",
-    "@sveltejs/kit": "^1.0.0-next.344",
+    "@sveltejs/adapter-static": "^1.0.0-next.34",
+    "@sveltejs/kit": "^1.0.0-next.350",
     "autoprefixer": "^10.4.7",
     "html-minifier-terser": "^6.1.0",
     "postcss": "^8.4.14",
     "postcss-html": "^1.4.1",
-    "postcss-load-config": "^4.0.0",
-    "stylelint": "^14.8.5",
-    "stylelint-config-standard": "^25.0.0",
+    "postcss-load-config": "^4.0.1",
+    "stylelint": "^14.9.0",
+    "stylelint-config-standard": "^26.0.0",
     "stylelint-order": "^5.0.0",
     "svelte": "^3.48.0",
-    "svelte-check": "^2.7.1",
-    "svelte-preprocess": "^4.10.6",
+    "svelte-check": "^2.7.2",
+    "svelte-preprocess": "^4.10.7",
     "the-new-css-reset": "^1.6.1"
   },
   "browserslist": [
