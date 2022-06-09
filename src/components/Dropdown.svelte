@@ -24,9 +24,9 @@
       <IconDotsHorizontal style="vertical-align: -0.125em;" />
     {/if}
   </summary>
-  <p aria-labelledby={id}>
+  <div class="menu" aria-labelledby={id}>
     <slot />
-  </p>
+  </div>
 </details>
 
 <style>
@@ -65,7 +65,7 @@
     z-index: 10;
   }
 
-  p {
+  .menu {
     background: var(--gray-700);
     border-radius: 0.25rem;
     box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-900);
