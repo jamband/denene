@@ -1,5 +1,5 @@
 <script>
-  import IconChrvronDown from "../icons/IconChevronDown.svelte";
+  import IconChevronDown from "../icons/IconChevronDown.svelte";
   import IconDotsHorizontal from "../icons/IconDotsHorizontal.svelte";
 
   export let id;
@@ -18,10 +18,14 @@
     {#if label}
       <div class="label">
         {label}
-        <IconChrvronDown style="vertical-align: -0.15em;" />
+        <IconChevronDown
+          style="height: 1.25em; vertical-align: -0.3em; width: 1.25em;"
+        />
       </div>
     {:else}
-      <IconDotsHorizontal style="vertical-align: -0.125em;" />
+      <IconDotsHorizontal
+        style="height: 1em; vertical-align: -0.125em; width: 1em;"
+      />
     {/if}
   </summary>
   <div class="menu" aria-labelledby={id}>

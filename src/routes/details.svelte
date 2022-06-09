@@ -74,7 +74,9 @@
     <DropdownLink href="/contact">contact</DropdownLink>
     <DropdownDivider />
     <DropdownLink href="https://github.com/jamband/denene" external
-      >github <IconExternalLink style="margin-left: 0.25rem;" /></DropdownLink
+      >github <IconExternalLink
+        style="height: 1em; margin-left: 0.25rem; vertical-align: -0.125em; width: 1em;"
+      /></DropdownLink
     >
   </Dropdown>
   <Dropdown
@@ -86,7 +88,9 @@
     <DropdownLink href="/contact">contact</DropdownLink>
     <DropdownDivider />
     <DropdownLink href="https://github.com/jamband/denene" external
-      >github <IconExternalLink style="margin-left: 0.25rem;" /></DropdownLink
+      >github <IconExternalLink
+        style="height: 1em; margin-left: 0.25rem; vertical-align: -0.125em; width: 1em;"
+      /></DropdownLink
     >
   </Dropdown>
 </section>

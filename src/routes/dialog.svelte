@@ -32,7 +32,10 @@
     <form method="dialog">
       <div class="dialog-header">
         <h3 id="example1-title">simple alert</h3>
-        <button type="submit" class="close" aria-label="close"><IconX /></button
+        <button type="submit" class="close" aria-label="close"
+          ><IconX
+            style="height: 1em; vertical-align: -0.125em; width: 1em;"
+          /></button
         >
       </div>
       <div class="dialog-body">

@@ -32,7 +32,10 @@
     href="https://developer.mozilla.org/en-US/"
     class="example example1-link"
     rel="noopener noreferrer"
-    target="_blank">mdn web docs <IconExternalLink /></a
+    target="_blank"
+    >mdn web docs<IconExternalLink
+      style="height: 1em; vertical-align: -0.175em; width: 1em;"
+    /></a
   >
 </section>
 <section>
@@ -45,7 +48,10 @@ border-bottom: 1px solid var(--pink-300);</code
     href="https://developer.mozilla.org/en-US/"
     class="example example2-link"
     rel="noopener noreferrer"
-    target="_blank">mdn web docs <IconExternalLink /></a
+    target="_blank"
+    >mdn web docs<IconExternalLink
+      style="height: 1em; vertical-align: -0.175em; width: 1em;"
+    /></a
   >
 </section>
 <section>
@@ -59,7 +65,10 @@ text-underline-offset: 0.25em;</code
     href="https://developer.mozilla.org/en-US/"
     class="example example3-link"
     rel="noopener noreferrer"
-    target="_blank">mdn web docs <IconExternalLink /></a
+    target="_blank"
+    >mdn web docs<IconExternalLink
+      style="height: 1em; vertical-align: -0.175em; width: 1em;"
+    /></a
   >
 </section>
 <section>
@@ -72,7 +81,10 @@ text-decoration: none;</code
     href="https://developer.mozilla.org/en-US/"
     class="example example4-link"
     rel="noopener noreferrer"
-    target="_blank">mdn web docs <IconExternalLink /></a
+    target="_blank"
+    >mdn web docs<IconExternalLink
+      style="height: 1em; vertical-align: -0.175em; width: 1em;"
+    /></a
   >
 </section>
 <section>
@@ -99,7 +111,6 @@ text-decoration: none;</code
   .example {
     align-items: center;
     display: inline-flex;
-    padding: 0;
     text-decoration: none;
     text-underline-offset: auto;
   }

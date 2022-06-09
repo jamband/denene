@@ -1,15 +1,14 @@
+<script>
+  export let viewBox;
+</script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 20 20"
+  {viewBox}
   fill="currentColor"
+  role="img"
+  aria-hidden={true}
   {...$$restProps}
 >
   <slot />
 </svg>
-
-<style>
-  svg {
-    height: 1em;
-    width: 1em;
-  }
-</style>

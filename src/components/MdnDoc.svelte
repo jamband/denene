@@ -11,20 +11,23 @@
   </p>
   <footer>
     <a href={prefix + path} rel="noopener noreferrer" target="_blank"
-      >mdn » {text} <IconExternalLink /></a
+      >mdn » {text}<IconExternalLink
+        style="height: 1em; vertical-align: -0.175em; width: 1em;"
+      /></a
     >
   </footer>
 </blockquote>
 
 <style>
+  p {
+    margin-bottom: 0.5rem;
+  }
+
   footer {
     text-align: center;
   }
 
-  footer > a {
-    align-items: center;
-    display: inline-flex;
-    margin-top: 0.25rem;
+  a {
     padding: 0.25rem 1rem;
   }
 </style>
