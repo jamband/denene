@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-5a3b3029.js",
+    "file": "immutable/start-3bd63fe3.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -415,21 +415,25 @@
     "file": "immutable/assets/404-29d2954d.css",
     "src": "src/routes/404.css"
   },
+  "BrowserSupport.css": {
+    "file": "immutable/assets/BrowserSupport-2b28e680.css",
+    "src": "BrowserSupport.css"
+  },
   "BackToHomeLink.css": {
     "file": "immutable/assets/BackToHomeLink-eaab3199.css",
     "src": "BackToHomeLink.css"
+  },
+  "src/routes/about.css": {
+    "file": "immutable/assets/about-29d2954d.css",
+    "src": "src/routes/about.css"
   },
   "src/routes/accent-color.css": {
     "file": "immutable/assets/accent-color-70b5f4ba.css",
     "src": "src/routes/accent-color.css"
   },
-  "src/routes/focus-within.css": {
-    "file": "immutable/assets/focus-within-02c6f65f.css",
-    "src": "src/routes/focus-within.css"
-  },
-  "BrowserSupport.css": {
-    "file": "immutable/assets/BrowserSupport-2b28e680.css",
-    "src": "BrowserSupport.css"
+  "src/routes/index.css": {
+    "file": "immutable/assets/index-3b966cc8.css",
+    "src": "src/routes/index.css"
   },
   "MdnDoc.css": {
     "file": "immutable/assets/MdnDoc-5d938b6e.css",
@@ -439,41 +443,21 @@
     "file": "immutable/assets/center-an-element-68a2ce4b.css",
     "src": "src/routes/center-an-element.css"
   },
-  "Example.css": {
-    "file": "immutable/assets/Example-1c6a43b6.css",
-    "src": "Example.css"
-  },
-  "src/routes/contact.css": {
-    "file": "immutable/assets/contact-29d2954d.css",
-    "src": "src/routes/contact.css"
-  },
-  "src/routes/details.css": {
-    "file": "immutable/assets/details-ee386c8e.css",
-    "src": "src/routes/details.css"
-  },
   "src/routes/dialog.css": {
     "file": "immutable/assets/dialog-d5b55918.css",
     "src": "src/routes/dialog.css"
-  },
-  "src/routes/about.css": {
-    "file": "immutable/assets/about-29d2954d.css",
-    "src": "src/routes/about.css"
-  },
-  "src/routes/flexbox.css": {
-    "file": "immutable/assets/flexbox-e6452fa2.css",
-    "src": "src/routes/flexbox.css"
   },
   "src/routes/grids.css": {
     "file": "immutable/assets/grids-1280eb85.css",
     "src": "src/routes/grids.css"
   },
+  "Example.css": {
+    "file": "immutable/assets/Example-1c6a43b6.css",
+    "src": "Example.css"
+  },
   "src/routes/img.css": {
     "file": "immutable/assets/img-08e17d71.css",
     "src": "src/routes/img.css"
-  },
-  "src/routes/index.css": {
-    "file": "immutable/assets/index-3b966cc8.css",
-    "src": "src/routes/index.css"
   },
   "src/routes/position.css": {
     "file": "immutable/assets/position-744d2d89.css",
@@ -490,5 +474,21 @@
   "src/routes/__layout.css": {
     "file": "immutable/assets/__layout-f3258232.css",
     "src": "src/routes/__layout.css"
+  },
+  "src/routes/focus-within.css": {
+    "file": "immutable/assets/focus-within-02c6f65f.css",
+    "src": "src/routes/focus-within.css"
+  },
+  "src/routes/contact.css": {
+    "file": "immutable/assets/contact-29d2954d.css",
+    "src": "src/routes/contact.css"
+  },
+  "src/routes/details.css": {
+    "file": "immutable/assets/details-ee386c8e.css",
+    "src": "src/routes/details.css"
+  },
+  "src/routes/flexbox.css": {
+    "file": "immutable/assets/flexbox-e6452fa2.css",
+    "src": "src/routes/flexbox.css"
   }
 }
