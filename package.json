@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.38",
-    "@sveltejs/kit": "^1.0.0-next.391",
-    "autoprefixer": "^10.4.7",
+    "@sveltejs/kit": "^1.0.0-next.402",
+    "autoprefixer": "^10.4.8",
     "html-minifier-terser": "^6.1.0",
     "postcss": "^8.4.14",
     "postcss-html": "^1.5.0",
@@ -27,7 +27,7 @@
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
     "the-new-css-reset": "^1.7.2",
-    "vite": "^3.0.2"
+    "vite": "^3.0.4"
   },
   "browserslist": [
     "defaults",
