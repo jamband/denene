@@ -1,11 +1,11 @@
 <script>
-  import BackToHomeLink from "../components/BackToHomeLink.svelte";
-  import BrowserSupport from "../components/BrowserSupport.svelte";
-  import Example from "../components/Example.svelte";
-  import MdnDoc from "../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
-  import IconX from "../icons/IconX.svelte";
-  import Page from "../layouts/Page.svelte";
+  import BackToHomeLink from "../../components/BackToHomeLink.svelte";
+  import BrowserSupport from "../../components/BrowserSupport.svelte";
+  import Example from "../../components/Example.svelte";
+  import MdnDoc from "../../components/MdnDoc.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import IconX from "../../icons/IconX.svelte";
+  import Page from "../../layouts/Page.svelte";
 
   const title = "<dialog>";
 </script>

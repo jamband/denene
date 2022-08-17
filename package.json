@@ -12,21 +12,21 @@
     "clean": "node scripts/clean.mjs"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.38",
-    "@sveltejs/kit": "^1.0.0-next.402",
+    "@sveltejs/adapter-static": "^1.0.0-next.39",
+    "@sveltejs/kit": "^1.0.0-next.415",
     "autoprefixer": "^10.4.8",
-    "html-minifier-terser": "^6.1.0",
-    "postcss": "^8.4.14",
+    "html-minifier-terser": "^7.0.0",
+    "postcss": "^8.4.16",
     "postcss-html": "^1.5.0",
     "postcss-load-config": "^4.0.1",
-    "stylelint": "^14.9.1",
-    "stylelint-config-standard": "^26.0.0",
+    "stylelint": "^14.10.0",
+    "stylelint-config-standard": "^27.0.0",
     "stylelint-order": "^5.0.0",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
-    "the-new-css-reset": "^1.7.2",
-    "vite": "^3.0.4"
+    "the-new-css-reset": "^1.7.3",
+    "vite": "^3.0.8"
   },
   "browserslist": [
     "defaults",

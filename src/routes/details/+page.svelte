@@ -1,13 +1,13 @@
 <script>
-  import BackToHomeLink from "../components/BackToHomeLink.svelte";
-  import BrowserSupport from "../components/BrowserSupport.svelte";
-  import Dropdown from "../components/Dropdown.svelte";
-  import DropdownDivider from "../components/DropdownDivider.svelte";
-  import DropdownLink from "../components/DropdownLink.svelte";
-  import MdnDoc from "../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
-  import IconExternalLink from "../icons/IconExternalLink.svelte";
-  import Page from "../layouts/Page.svelte";
+  import BackToHomeLink from "../../components/BackToHomeLink.svelte";
+  import BrowserSupport from "../../components/BrowserSupport.svelte";
+  import Dropdown from "../../components/Dropdown.svelte";
+  import DropdownDivider from "../../components/DropdownDivider.svelte";
+  import DropdownLink from "../../components/DropdownLink.svelte";
+  import MdnDoc from "../../components/MdnDoc.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import IconExternalLink from "../../icons/IconExternalLink.svelte";
+  import Page from "../../layouts/Page.svelte";
 
   const title = "<details>";
 </script>

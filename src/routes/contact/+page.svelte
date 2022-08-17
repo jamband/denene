@@ -1,8 +1,8 @@
 <script>
-  import BackToHomeLink from "../components/BackToHomeLink.svelte";
-  import ExternalLink from "../components/ExternalLink.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../constants";
-  import Page from "../layouts/Page.svelte";
+  import BackToHomeLink from "../../components/BackToHomeLink.svelte";
+  import ExternalLink from "../../components/ExternalLink.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import Page from "../../layouts/Page.svelte";
 
   const title = "contact";
 </script>
