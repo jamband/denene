@@ -35,6 +35,7 @@
   a {
     border-radius: 0.25rem;
     color: var(--gray-100);
+    font-weight: bold;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
   }
@@ -48,7 +49,11 @@
     font-size: 0.85rem;
   }
 
-  .repository {
-    font-weight: bold;
+  a:active > .account {
+    color: var(--gray-100);
+  }
+
+  a:active > .repository {
+    color: var(--pink-300);
   }
 </style>
