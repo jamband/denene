@@ -1,5 +1,10 @@
-<script>
-  export let items;
+<script lang="ts">
+  export let items: Array<{
+    value: string;
+    chrome: string;
+    firefox: string;
+    safari: string;
+  }>;
 </script>
 
 <h2>browser support</h2>

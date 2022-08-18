@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import BackToHomeLink from "../../components/BackToHomeLink.svelte";
   import BrowserSupport from "../../components/BrowserSupport.svelte";
   import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
   import IconExternalLink from "../../icons/IconExternalLink.svelte";
   import Page from "../../layouts/Page.svelte";
 

@@ -1,20 +1,14 @@
-<script>
+<script lang="ts">
   import IconChevronDown from "../icons/IconChevronDown.svelte";
   import IconDotsHorizontal from "../icons/IconDotsHorizontal.svelte";
 
-  export let id;
+  export let id: string;
   export let label = "";
   export let buttonStyle = "";
 </script>
 
 <details {...$$restProps}>
-  <summary
-    {id}
-    aria-expanded={false}
-    onclick="this.setAttribute('aria-expanded', !this.parentNode.open);"
-    aria-label={label ? null : "more"}
-    style={buttonStyle}
-  >
+  <summary {id} aria-label={label ? null : "more"} style={buttonStyle}>
     {#if label}
       <div class="label">
         {label}

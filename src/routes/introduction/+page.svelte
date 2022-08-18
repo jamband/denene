@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import BackToHomeLink from "../../components/BackToHomeLink.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
   import Page from "../../layouts/Page.svelte";
 
   const title = "introduction";

@@ -1,5 +1,5 @@
-<script>
-  export let viewBox;
+<script lang="ts">
+  export let viewBox: `${number} ${number} ${number} ${number}`;
 </script>
 
 <svg

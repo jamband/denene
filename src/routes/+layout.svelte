@@ -1,5 +1,5 @@
-<script>
-  import { APP_NAME } from "../constants";
+<script lang="ts">
+  import { APP_NAME } from "../constants/app";
   import Footer from "../layouts/Footer.svelte";
   import Header from "../layouts/Header.svelte";
   import "../styles/app.css";

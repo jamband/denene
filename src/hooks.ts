@@ -1,7 +1,8 @@
 import { prerendering } from "$app/env";
+import type { Handle } from "@sveltejs/kit";
 import { minify } from "html-minifier-terser";
 
-export const handle = async ({ event, resolve }) => {
+export const handle: Handle = async ({ event, resolve }) => {
   const response = await resolve(event);
 
   if (prerendering && response.headers.get("content-type") === "text/html") {

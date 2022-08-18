@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { base } from "$app/paths";
 
-  export let href;
+  export let href: string;
   export let external = false;
 </script>
 

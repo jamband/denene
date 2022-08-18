@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
   import BackToHomeLink from "../../components/BackToHomeLink.svelte";
   import BrowserSupport from "../../components/BrowserSupport.svelte";
   import ExternalLink from "../../components/ExternalLink.svelte";
   import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
   import Page from "../../layouts/Page.svelte";
 
   const title = "<img>";
 
-  const image = (id, width, quality) => {
+  const image = (id: string, width: number, quality: number) => {
     return `https://images.unsplash.com/photo-${id}?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=${width}&q=${quality}`;
   };
 </script>

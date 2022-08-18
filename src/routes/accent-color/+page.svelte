@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import BackToHomeLink from "../../components/BackToHomeLink.svelte";
   import BrowserSupport from "../../components/BrowserSupport.svelte";
   import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
   import Page from "../../layouts/Page.svelte";
 
   const title = "accent-color";

@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
   import IconExternalLink from "../icons/IconExternalLink.svelte";
-  export let href;
+
+  export let href: string;
 </script>
 
 <a {href} rel="noopener noreferrer" target="_blank" class={$$props.class || ""}

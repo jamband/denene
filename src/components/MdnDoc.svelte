@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
   import IconExternalLink from "../icons/IconExternalLink.svelte";
-  export let path;
-  export let text;
+
+  export let path: string;
+  export let text: string;
+
   const prefix = "https://developer.mozilla.org/en-US/docs/";
 </script>
 

@@ -1,5 +1,5 @@
-<script>
-  import { APP_NAME } from "../constants";
+<script lang="ts">
+  import { APP_NAME } from "../constants/app";
   export let title = "";
 </script>
 

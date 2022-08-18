@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import BackToHomeLink from "../../components/BackToHomeLink.svelte";
   import BrowserSupport from "../../components/BrowserSupport.svelte";
   import Example from "../../components/Example.svelte";
   import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
   import IconX from "../../icons/IconX.svelte";
   import Page from "../../layouts/Page.svelte";
+  import notTypeCheck from "../../utils/not-type-check";
 
   const title = "<dialog>";
 </script>
@@ -27,7 +28,11 @@
 </section>
 <section>
   <h2>1 <Example>simple alert</Example></h2>
-  <button onclick="getElementById('example1').showModal();">press me</button>
+  <button
+    type="button"
+    {...notTypeCheck({ onclick: "getElementById('example1').showModal();" })}
+    >press me</button
+  >
   <dialog id="example1" aria-labelledby="example1-title">
     <form method="dialog">
       <div class="dialog-header">
@@ -46,11 +51,17 @@
 </section>
 <section>
   <h2>2 <Example>confirm</Example></h2>
-  <button onclick="getElementById('example2').showModal();">press me</button>
+  <button
+    type="button"
+    {...notTypeCheck({ onclick: "getElementById('example2').showModal();" })}
+    >press me</button
+  >
   <dialog
     id="example2"
     aria-labelledby="example2-title"
-    onclose="this.nextElementSibling.textContent = this.returnValue;"
+    {...notTypeCheck({
+      onclose: "this.nextElementSibling.textContent = this.returnValue;",
+    })}
   >
     <form method="dialog">
       <div class="dialog-header">
