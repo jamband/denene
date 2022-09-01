@@ -12,16 +12,9 @@ const config = {
   ],
   kit: {
     adapter: adapter(),
-    browser: {
-      router: dev || false,
-      hydrate: dev || false,
-    },
     inlineStyleThreshold: 1024,
     paths: {
       base: process.env["VITE_GITHUB_ACTIONS"] ? "/denene" : "",
-    },
-    prerender: {
-      default: true,
     },
     trailingSlash: "always",
   },
