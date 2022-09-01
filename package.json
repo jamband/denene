@@ -12,24 +12,24 @@
     "clean": "node scripts/clean.mjs"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.39",
-    "@sveltejs/kit": "^1.0.0-next.428",
+    "@sveltejs/adapter-static": "^1.0.0-next.41",
+    "@sveltejs/kit": "^1.0.0-next.461",
     "@types/html-minifier-terser": "^7.0.0",
     "autoprefixer": "^10.4.8",
     "html-minifier-terser": "^7.0.0",
     "postcss": "^8.4.16",
     "postcss-html": "^1.5.0",
     "postcss-load-config": "^4.0.1",
-    "stylelint": "^14.10.0",
-    "stylelint-config-standard": "^27.0.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-standard": "^28.0.0",
     "stylelint-order": "^5.0.0",
     "svelte": "^3.49.0",
-    "svelte-check": "^2.8.1",
+    "svelte-check": "^2.9.0",
     "svelte-preprocess": "^4.10.7",
     "the-new-css-reset": "^1.7.3",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.9"
+    "typescript": "^4.8.2",
+    "vite": "^3.1.0-beta.1"
   },
   "browserslist": [
     "defaults",
