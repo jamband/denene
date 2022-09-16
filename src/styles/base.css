@@ -38,10 +38,6 @@ a {
   text-underline-offset: 0.25em;
 }
 
-a:active {
-  color: var(--pink-400);
-}
-
 button {
   background: var(--gray-700);
   border-radius: 0.25rem;

@@ -2,8 +2,6 @@
   import { base } from "$app/paths";
   import { APP_DESCRIPTION, APP_NAME, APP_URL } from "~/constants/app";
   import Page from "~/layouts/Page.svelte";
-
-  const title = "home";
 </script>
 
 <svelte:head>
@@ -14,7 +12,6 @@
 </svelte:head>
 
 <Page />
-<h1>{title}</h1>
 <ul>
   <li><a href="{base}/introduction/">introduction</a></li>
   <li><a href="{base}/grids/">grids</a></li>
