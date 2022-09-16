@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import { APP_NAME } from "../constants/app";
+  import { APP_NAME } from "~/constants/app";
 
   const [account, repository] = APP_NAME.split("/");
 </script>

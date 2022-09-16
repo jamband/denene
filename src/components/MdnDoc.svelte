@@ -1,5 +1,5 @@
 <script lang="ts">
-  import IconExternalLink from "../icons/IconExternalLink.svelte";
+  import IconExternalLink from "~/icons/IconExternalLink.svelte";
 
   export let path: string;
   export let text: string;

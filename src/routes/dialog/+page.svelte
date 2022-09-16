@@ -1,12 +1,12 @@
 <script lang="ts">
-  import BackToHomeLink from "../../components/BackToHomeLink.svelte";
-  import BrowserSupport from "../../components/BrowserSupport.svelte";
-  import Example from "../../components/Example.svelte";
-  import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
-  import IconX from "../../icons/IconX.svelte";
-  import Page from "../../layouts/Page.svelte";
-  import notTypeCheck from "../../utils/not-type-check";
+  import BackToHomeLink from "~/components/BackToHomeLink.svelte";
+  import BrowserSupport from "~/components/BrowserSupport.svelte";
+  import Example from "~/components/Example.svelte";
+  import MdnDoc from "~/components/MdnDoc.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "~/constants/app";
+  import IconX from "~/icons/IconX.svelte";
+  import Page from "~/layouts/Page.svelte";
+  import notTypeCheck from "~/utils/not-type-check";
 
   const title = "<dialog>";
 </script>

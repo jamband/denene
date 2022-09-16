@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import { APP_NAME } from "../constants/app";
+  import { APP_NAME } from "~/constants/app";
 </script>
 
 <footer>

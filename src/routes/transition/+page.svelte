@@ -1,9 +1,9 @@
 <script lang="ts">
-  import BackToHomeLink from "../../components/BackToHomeLink.svelte";
-  import Example from "../../components/Example.svelte";
-  import MdnDoc from "../../components/MdnDoc.svelte";
-  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "../../constants/app";
-  import Page from "../../layouts/Page.svelte";
+  import BackToHomeLink from "~/components/BackToHomeLink.svelte";
+  import Example from "~/components/Example.svelte";
+  import MdnDoc from "~/components/MdnDoc.svelte";
+  import { APP_DESCRIPTION, APP_NAME, APP_URL } from "~/constants/app";
+  import Page from "~/layouts/Page.svelte";
 
   const title = "transition";
 </script>

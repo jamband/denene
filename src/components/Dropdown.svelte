@@ -1,6 +1,6 @@
 <script lang="ts">
-  import IconChevronDown from "../icons/IconChevronDown.svelte";
-  import IconDotsHorizontal from "../icons/IconDotsHorizontal.svelte";
+  import IconChevronDown from "~/icons/IconChevronDown.svelte";
+  import IconDotsHorizontal from "~/icons/IconDotsHorizontal.svelte";
 
   export let id: string;
   export let label = "";
