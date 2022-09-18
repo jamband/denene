@@ -35,7 +35,6 @@
   summary {
     border-radius: 0.25rem;
     color: var(--gray-400);
-    cursor: pointer;
     list-style: none;
     padding: 0.5rem 0.9rem;
     white-space: nowrap;

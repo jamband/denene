@@ -130,7 +130,7 @@
     background: var(--gray-700);
     border-radius: 0.25rem;
     color: var(--gray-400);
-    margin-top: 0.5rem;
+    margin-bottom: 0;
     padding: 1rem;
   }
 
