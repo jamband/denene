@@ -10,23 +10,14 @@
   <meta property="og:site_name" content={APP_NAME} />
 </svelte:head>
 
-<div class="container">
-  <Header />
-  <main>
-    <slot />
-  </main>
-  <Footer />
-</div>
+<Header />
+<main>
+  <slot />
+</main>
+<Footer />
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-
   main {
-    flex-grow: 1;
     margin: 0 auto;
     padding: 7rem 1rem;
     width: 100%;
