@@ -1,4 +1,4 @@
-@import "the-new-css-reset/css/reset.css";
+@import url("the-new-css-reset/css/reset.css");
 
 dialog,
 summary,
