@@ -1,0 +1,14 @@
+@import url("the-new-css-reset/css/reset.css");
+
+dialog,
+summary,
+progress,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  all: revert;
+}
+
+:focus {
+  outline: revert;
+}

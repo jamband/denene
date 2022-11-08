@@ -1,0 +1,69 @@
+html,
+body {
+  background-color: var(--gray-800);
+  color: var(--gray-400);
+  cursor: default;
+  font-family: var(--font-sans);
+  font-size: 1.025rem;
+  line-height: 1.5;
+  text-size-adjust: 100%;
+}
+
+h1 {
+  color: var(--gray-100);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h2 {
+  color: var(--gray-100);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  display: inline-block;
+  color: var(--pink-300);
+  cursor: default;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.25em;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+button {
+  background: var(--gray-700);
+  border-radius: 0.25rem;
+  box-shadow: 0.05rem 0.1rem 0.1rem var(--gray-900);
+  color: var(--gray-100);
+  font-weight: bold;
+  padding: 0.5rem 1.1rem;
+}
+
+dialog {
+  background: var(--gray-700);
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--gray-400);
+  width: 85%;
+}
+
+@media (min-width: 640px) {
+  dialog {
+    width: 35rem;
+  }
+}
+
+dialog::backdrop {
+  background: #13111a;
+  opacity: 0.6;
+}

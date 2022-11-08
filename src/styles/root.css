@@ -1,0 +1,16 @@
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont,
+    "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --gray-100: #eceff4;
+  --gray-400: #b7b4c7;
+  --gray-600: #35333c;
+  --gray-700: #24222b;
+  --gray-800: #13111a;
+  --gray-900: #020009;
+  --pink-300: #d786b2;
+  --blue-300: #93c5fd;
+  --outline: 0 0 0 0.125rem var(--gray-400);
+}

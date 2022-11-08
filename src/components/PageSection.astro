@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export type Props = {
+  class?: HTMLAttributes<"section">["class"];
+};
+---
+
+<section class={Astro.props.class}><slot /></section>
+
+<style>
+  section {
+    margin-bottom: 3.5rem;
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+export type Props = {
+  id?: string;
+  title: string;
+  subTitle?: string;
+};
+---
+
+<h2 id={Astro.props.id}>
+  {Astro.props.title}{
+    !!Astro.props.subTitle && <small>{Astro.props.subTitle}</small>
+  }
+</h2>
+
+<style>
+  h2 {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  small {
+    color: var(--gray-400);
+    display: inline;
+    font-size: 50%;
+  }
+</style>

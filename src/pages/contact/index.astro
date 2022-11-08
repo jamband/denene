@@ -1,0 +1,43 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import BackToHomeLink from "~/components/BackToHomeLink.astro";
+import PageHeader from "~/components/PageHeader.astro";
+import PageSection from "~/components/PageSection.astro";
+import { APP_NAME } from "~/constants/app";
+import IconExternalLink from "~/icons/IconExternalLink.astro";
+
+const title = "contact";
+---
+
+<Layout title={title} description="">
+  <PageHeader title={title} />
+  <PageSection class="centering">
+    <p>
+      please to the message via
+      <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer"
+        >twitter<IconExternalLink
+          style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+        />
+      </a>
+      or
+      <a
+        href={`https://github.com/${APP_NAME}/issues`}
+        target="_blank"
+        rel="noreferrer"
+        >github<IconExternalLink
+          style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+        />
+      </a>
+      issues. thank you.
+    </p>
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<style>
+  .centering {
+    display: grid;
+    place-items: center;
+  }
+</style>

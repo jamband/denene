@@ -1,0 +1,24 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import BackToHomeLink from "~/components/BackToHomeLink.astro";
+import PageHeader from "~/components/PageHeader.astro";
+import PageSection from "~/components/PageSection.astro";
+
+const title = "not found";
+---
+
+<Layout title={title} description="">
+  <PageSection>
+    <PageHeader title={title} />
+    <p>this page does not exist.</p>
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<style>
+  p {
+    display: grid;
+    place-items: center;
+  }
+</style>

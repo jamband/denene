@@ -1,0 +1,121 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import BackToHomeLink from "~/components/BackToHomeLink.astro";
+import BrowserSupport from "~/components/BrowserSupport.astro";
+import MdnDoc from "~/components/MdnDoc.astro";
+import PageHeader from "~/components/PageHeader.astro";
+import PageSection from "~/components/PageSection.astro";
+import PageSubHeader from "~/components/PageSubHeader.astro";
+
+const title = "flexbox";
+---
+
+<Layout title={title} description="">
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Learn/CSS/CSS_layout/Flexbox" text={title}
+      >flexbox is a one-dimensional layout method for arranging items in rows or
+      columns. items flex (expand) to fill additional space or shrink to fit
+      into smaller spaces. this article explains all the fundamentals.</MdnDoc
+    >
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="row" subTitle="e.g. navigation header" />
+    <div class="row-container">
+      <a href="/denene/" class="row-box">home</a>
+      <a href="/denene/about/" class="row-box">about</a>
+      <a href="/denene/contact/" class="row-box">contact</a>
+    </div>
+  </PageSection>
+  <PageSection>
+    <div class="anonymous-container">
+      <div class="anonymous-box">
+        <PageSubHeader title="column" subTitle="e.g. side navigation" />
+        <div class="column-container">
+          <a href="/denene/" class="column-box">home</a>
+          <a href="/denene/about/" class="column-box">about</a>
+          <a href="/denene/contact/" class="column-box">contact</a>
+        </div>
+      </div>
+      <div class="anonymous-box">
+        <PageSubHeader title="grids and flexbox" />
+        <MdnDoc
+          path="Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#grid_and_flexbox"
+          text="grids and flexbox"
+          >the basic difference between css grid layout and css flexbox layout
+          is that flexbox was designed for layout in one dimension - either a
+          row or a column. grid was designed for two-dimensional layout - rows,
+          and columns at the same time.</MdnDoc
+        >
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "display: flex",
+          chrome: "29",
+          firefox: "20",
+          safari: "9",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<style>
+  .row-container {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-around;
+  }
+
+  .row-box {
+    border-bottom: 1px solid var(--gray-600);
+    border-top: 1px solid var(--gray-600);
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .anonymous-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .anonymous-box {
+      width: 100%;
+    }
+
+    .anonymous-box:first-child {
+      padding-right: 1rem;
+    }
+
+    .anonymous-box:last-child {
+      padding-left: 1rem;
+    }
+  }
+
+  .column-container {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .column-box {
+    border-bottom: 1px solid var(--gray-600);
+    padding: 0.75em 1rem;
+    text-decoration: none;
+  }
+
+  .row-box:active,
+  .column-box:active {
+    background: var(--gray-700);
+  }
+</style>

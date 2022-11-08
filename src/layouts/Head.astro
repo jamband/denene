@@ -1,0 +1,27 @@
+---
+import "~/styles/app.css";
+
+import { APP_DESCRIPTION, APP_NAME } from "~/constants/app";
+
+export type Props = {
+  title: string;
+  description: string;
+};
+
+const title =
+  Astro.props.title === "" ? APP_NAME : `${Astro.props.title} ･ ${APP_NAME}`;
+
+const description =
+  Astro.props.description === "" ? APP_DESCRIPTION : Astro.props.description;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,viewport-fit=cover" />
+<meta name="description" content={description} />
+<link rel="icon" href="/favicon.ico" />
+<title>{title}</title>
+<meta name="og:type" content="website" />
+<meta name="og:site_name" content={APP_NAME} />
+<meta name="og:url" content={Astro.url} />
+<meta name="og:title" content={title} />
+<meta name="og:description" content={description} />

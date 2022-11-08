@@ -1,0 +1,54 @@
+---
+import Head from "./Head.astro";
+
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+
+export type Props = {
+  title: string;
+  description: string;
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title={Astro.props.title} description={Astro.props.description} />
+  </head>
+  <body>
+    <div class="container">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  main {
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 7rem 1rem;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    main {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    main {
+      max-width: 768px;
+    }
+  }
+</style>

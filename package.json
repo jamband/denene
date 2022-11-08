@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "checks": "tsc && astro check",
+    "format": "prettier --check .",
+    "clear": "node scripts/clear.mjs",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^1.0.0",
+    "@types/html-minifier-terser": "^7.0.0",
+    "astro": "^1.6.4",
+    "autoprefixer": "^10.4.13",
+    "html-minifier-terser": "^7.0.0",
+    "postcss": "^8.4.18",
+    "prettier": "2.7.1",
+    "prettier-plugin-astro": "^0.7.0",
+    "the-new-css-reset": "^1.7.3"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

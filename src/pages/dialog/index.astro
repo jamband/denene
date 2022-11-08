@@ -1,0 +1,157 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import BackToHomeLink from "~/components/BackToHomeLink.astro";
+import BrowserSupport from "~/components/BrowserSupport.astro";
+import MdnDoc from "~/components/MdnDoc.astro";
+import PageHeader from "~/components/PageHeader.astro";
+import PageSection from "~/components/PageSection.astro";
+import PageSubHeader from "~/components/PageSubHeader.astro";
+import IconX from "~/icons/IconX.astro";
+
+const title = "<dialog>";
+---
+
+<Layout title={title} description="">
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/HTML/Element/dialog" text={title}
+      >the <code>&lt;dialog&gt;</code> html element represents a dialog box or other
+      interactive component, such as a dismissible alert, inspector, or subwindow.</MdnDoc
+    >
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="1" subTitle="e.g. simple alert" />
+    <button id="example1-button">press me</button>
+    <dialog id="example1" aria-labelledby="example1-title">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h3 id="example1-title">simple alert</h3>
+          <button type="submit" class="close" aria-label="close"
+            ><IconX
+              style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+            />
+          </button>
+        </div>
+        <div class="dialog-body">
+          <p>press the [x] button or the <code>esc</code> key to close it.</p>
+        </div>
+      </form>
+    </dialog>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="2" subTitle="e.g. confirm" />
+    <button id="example2-button">press me</button>
+    <dialog id="example2" aria-labelledby="example2-title">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h3 id="example2-title">confirm</h3>
+        </div>
+        <div class="dialog-body">
+          <p>you can also close it by pressing the <code>esc</code> key.</p>
+        </div>
+        <footer class="dialog-footer">
+          <button type="submit" value="it was canceled." class="cancel"
+            >cancel
+          </button>
+          <button type="submit" value="it was ok.">ok</button>
+        </footer>
+      </form>
+    </dialog>
+    <p class="dialog-action"></p>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: title,
+          chrome: "37",
+          firefox: "98",
+          safari: "15.4",
+        },
+        {
+          value: "::backdrop",
+          chrome: "37",
+          firefox: "47",
+          safari: "15.4",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<script is:inline>
+  const example1 = document.getElementById("example1");
+  const example2 = document.getElementById("example2");
+
+  document.getElementById("example1-button").addEventListener("click", () => {
+    example1.showModal();
+  });
+
+  document.getElementById("example2-button").addEventListener("click", () => {
+    example2.showModal();
+  });
+
+  example2.addEventListener("close", () => {
+    example2.nextElementSibling.textContent = example2.returnValue;
+  });
+</script>
+
+<style>
+  .dialog-header {
+    border-bottom: 1px solid var(--gray-600);
+    color: var(--gray-100);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
+  }
+
+  .dialog-header > button {
+    background: none;
+    box-shadow: none;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem 0;
+  }
+
+  .dialog-body {
+    margin-top: 1rem;
+  }
+
+  .dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .dialog-footer > button {
+    background: var(--gray-600);
+    box-shadow: 0.05rem 0.1rem 0.1rem var(--gray-800);
+  }
+
+  .dialog-action {
+    color: var(--pink-300);
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  .dialog-action::before {
+    color: var(--gray-400);
+    content: "» ";
+    margin-left: 0.25rem;
+  }
+
+  .close {
+    color: var(--gray-400);
+  }
+
+  .close:active {
+    color: var(--gray-100);
+  }
+
+  .cancel {
+    margin-right: 0.75rem;
+  }
+</style>

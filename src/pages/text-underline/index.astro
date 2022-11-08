@@ -1,0 +1,128 @@
+---
+import Layout from "~/layouts/Layout.astro";
+
+import BackToHomeLink from "~/components/BackToHomeLink.astro";
+import BrowserSupport from "~/components/BrowserSupport.astro";
+import MdnDoc from "~/components/MdnDoc.astro";
+import PageHeader from "~/components/PageHeader.astro";
+import PageSection from "~/components/PageSection.astro";
+import PageSubHeader from "~/components/PageSubHeader.astro";
+import IconExternalLink from "~/icons/IconExternalLink.astro";
+
+const title = "text underline";
+---
+
+<Layout title={title} description="">
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/text-decoration" text="text-decoration"
+      >the <code>text-decoration</code> shorthand css property sets the appearance
+      of decorative lines on text. it is a shorthand for text-decoration-line, text-decoration-color,
+      text-decoration-style, and the newer text-decoration-thickness property.</MdnDoc
+    >
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="1" />
+    <pre><code>text-decoration: underline;</code></pre>
+    <a
+      href="https://developer.mozilla.org/en-US/"
+      class="example example1-link"
+      rel="noopener noreferrer"
+      target="_blank"
+      >mdn web docs<IconExternalLink
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+      />
+    </a>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="2" />
+    <pre><code>text-decoration: none;
+border-bottom: 1px solid var(--pink-300);</code></pre>
+    <a
+      href="https://developer.mozilla.org/en-US/"
+      class="example example2-link"
+      rel="noopener noreferrer"
+      target="_blank"
+      >mdn web docs<IconExternalLink
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+      />
+    </a>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="3" />
+    <pre><code>text-decoration: underline;
+text-decoration-thickness: 0.1em;
+text-underline-offset: 0.25em;</code></pre>
+    <a
+      href="https://developer.mozilla.org/en-US/"
+      class="example example3-link"
+      rel="noopener noreferrer"
+      target="_blank"
+      >mdn web docs<IconExternalLink
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+      />
+    </a>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="4" />
+    <pre><code>background-image: linear-gradient(transparent 95%, var(--pink-300) 0);
+text-decoration: none;</code></pre>
+    <a
+      href="https://developer.mozilla.org/en-US/"
+      class="example example4-link"
+      rel="noopener noreferrer"
+      target="_blank"
+      >mdn web docs<IconExternalLink
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
+      />
+    </a>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "text-underline-offset",
+          chrome: "87",
+          firefox: "70",
+          safari: "12.1",
+        },
+        {
+          value: "text-decoration-thickness",
+          chrome: "89",
+          firefox: "70",
+          safari: "12.1",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<style>
+  .example {
+    align-items: center;
+    display: inline-flex;
+    text-decoration: none;
+    text-underline-offset: auto;
+  }
+
+  .example1-link {
+    text-decoration: underline;
+  }
+
+  .example2-link {
+    border-bottom: 1px solid var(--pink-300);
+    text-decoration: none;
+  }
+
+  .example3-link {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.25em;
+  }
+
+  .example4-link {
+    background-image: linear-gradient(transparent 95%, var(--pink-300) 0);
+    text-decoration: none;
+  }
+</style>

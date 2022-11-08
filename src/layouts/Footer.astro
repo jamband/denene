@@ -1,0 +1,50 @@
+---
+import { APP_REPOSITORY_URL } from "~/constants/app";
+---
+
+<footer>
+  <nav aria-label="footer navigation">
+    <a href="/denene/about/">about</a>
+    <a href="/denene/contact/">contact</a>
+    <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer">github</a>
+  </nav>
+</footer>
+
+<style>
+  footer {
+    align-items: center;
+    background-color: var(--gray-700);
+    bottom: 0;
+    box-shadow: 0 0 0.1rem 0.05rem var(--gray-900);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    nav {
+      gap: 2rem;
+    }
+  }
+
+  a {
+    border-radius: 0.25rem;
+    color: var(--gray-400);
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+  }
+
+  a:active {
+    background-color: var(--gray-600);
+    color: var(--gray-100);
+  }
+</style>

@@ -1,0 +1,36 @@
+fieldset {
+  border: 1px solid var(--gray-600);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  margin-left: 0.1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: var(--gray-900);
+  border: 1px solid var(--gray-600);
+  border-radius: 0.25rem;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+progress,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: var(--pink-300);
+}
+
+::placeholder {
+  color: #57555e;
+}
