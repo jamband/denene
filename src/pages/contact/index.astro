@@ -4,7 +4,7 @@ import Layout from "~/layouts/Layout.astro";
 import BackToHomeLink from "~/components/BackToHomeLink.astro";
 import PageHeader from "~/components/PageHeader.astro";
 import PageSection from "~/components/PageSection.astro";
-import { APP_NAME } from "~/constants/app";
+import { APP_REPOSITORY_URL } from "~/constants/app";
 import IconExternalLink from "~/icons/IconExternalLink.astro";
 
 const title = "contact";
@@ -21,10 +21,7 @@ const title = "contact";
         />
       </a>
       or
-      <a
-        href={`https://github.com/${APP_NAME}/issues`}
-        target="_blank"
-        rel="noreferrer"
+      <a href={`${APP_REPOSITORY_URL}/issues`} target="_blank" rel="noreferrer"
         >github<IconExternalLink
           style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
         />
