@@ -26,6 +26,10 @@ export type Props = {
   </body>
 </html>
 
+<script is:inline>
+  document.addEventListener("touchstart", () => {}, { passive: true });
+</script>
+
 <style>
   .container {
     display: flex;
