@@ -5,7 +5,7 @@
 ## tools
 
 - hosting: github pages
-- building: sveltekit
+- building: astro
 - color palette: tailwind css
 
 ## license

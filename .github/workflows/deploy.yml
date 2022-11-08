@@ -17,18 +17,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
+          cache: npm
 
       - name: install dependencies
-        run: yarn --frozen-lockfile
+        run: npm install
 
       - name: build
-        run: yarn build
-        env:
-          VITE_GITHUB_ACTIONS: true
+        run: npm run build
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build
+          publish_dir: dist
