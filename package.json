@@ -13,6 +13,7 @@
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "@types/html-minifier-terser": "^7.0.0",
+    "@types/node": "^16.18.3",
     "astro": "^1.6.5",
     "autoprefixer": "^10.4.13",
     "html-minifier-terser": "^7.0.0",
