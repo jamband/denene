@@ -1,6 +1,6 @@
 import type { AstroIntegration } from "astro";
 import { minify } from "html-minifier-terser";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFile, writeFile } from "node:fs/promises";
 
 export default function htmlMinify(): AstroIntegration {
   const name = "html-minify";
@@ -9,28 +9,30 @@ export default function htmlMinify(): AstroIntegration {
     name,
     hooks: {
       "astro:build:done": async ({ routes }) => {
-        for (const route of routes) {
-          const path = route.distURL!.pathname;
+        await Promise.all(
+          routes.map(async (route) => {
+            const path = route.distURL!.pathname;
 
-          const data = await minify(readFileSync(path, "utf8"), {
-            collapseBooleanAttributes: true,
-            collapseWhitespace: true,
-            conservativeCollapse: true,
-            decodeEntities: true,
-            ignoreCustomComments: [/^#/],
-            minifyCSS: true,
-            minifyJS: true,
-            removeAttributeQuotes: true,
-            removeComments: true,
-            removeOptionalTags: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            sortAttributes: true,
-            sortClassName: true,
-          });
+            const data = await minify(await readFile(path, "utf8"), {
+              collapseBooleanAttributes: true,
+              collapseWhitespace: true,
+              conservativeCollapse: true,
+              decodeEntities: true,
+              ignoreCustomComments: [/^#/],
+              minifyCSS: true,
+              minifyJS: true,
+              removeAttributeQuotes: true,
+              removeComments: true,
+              removeOptionalTags: true,
+              removeScriptTypeAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              sortAttributes: true,
+              sortClassName: true,
+            });
 
-          writeFileSync(path, data, "utf8");
-        }
+            await writeFile(path, data, "utf8");
+          })
+        );
 
         console.log(`\x1b[32m${name}:\x1b[0m completed.`);
       },
