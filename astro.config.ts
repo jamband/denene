@@ -11,7 +11,7 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          assetFileNames: "assets/app.[hash][extname]",
+          assetFileNames: "assets/[hash][extname]",
         },
       },
     },
