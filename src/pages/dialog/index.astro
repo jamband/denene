@@ -73,6 +73,18 @@ const title = "<dialog>";
           firefox: "47",
           safari: "15.4",
         },
+        {
+          value: "backdrop-filter",
+          chrome: "76",
+          firefox: "103",
+          safari: "9",
+        },
+        {
+          value: "scrollbar-gutter",
+          chrome: "94",
+          firefox: "97",
+          safari: "No",
+        },
       ]}
     />
   </PageSection>
@@ -98,8 +110,20 @@ const title = "<dialog>";
     example1.showModal();
   });
 
+  example1.addEventListener("click", (event) => {
+    if (["A", "DIALOG"].includes((event.target as HTMLElement).nodeName)) {
+      example1.close();
+    }
+  });
+
   example2Button.addEventListener("click", () => {
     example2.showModal();
+  });
+
+  example2.addEventListener("click", (event) => {
+    if (["A", "DIALOG"].includes((event.target as HTMLElement).nodeName)) {
+      example2.close();
+    }
   });
 
   example2.addEventListener("close", () => {
