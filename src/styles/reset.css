@@ -1,6 +1,5 @@
 @import url("the-new-css-reset/css/reset.css");
 
-dialog,
 summary,
 progress,
 input[type="checkbox"],
@@ -11,4 +10,8 @@ input[type="range"] {
 
 :focus {
   outline: revert;
+}
+
+::marker {
+  content: revert;
 }
