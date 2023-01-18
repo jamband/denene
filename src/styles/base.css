@@ -37,10 +37,12 @@ a {
 }
 
 blockquote p::before {
+  color: var(--gray-100);
   content: "\201C";
 }
 
 blockquote p::after {
+  color: var(--gray-100);
   content: "\201D";
 }
 

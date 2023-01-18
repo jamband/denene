@@ -3,5 +3,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "html.autoClosingTags": false,
   "prettier.documentSelectors": ["**/*.astro"]
 }
