@@ -1,3 +1,4 @@
 /dist
+pnpm-lock.yaml
 src/constants/*
 src/layouts/Layout.astro
