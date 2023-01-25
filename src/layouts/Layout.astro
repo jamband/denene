@@ -3,6 +3,7 @@ import Head from "./Head.astro";
 
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
+import styles from "./Layout.module.css";
 
 type Props = {
   title: string;
@@ -16,43 +17,15 @@ type Props = {
     <Head title={Astro.props.title} description={Astro.props.description} />
   </head>
   <body>
-    <div class="container">
+    <div class={styles.container}>
       <Header />
-      <main>
+      <main class={styles.main}>
         <slot />
       </main>
       <Footer />
     </div>
+    <script is:inline>
+      document.addEventListener("touchstart", () => {}, { passive: true });
+    </script>
   </body>
 </html>
-
-<script is:inline>
-  document.addEventListener("touchstart", () => {}, { passive: true });
-</script>
-
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-
-  main {
-    flex-grow: 1;
-    margin: 0 auto;
-    padding: 7rem 1rem;
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    main {
-      max-width: 768px;
-    }
-  }
-</style>
