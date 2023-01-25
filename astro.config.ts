@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import htmlMinify from "./integrations/html-minify";
 
 export default defineConfig({
-  site: "https://jamband.github.io",
+  site: "https://jamband.github.io/",
   base: "/denene",
   trailingSlash: "always",
   integrations: [htmlMinify(), sitemap()],
