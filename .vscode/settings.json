@@ -1,8 +1,6 @@
 {
-  "[astro][css][javascript][json][jsonc][typescript]": {
+  "[css][javascript][json][jsonc][typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
-  "html.autoClosingTags": false,
-  "prettier.documentSelectors": ["**/*.astro"]
+  "editor.formatOnSave": true
 }
