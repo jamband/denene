@@ -5,8 +5,8 @@ import styles from "./Footer.module.css";
 
 <footer class={styles.footer}>
   <nav class={styles.nav} aria-label="footer navigation">
-    <a href="/denene/about/">about</a>
-    <a href="/denene/contact/">contact</a>
+    <a href={`${import.meta.env.BASE_URL}about/`}>about</a>
+    <a href={`${import.meta.env.BASE_URL}contact/`}>contact</a>
     <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer">github</a>
   </nav>
 </footer>

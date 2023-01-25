@@ -4,18 +4,29 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="" description="">
   <ul>
-    <li><a href="/denene/introduction/">introduction</a></li>
-    <li><a href="/denene/grids/">grids</a></li>
-    <li><a href="/denene/flexbox/">flexbox</a></li>
-    <li><a href="/denene/center-an-element/">center an element</a></li>
-    <li><a href="/denene/position/">position</a></li>
-    <li><a href="/denene/transition/">transition</a></li>
-    <li><a href="/denene/focus-within/">:focus-within</a></li>
-    <li><a href="/denene/accent-color/">accent-color</a></li>
-    <li><a href="/denene/text-underline/">text underline</a></li>
-    <li><a href="/denene/img/">&lt;img&gt;</a></li>
-    <li><a href="/denene/details/">&lt;details&gt;</a></li>
-    <li><a href="/denene/dialog/">&lt;dialog&gt;</a></li>
+    <li>
+      <a href={`${import.meta.env.BASE_URL}introduction/`}>introduction</a>
+    </li>
+    <li><a href={`${import.meta.env.BASE_URL}grids/`}>grids</a></li>
+    <li><a href={`${import.meta.env.BASE_URL}flexbox/`}>flexbox</a></li>
+    <li>
+      <a href={`${import.meta.env.BASE_URL}center-an-element/`}
+        >center an element</a>
+    </li>
+    <li><a href={`${import.meta.env.BASE_URL}position/`}>position</a></li>
+    <li><a href={`${import.meta.env.BASE_URL}transition/`}>transition</a></li>
+    <li>
+      <a href={`${import.meta.env.BASE_URL}focus-within/`}>:focus-within</a>
+    </li>
+    <li>
+      <a href={`${import.meta.env.BASE_URL}accent-color/`}>accent-color</a>
+    </li>
+    <li>
+      <a href={`${import.meta.env.BASE_URL}text-underline/`}>text underline</a>
+    </li>
+    <li><a href={`${import.meta.env.BASE_URL}img/`}>&lt;img&gt;</a></li>
+    <li><a href={`${import.meta.env.BASE_URL}details/`}>&lt;details&gt;</a></li>
+    <li><a href={`${import.meta.env.BASE_URL}dialog/`}>&lt;dialog&gt;</a></li>
   </ul>
 </Layout>
 

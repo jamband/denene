@@ -23,9 +23,10 @@ const title = "flexbox";
   <PageSection>
     <PageSubHeader title="row" subTitle="e.g. navigation header" />
     <div class="row-container">
-      <a href="/denene/" class="row-box">home</a>
-      <a href="/denene/about/" class="row-box">about</a>
-      <a href="/denene/contact/" class="row-box">contact</a>
+      <a href={import.meta.env.BASE_URL} class="row-box">home</a>
+      <a href={`${import.meta.env.BASE_URL}about/`} class="row-box">about</a>
+      <a href={`${import.meta.env.BASE_URL}contact/`} class="row-box">contact</a
+      >
     </div>
   </PageSection>
   <PageSection>
@@ -33,9 +34,13 @@ const title = "flexbox";
       <div class="anonymous-box">
         <PageSubHeader title="column" subTitle="e.g. side navigation" />
         <div class="column-container">
-          <a href="/denene/" class="column-box">home</a>
-          <a href="/denene/about/" class="column-box">about</a>
-          <a href="/denene/contact/" class="column-box">contact</a>
+          <a href={import.meta.env.BASE_URL} class="column-box">home</a>
+          <a href={`${import.meta.env.BASE_URL}about/`} class="column-box"
+            >about</a
+          >
+          <a href={`${import.meta.env.BASE_URL}contact/`} class="column-box"
+            >contact</a
+          >
         </div>
       </div>
       <div class="anonymous-box">

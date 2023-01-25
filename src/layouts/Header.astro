@@ -7,7 +7,7 @@ const [account, repository] = APP_NAME.split("/");
 
 <header class={styles.header}>
   <nav class={styles.nav} aria-label="header navigation">
-    <a class={styles.link} href="/denene/"
+    <a class={styles.link} href={import.meta.env.BASE_URL}
       ><span class={styles.account}>{account}/</span><span
         class={styles.repository}
         >{repository}
