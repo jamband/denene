@@ -1,33 +1,22 @@
 ---
+import Link from "@/components/Link.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="" description="">
   <ul>
-    <li>
-      <a href={`${import.meta.env.BASE_URL}introduction/`}>introduction</a>
-    </li>
-    <li><a href={`${import.meta.env.BASE_URL}grids/`}>grids</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}flexbox/`}>flexbox</a></li>
-    <li>
-      <a href={`${import.meta.env.BASE_URL}center-an-element/`}
-        >center an element</a
-      >
-    </li>
-    <li><a href={`${import.meta.env.BASE_URL}position/`}>position</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}transition/`}>transition</a></li>
-    <li>
-      <a href={`${import.meta.env.BASE_URL}focus-within/`}>:focus-within</a>
-    </li>
-    <li>
-      <a href={`${import.meta.env.BASE_URL}accent-color/`}>accent-color</a>
-    </li>
-    <li>
-      <a href={`${import.meta.env.BASE_URL}text-underline/`}>text underline</a>
-    </li>
-    <li><a href={`${import.meta.env.BASE_URL}img/`}>&lt;img&gt;</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}details/`}>&lt;details&gt;</a></li>
-    <li><a href={`${import.meta.env.BASE_URL}dialog/`}>&lt;dialog&gt;</a></li>
+    <li><Link href="/introduction">introduction</Link></li>
+    <li><Link href="/grids">grids</Link></li>
+    <li><Link href="/flexbox">flexbox</Link></li>
+    <li><Link href="/center-an-element">center an element</Link></li>
+    <li><Link href="/position">position</Link></li>
+    <li><Link href="/transition">transition</Link></li>
+    <li><Link href="/focus-within">:focus-within</Link></li>
+    <li><Link href="/accent-color">accent-color</Link></li>
+    <li><Link href="/text-underline">text underline</Link></li>
+    <li><Link href="/img">&lt;img&gt;</Link></li>
+    <li><Link href="/details">&lt;details&gt;</Link></li>
+    <li><Link href="/dialog">&lt;dialog&gt;</Link></li>
   </ul>
 </Layout>
 

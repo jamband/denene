@@ -1,12 +1,13 @@
 ---
+import Link from "@/components/Link.astro";
 import { APP_REPOSITORY_URL } from "@/constants/app";
 import styles from "./Footer.module.css";
 ---
 
 <footer class={styles.footer}>
   <nav class={styles.nav} aria-label="footer navigation">
-    <a href={`${import.meta.env.BASE_URL}about/`}>about</a>
-    <a href={`${import.meta.env.BASE_URL}contact/`}>contact</a>
+    <Link href="/about">about</Link>
+    <Link href="/contact">contact</Link>
     <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer">github</a>
   </nav>
 </footer>

@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+export type Props = {
+  href: HTMLAttributes<"a">["href"];
+  class?: string;
+};
+
+const { props } = Astro;
+
+const getHref = () => {
+  const href = import.meta.env.BASE_URL.slice(0, -1);
+  return props.href === "/" ? href + "/" : href + props.href + "/";
+};
+---
+
+<a href={getHref()} class={props.class}><slot /></a>
