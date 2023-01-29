@@ -2,9 +2,11 @@
 type Props = {
   title: string;
 };
+
+const { props } = Astro;
 ---
 
-<h1>{Astro.props.title}</h1>
+<h1>{props.title}</h1>
 
 <style>
   h1 {

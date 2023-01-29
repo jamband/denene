@@ -5,6 +5,8 @@ export type Props = {
   viewBox: HTMLAttributes<"svg">["viewBox"];
   style: HTMLAttributes<"svg">["style"];
 };
+
+const { props } = Astro;
 ---
 
 <svg
@@ -12,7 +14,7 @@ export type Props = {
   fill="currentColor"
   role="img"
   aria-hidden={true}
-  viewBox={Astro.props.viewBox}
-  style={Astro.props.style}
+  viewBox={props.viewBox}
+  style={props.style}
   ><slot />
 </svg>

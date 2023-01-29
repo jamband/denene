@@ -4,9 +4,11 @@ import type { HTMLAttributes } from "astro/types";
 type Props = {
   href: HTMLAttributes<"a">["href"];
 };
+
+const { props } = Astro;
 ---
 
-<a href={Astro.props.href}>
+<a href={props.href}>
   <slot />
 </a>
 

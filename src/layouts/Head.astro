@@ -8,11 +8,12 @@ type Props = {
   description: string;
 };
 
-const title =
-  Astro.props.title === "" ? APP_NAME : `${Astro.props.title} ･ ${APP_NAME}`;
+const { props, url } = Astro;
+
+const title = props.title === "" ? APP_NAME : `${props.title} ･ ${APP_NAME}`;
 
 const description =
-  Astro.props.description === "" ? APP_DESCRIPTION : Astro.props.description;
+  props.description === "" ? APP_DESCRIPTION : props.description;
 ---
 
 <meta charset="utf-8" />
@@ -22,6 +23,6 @@ const description =
 <title>{title}</title>
 <meta name="og:type" content="website" />
 <meta name="og:site_name" content={APP_NAME} />
-<meta name="og:url" content={Astro.url} />
+<meta name="og:url" content={url} />
 <meta name="og:title" content={title} />
 <meta name="og:description" content={description} />

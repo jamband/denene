@@ -8,19 +8,21 @@ type Props = {
   label?: string;
   style: HTMLAttributes<"details">["style"];
 };
+
+const { props } = Astro;
 ---
 
 <details>
   <summary
-    id={Astro.props.id}
+    id={props.id}
     aria-expanded={false}
-    aria-label={Astro.props.label ? null : "more"}
-    style={Astro.props.style}
+    aria-label={props.label ? null : "more"}
+    style={props.style}
   >
     {
-      Astro.props.label ? (
+      props.label ? (
         <div class="label">
-          {Astro.props.label}
+          {props.label}
           <IconChevronDown
             style={{
               height: "1.25em",
@@ -36,7 +38,7 @@ type Props = {
       )
     }
   </summary>
-  <div class="menu" aria-labelledby={Astro.props.id}>
+  <div class="menu" aria-labelledby={props.id}>
     <slot />
   </div>
 </details>

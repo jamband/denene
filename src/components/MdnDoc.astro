@@ -6,14 +6,15 @@ type Props = {
   text: string;
 };
 
+const { props } = Astro;
 const prefix = "https://developer.mozilla.org/en-US/docs/";
 ---
 
-<blockquote cite={prefix + Astro.props.path}>
+<blockquote cite={prefix + props.path}>
   <p><slot /></p>
   <footer>
-    <a href={prefix + Astro.props.path} target="_blank" rel="noreferrer"
-      >mdn » {Astro.props.text}<IconExternalLink
+    <a href={prefix + props.path} target="_blank" rel="noreferrer"
+      >mdn » {props.text}<IconExternalLink
         style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
       />
     </a>

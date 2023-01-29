@@ -4,9 +4,11 @@ import type { HTMLAttributes } from "astro/types";
 type Props = {
   class?: HTMLAttributes<"section">["class"];
 };
+
+const { props } = Astro;
 ---
 
-<section class={Astro.props.class}><slot /></section>
+<section class={props.class}><slot /></section>
 
 <style>
   section {
