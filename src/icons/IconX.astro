@@ -1,8 +1,8 @@
 ---
-import type { Props as BaseProps } from "./Icon.astro";
+import type { HTMLAttributes } from "astro/types";
 import Icon from "./Icon.astro";
 
-type Props = BaseProps["style"];
+type Props = HTMLAttributes<"svg">["style"];
 
 const { props } = Astro;
 ---
