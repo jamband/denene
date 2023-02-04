@@ -10,7 +10,7 @@
     "clear": "node scripts/clear.js",
     "clean": "node scripts/clean.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "@astrojs/sitemap": "^1.0.1",
     "@types/html-minifier-terser": "^7.0.0",
     "@types/node": "^16.18.11",
