@@ -2,23 +2,25 @@
 import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
 
 const title = "not found";
 ---
 
 <Layout title={title}>
-  <PageSection>
-    <PageHeader title={title} />
+  <div class="container">
+    <h1>{title}</h1>
     <p>this page does not exist.</p>
-  </PageSection>
-  <BackToHomeLink />
+    <BackToHomeLink />
+  </div>
 </Layout>
 
 <style>
-  p {
-    display: grid;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
     place-items: center;
+    row-gap: 1rem;
   }
 </style>

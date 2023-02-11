@@ -1,13 +1,51 @@
 ---
 import Link from "@/components/Link.astro";
 import { APP_REPOSITORY_URL } from "@/constants/app";
-import styles from "./Footer.module.css";
 ---
 
-<footer class={styles.footer}>
-  <nav class={styles.nav} aria-label="footer navigation">
+<footer>
+  <nav aria-label="footer navigation">
     <Link href="/about">about</Link>
     <Link href="/contact">contact</Link>
     <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer">github</a>
   </nav>
 </footer>
+
+<style>
+  footer {
+    align-items: center;
+    background-color: rgb(var(--gray-700));
+    bottom: 0;
+    box-shadow: 0 0 0.1rem 0.05rem rgb(var(--gray-900));
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    nav {
+      gap: 2rem;
+    }
+  }
+
+  nav a {
+    border-radius: 0.25rem;
+    color: rgb(var(--gray-400));
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+  }
+
+  nav a:active {
+    background-color: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
+</style>
