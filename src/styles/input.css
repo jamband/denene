@@ -32,5 +32,5 @@ input[type="range"] {
 }
 
 ::placeholder {
-  color: #57555e;
+  color: rgb(var(--gray-400) / 40%);
 }
