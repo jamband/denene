@@ -1,7 +1,9 @@
 :root {
+  /* stylelint-disable */
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Arial, sans-serif;
-  --font-mono: ui-monospace, sfmono-regular, menlo, monospace;
+  --font-mono: ui-monospace, SFMono-Regularr, Menlo, monospace;
+  /* stylelint-enable */
   --gray-100: #eceff4;
   --gray-400: #b7b4c7;
   --gray-600: #35333c;

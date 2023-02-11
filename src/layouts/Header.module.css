@@ -31,6 +31,6 @@
 }
 
 .repository {
-  color: var(---pink-300);
+  color: var(--pink-300);
   font-weight: bold;
 }

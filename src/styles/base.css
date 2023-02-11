@@ -28,9 +28,9 @@ h2 {
 }
 
 a {
-  display: inline-block;
   color: var(--pink-300);
   cursor: default;
+  display: inline-block;
   text-decoration: underline;
   text-decoration-thickness: 0.1em;
   text-underline-offset: 0.25em;
