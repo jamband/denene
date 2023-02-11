@@ -1,8 +1,8 @@
 .footer {
   align-items: center;
-  background-color: var(--gray-700);
+  background-color: rgb(var(--gray-700));
   bottom: 0;
-  box-shadow: 0 0 0.1rem 0.05rem var(--gray-900);
+  box-shadow: 0 0 0.1rem 0.05rem rgb(var(--gray-900));
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
@@ -25,12 +25,12 @@
 
 .nav a {
   border-radius: 0.25rem;
-  color: var(--gray-400);
+  color: rgb(var(--gray-400));
   padding: 0.5rem 1.5rem;
   text-decoration: none;
 }
 
 .nav a:active {
-  background-color: var(--gray-600);
-  color: var(--gray-100);
+  background-color: rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
 }

@@ -1,5 +1,5 @@
 fieldset {
-  border: 1px solid var(--gray-600);
+  border: 1px solid rgb(var(--gray-600));
   border-radius: 0.25rem;
   padding: 1rem;
 }
@@ -17,8 +17,8 @@ label {
 
 input[type="text"],
 input[type="password"] {
-  background: var(--gray-900);
-  border: 1px solid var(--gray-600);
+  background: rgb(var(--gray-900));
+  border: 1px solid rgb(var(--gray-600));
   border-radius: 0.25rem;
   display: block;
   padding: 0.5rem 1rem;
@@ -28,7 +28,7 @@ progress,
 input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
-  accent-color: var(--pink-300);
+  accent-color: rgb(var(--pink-300));
 }
 
 ::placeholder {

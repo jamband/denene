@@ -1,5 +1,5 @@
 pre {
-  background: var(--gray-700);
+  background: rgb(var(--gray-700));
   border-radius: 0.25rem;
   color: #d9d6e9;
   display: block;
@@ -12,7 +12,7 @@ pre {
 }
 
 :not(pre) > code {
-  background: var(--gray-600);
+  background: rgb(var(--gray-600));
   border-radius: 0.25em;
   color: #eae7fa;
   font-family: var(--font-mono);

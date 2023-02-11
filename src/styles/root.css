@@ -4,13 +4,13 @@
     Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regularr, Menlo, monospace;
   /* stylelint-enable */
-  --gray-100: #eceff4;
-  --gray-400: #b7b4c7;
-  --gray-600: #35333c;
-  --gray-700: #24222b;
-  --gray-800: #13111a;
-  --gray-900: #020009;
-  --pink-300: #d786b2;
-  --blue-300: #93c5fd;
-  --outline: 0 0 0 0.125rem var(--gray-400);
+  --gray-100: 236 239 244;
+  --gray-400: 183 180 199;
+  --gray-600: 53 51 60;
+  --gray-700: 36 34 43;
+  --gray-800: 19 17 26;
+  --gray-900: 2 0 9;
+  --pink-300: 215 134 178;
+  --blue-300: 147 197 253;
+  --outline: 0 0 0 0.125rem rgb(var(--gray-400));
 }
