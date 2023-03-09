@@ -12,10 +12,10 @@
     "clean": "node scripts/clean.js"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^1.1.0",
+    "@astrojs/sitemap": "^1.2.0",
     "@types/html-minifier-terser": "^7.0.0",
     "@types/node": "^16.18.14",
-    "astro": "^2.0.17",
+    "astro": "^2.1.2",
     "autoprefixer": "^10.4.13",
     "html-minifier-terser": "^7.1.0",
     "postcss": "^8.4.21",
@@ -24,7 +24,7 @@
     "prettier-plugin-astro": "^0.8.0",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
-    "stylelint-order": "^6.0.2",
+    "stylelint-order": "^6.0.3",
     "the-new-css-reset": "^1.8.4",
     "typescript": "^4.9.5"
   },
