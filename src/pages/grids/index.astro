@@ -67,7 +67,7 @@ const title = "grids";
     place-items: center;
   }
 
-  @media (max-width: 640px) {
+  @media (width <= 640px) {
     .container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -90,7 +90,7 @@ const title = "grids";
     }
   }
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     .container {
       grid-template-columns: repeat(3, 1fr);
     }

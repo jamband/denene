@@ -60,7 +60,7 @@ dialog {
   width: 85%;
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
   dialog {
     width: 35rem;
   }

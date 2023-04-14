@@ -198,7 +198,7 @@ const image = (id: string, width: number, quality: number) => {
     grid-template-columns: 1fr;
   }
 
-  @media (min-width: 640px) {
+  @media (width >= 640px) {
     .lazy-loading {
       grid-template-columns: repeat(2, 1fr);
     }
