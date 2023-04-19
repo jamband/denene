@@ -1,16 +1,17 @@
 html {
+  line-height: 1.5;
   scrollbar-gutter: stable;
+  text-size-adjust: 100%;
 }
 
-html,
 body {
   background-color: rgb(var(--gray-800));
   color: rgb(var(--gray-400));
   cursor: default;
-  font-family: var(--font-sans);
-  font-size: 1.025rem;
-  line-height: 1.5;
-  text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: inherit;
 }
 
 h1 {

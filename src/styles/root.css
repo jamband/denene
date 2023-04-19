@@ -1,9 +1,6 @@
 :root {
-  /* stylelint-disable */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Arial, sans-serif;
+  /* stylelint-disable-next-line value-keyword-case */
   --font-mono: ui-monospace, SFMono-Regularr, Menlo, monospace;
-  /* stylelint-enable */
   --gray-100: 236 239 244;
   --gray-400: 183 180 199;
   --gray-600: 53 51 60;
