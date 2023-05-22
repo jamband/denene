@@ -6,6 +6,7 @@ export default defineConfig({
   site: "https://jamband.github.io/",
   base: "/denene",
   trailingSlash: "always",
+  scopedStyleStrategy: "class",
   integrations: [htmlMinify(), sitemap()],
   vite: {
     build: {
