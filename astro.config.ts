@@ -17,7 +17,7 @@ export default defineConfig({
       },
     },
   },
-  experimental: {
+  build: {
     inlineStylesheets: "auto",
   },
 });
