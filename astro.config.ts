@@ -3,10 +3,8 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://jamband.github.io/",
-  base: "/denene",
+  base: "denene/",
   trailingSlash: "always",
-  scopedStyleStrategy: "class",
-  compressHTML: true,
   integrations: [sitemap()],
   vite: {
     build: {
@@ -16,8 +14,5 @@ export default defineConfig({
         },
       },
     },
-  },
-  build: {
-    inlineStylesheets: "auto",
   },
 });
