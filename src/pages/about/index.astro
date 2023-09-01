@@ -17,11 +17,9 @@ const title = "about";
     <p>
       this website is an open source project. see
       <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer"
-        >github {APP_NAME}<IconExternalLink
-          style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-        />
+        >github {APP_NAME}<IconExternalLink class="external-link-icon" />
       </a>
-      for details.
+       for details.
     </p>
   </PageSection>
   <BackToHomeLink />
@@ -30,5 +28,12 @@ const title = "about";
 <style>
   .centering {
     text-align: center;
+  }
+
+  .external-link-icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.175em;
+    width: 1rem;
   }
 </style>

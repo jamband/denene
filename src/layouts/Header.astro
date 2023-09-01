@@ -1,17 +1,16 @@
 ---
-import Link from "@/components/Link.astro";
 import { APP_NAME } from "@/constants/app";
 
-const [account, repository] = APP_NAME.split("/");
+const [_account, _repository] = APP_NAME.split("/");
 ---
 
 <header>
   <nav aria-label="header navigation">
-    <Link href="/">
-      <span class="account">{account}/</span><span class="repository"
-        >{repository}</span
+    <a href="/denene/">
+      <span class="account">{_account}/</span><span class="repository"
+        >{_repository}</span
       >
-    </Link>
+    </a>
   </nav>
 </header>
 

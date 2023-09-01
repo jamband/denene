@@ -1,15 +1,12 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import Link from "./Link.astro";
-
 type Props = {
-  href: HTMLAttributes<"a">["href"];
+  href: string;
 };
 
-const { props } = Astro;
+const { href } = Astro.props;
 ---
 
-<Link href={props.href}><slot /></Link>
+<a href={href}><slot /></a>
 
 <style>
   a {

@@ -20,8 +20,8 @@ const title = "<details>";
   <PageSection>
     <MdnDoc path="Web/HTML/Element/details" text={title}>
       the <code>{title}</code> html element creates a disclosure widget in which
-      information is visible only when the widget is toggled into an "open" state.
-      a summary or label must be provided using the
+      information is visible only when the widget is toggled into an "open"
+      state. a summary or label must be provided using the
       <code>&lt;summary&gt;</code> element.
     </MdnDoc>
   </PageSection>
@@ -30,24 +30,24 @@ const title = "<details>";
     <details>
       <summary>hosting</summary>
       <p>
-        <span class="tool">github pages</span> » you can use github pages to host
-        a website about yourself, your organization, or your project directly from
-        a repository on github.com.
+        <span class="tool">github pages</span> » you can use github pages to
+        host a website about yourself, your organization, or your project
+        directly from a repository on github.com.
       </p>
     </details>
     <details>
       <summary>building</summary>
       <p>
-        <span class="tool">astro</span> » build faster websites with astro's next-gen
-        island architecture.
+        <span class="tool">astro</span> » build faster websites with astro's
+        next-gen island architecture.
       </p>
     </details>
     <details>
       <summary>color palette</summary>
       <p>
-        <span class="tool">tailwind css</span> » tailwind includes an expertly-crafted
-        default color palette out-of-the-box that is a great starting point if you
-        don't have your own specific branding in mind.
+        <span class="tool">tailwind css</span> » tailwind includes an
+        expertly-crafted default color palette out-of-the-box that is a great
+        starting point if you don't have your own specific branding in mind.
       </p>
     </details>
   </PageSection>
@@ -59,32 +59,19 @@ const title = "<details>";
       would be better if there was something like <code>&lt;dropdown&gt;</code>.
     </p>
     <div class="dropdowns">
-      <Dropdown
-        id="more-links"
-        label="press me"
-        style={{
-          background: "rgb(var(--gray-700))",
-          border: "1px solid rgb(var(--gray-600))",
-        }}
-      >
-        <DropdownLink href="/">home</DropdownLink>
-        <DropdownLink href="/about">about</DropdownLink>
-        <DropdownLink href="/contact">contact</DropdownLink>
+      <Dropdown id="more-links" label="press me" class="dropdown">
+        <DropdownLink href="/denene/">home</DropdownLink>
+        <DropdownLink href="/denene/about/">about</DropdownLink>
+        <DropdownLink href="/denene/contact/">contact</DropdownLink>
         <DropdownDivider />
         <DropdownExternalLink href="https://github.com/jamband/denene">
           github
         </DropdownExternalLink>
       </Dropdown>
-      <Dropdown
-        id="more-links-without-label"
-        style={{
-          background: "rgb(var(--gray-700))",
-          border: "1px solid rgb(var(--gray-600))",
-        }}
-      >
-        <DropdownLink href="/">home</DropdownLink>
-        <DropdownLink href="/about">about</DropdownLink>
-        <DropdownLink href="/contact">contact</DropdownLink>
+      <Dropdown id="more-links-without-label" class="dropdown">
+        <DropdownLink href="/denene/">home</DropdownLink>
+        <DropdownLink href="/denene/about/">about</DropdownLink>
+        <DropdownLink href="/denene/contact/">contact</DropdownLink>
         <DropdownDivider />
         <DropdownExternalLink href="https://github.com/jamband/denene">
           github
@@ -150,5 +137,10 @@ const title = "<details>";
   .dropdowns {
     display: flex;
     gap: 1rem;
+  }
+
+  .dropdown {
+    background: rgb(var(--gray-700));
+    border: 1px solid rgb(var(--gray-600));
   }
 </style>

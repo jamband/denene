@@ -1,12 +1,10 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
 type Props = {
-  viewBox: HTMLAttributes<"svg">["viewBox"];
-  style: HTMLAttributes<"svg">["style"];
+  viewBox: string;
+  class: string;
 };
 
-const { props } = Astro;
+const { viewBox, class: className, ...attributes } = Astro.props;
 ---
 
 <svg
@@ -14,7 +12,8 @@ const { props } = Astro;
   fill="currentColor"
   role="img"
   aria-hidden={true}
-  viewBox={props.viewBox}
-  style={props.style}
+  viewBox={viewBox}
+  class={className}
+  {...attributes}
   ><slot />
 </svg>

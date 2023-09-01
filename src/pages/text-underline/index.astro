@@ -16,9 +16,10 @@ const title = "text underline";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/text-decoration" text="text-decoration">
-      the <code>text-decoration</code> shorthand css property sets the appearance
-      of decorative lines on text. it is a shorthand for text-decoration-line, text-decoration-color,
-      text-decoration-style, and the newer text-decoration-thickness property.
+      the <code>text-decoration</code> shorthand css property sets the
+      appearance of decorative lines on text. it is a shorthand for
+      text-decoration-line, text-decoration-color, text-decoration-style, and
+      the newer text-decoration-thickness property.
     </MdnDoc>
   </PageSection>
   <PageSection>
@@ -29,9 +30,7 @@ const title = "text underline";
       class="example example1-link"
       target="_blank"
       rel="noreferrer"
-      >mdn web docs<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+      >mdn web docs<IconExternalLink class="external-link-icon" />
     </a>
   </PageSection>
   <PageSection>
@@ -43,9 +42,7 @@ border-bottom: 1px solid currentcolor;</code></pre>
       class="example example2-link"
       target="_blank"
       rel="noreferrer"
-      >mdn web docs<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+      >mdn web docs<IconExternalLink class="external-link-icon" />
     </a>
   </PageSection>
   <PageSection>
@@ -58,9 +55,7 @@ text-underline-offset: 0.25em;</code></pre>
       class="example example3-link"
       target="_blank"
       rel="noreferrer"
-      >mdn web docs<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+      >mdn web docs<IconExternalLink class="external-link-icon" />
     </a>
   </PageSection>
   <PageSection>
@@ -72,9 +67,7 @@ background-image: linear-gradient(transparent 95%, currentcolor 0);</code></pre>
       class="example example4-link"
       target="_blank"
       rel="noreferrer"
-      >mdn web docs<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+      >mdn web docs<IconExternalLink class="external-link-icon" />
     </a>
   </PageSection>
   <PageSection>
@@ -86,9 +79,7 @@ box-shadow: 0 1px 0 0 currentcolor;</code></pre>
       class="example example5-link"
       target="_blank"
       rel="noreferrer"
-      >mdn web docs<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+      >mdn web docs<IconExternalLink class="external-link-icon" />
     </a>
   </PageSection>
   <PageSection>
@@ -143,5 +134,12 @@ box-shadow: 0 1px 0 0 currentcolor;</code></pre>
   .example5-link {
     box-shadow: 0 1px 0 0 currentcolor;
     text-decoration: none;
+  }
+
+  .external-link-icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.175em;
+    width: 1rem;
   }
 </style>

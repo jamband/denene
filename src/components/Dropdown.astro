@@ -1,44 +1,36 @@
 ---
 import IconChevronDown from "@/icons/IconChevronDown.astro";
 import IconDotsHorizontal from "@/icons/IconDotsHorizontal.astro";
-import type { HTMLAttributes } from "astro/types";
 
 type Props = {
   id: string;
   label?: string;
-  style: HTMLAttributes<"details">["style"];
+  class?: string;
 };
 
-const { props } = Astro;
+const { id, label, class: className, ...attributes } = Astro.props;
 ---
 
 <details>
   <summary
-    id={props.id}
+    id={id}
     aria-expanded={false}
-    aria-label={props.label ? null : "more"}
-    style={props.style}
+    aria-label={label ? null : "more"}
+    class={className}
+    {...attributes}
   >
     {
-      props.label ? (
+      label ? (
         <div class="label">
-          {props.label}
-          <IconChevronDown
-            style={{
-              height: "1.25em",
-              width: "1.25em",
-              verticalAlign: "-0.3em",
-            }}
-          />
+          {label}
+          <IconChevronDown class="chevron-down-icon" />
         </div>
       ) : (
-        <IconDotsHorizontal
-          style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-        />
+        <IconDotsHorizontal class="dots-horizontal-icon" />
       )
     }
   </summary>
-  <div class="menu" aria-labelledby={props.id}>
+  <div class="menu" aria-labelledby={id}>
     <slot />
   </div>
 </details>
@@ -86,5 +78,17 @@ const { props } = Astro;
     padding: 0.25rem 0;
     position: absolute;
     z-index: 20;
+  }
+
+  .chevron-down-icon {
+    height: 1.25rem;
+    vertical-align: -0.3em;
+    width: 1.25rem;
+  }
+
+  .dots-horizontal-icon {
+    height: 1rem;
+    vertical-align: -0.125em;
+    width: 1rem;
   }
 </style>

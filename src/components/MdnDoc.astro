@@ -6,17 +6,15 @@ type Props = {
   text: string;
 };
 
-const { props } = Astro;
-const prefix = "https://developer.mozilla.org/en-US/docs/";
+const { path, text } = Astro.props;
+const _prefix = "https://developer.mozilla.org/en-US/docs/";
 ---
 
-<blockquote cite={prefix + props.path}>
+<blockquote cite={_prefix + path}>
   <p><slot /></p>
   <footer>
-    <a href={prefix + props.path} target="_blank" rel="noreferrer"
-      >mdn » {props.text}<IconExternalLink
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-      />
+    <a href={_prefix + path} target="_blank" rel="noreferrer"
+      >mdn » {text}<IconExternalLink class="external-link-icon" />
     </a>
   </footer>
 </blockquote>
@@ -32,5 +30,12 @@ const prefix = "https://developer.mozilla.org/en-US/docs/";
 
   a {
     padding: 0.25rem 1rem;
+  }
+
+  .external-link-icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.175em;
+    width: 1rem;
   }
 </style>

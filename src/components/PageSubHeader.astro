@@ -5,11 +5,11 @@ type Props = {
   subTitle?: string;
 };
 
-const { props } = Astro;
+const { id, title, subTitle } = Astro.props;
 ---
 
-<h2 id={props.id}>
-  {props.title}{!!props.subTitle && <small>{props.subTitle}</small>}
+<h2 id={id}>
+  {title}{!!subTitle && <small>{subTitle}</small>}
 </h2>
 
 <style>

@@ -1,14 +1,12 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
 type Props = {
-  class?: HTMLAttributes<"section">["class"];
+  class?: string;
 };
 
-const { props } = Astro;
+const { class: className, ...attributes } = Astro.props;
 ---
 
-<section class={props.class}><slot /></section>
+<section class={className} {...attributes}><slot /></section>
 
 <style>
   section {

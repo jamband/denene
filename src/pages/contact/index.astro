@@ -16,17 +16,13 @@ const title = "contact";
     <p>
       please to the message via
       <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer"
-        >twitter<IconExternalLink
-          style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-        />
+        >twitter<IconExternalLink class="external-link-icon" />
       </a>
-      or
+       or
       <a href={`${APP_REPOSITORY_URL}/issues`} target="_blank" rel="noreferrer"
-        >github<IconExternalLink
-          style={{ height: "1em", width: "1em", verticalAlign: "-0.175em" }}
-        />
+        >github<IconExternalLink class="external-link-icon" />
       </a>
-      issues. thank you.
+       issues. thank you.
     </p>
   </PageSection>
   <BackToHomeLink />
@@ -35,5 +31,12 @@ const title = "contact";
 <style>
   .centering {
     text-align: center;
+  }
+
+  .external-link-icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.175em;
+    width: 1rem;
   }
 </style>

@@ -3,7 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
-import Link from "@/components/Link.astro";
 import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
@@ -24,9 +23,9 @@ const title = "flexbox";
   <PageSection>
     <PageSubHeader title="row" subTitle="e.g. navigation header" />
     <div class="row-container">
-      <Link href="/" class="row-box">home</Link>
-      <Link href="/about" class="row-box">about</Link>
-      <Link href="/contact" class="row-box">contact</Link>
+      <a href="/denene/" class="row-box">home</a>
+      <a href="/denene/about/" class="row-box">about</a>
+      <a href="/denene/contact/" class="row-box">contact</a>
     </div>
   </PageSection>
   <PageSection>
@@ -34,9 +33,9 @@ const title = "flexbox";
       <div class="anonymous-box">
         <PageSubHeader title="column" subTitle="e.g. side navigation" />
         <div class="column-container">
-          <Link href="/" class="column-box">home</Link>
-          <Link href="/about" class="column-box">about</Link>
-          <Link href="/contact" class="column-box">contact</Link>
+          <a href="/denene/" class="column-box">home</a>
+          <a href="/denene/about" class="column-box">about</a>
+          <a href="/denene/contact/" class="column-box">contact</a>
         </div>
       </div>
       <div class="anonymous-box">

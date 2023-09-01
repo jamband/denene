@@ -42,9 +42,7 @@ const image = (id: string, width: number, quality: number) => {
           href={image("1488508872907-592763824245", 300, 60)}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink
-            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-          />
+          >original<IconExternalLink class="external-link-icon" />
         </a>
       </div>
       <div class="box">
@@ -58,9 +56,7 @@ const image = (id: string, width: number, quality: number) => {
           href={image("1565079527389-eb2640ee27fc", 300, 60)}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink
-            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-          />
+          >original<IconExternalLink class="external-link-icon" />
         </a>
       </div>
       <div class="box">
@@ -74,9 +70,7 @@ const image = (id: string, width: number, quality: number) => {
           href={image("1563350316-9f7fc841d2c4", 300, 60)}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink
-            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-          />
+          >original<IconExternalLink class="external-link-icon" />
         </a>
       </div>
     </div>
@@ -166,9 +160,7 @@ const image = (id: string, width: number, quality: number) => {
     <p class="text-center">
       all photos from
       <a href="https://unsplash.com" target="_blank" rel="noreferrer"
-        >unsplash<IconExternalLink
-          style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-        />
+        >unsplash<IconExternalLink class="external-link-icon" />
       </a>
     </p>
   </PageSection>
@@ -244,5 +236,12 @@ const image = (id: string, width: number, quality: number) => {
 
   .text-center {
     text-align: center;
+  }
+
+  .external-link-icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.125em;
+    width: 1rem;
   }
 </style>

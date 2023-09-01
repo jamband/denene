@@ -1,24 +1,16 @@
 ---
 import IconExternalLink from "@/icons/IconExternalLink.astro";
-import type { HTMLAttributes } from "astro/types";
 
 type Props = {
-  href: HTMLAttributes<"a">["href"];
+  href: string;
 };
 
-const { props } = Astro;
+const { href } = Astro.props;
 ---
 
-<a href={props.href} target="_blank" rel="noreferrer">
+<a href={href} target="_blank" rel="noreferrer">
   <slot />
-  <IconExternalLink
-    style={{
-      marginLeft: "0.25rem",
-      height: "1em",
-      width: "1em",
-      verticalAlign: "-0.125em",
-    }}
-  />
+  <IconExternalLink class="icon" />
 </a>
 
 <style>
@@ -34,5 +26,12 @@ const { props } = Astro;
   a:active {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
+  }
+
+  .icon {
+    height: 1rem;
+    margin-left: 0.1rem;
+    vertical-align: -0.125em;
+    width: 1rem;
   }
 </style>

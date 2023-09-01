@@ -16,8 +16,9 @@ const title = "<dialog>";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/HTML/Element/dialog" text={title}>
-      the <code>&lt;dialog&gt;</code> html element represents a dialog box or other
-      interactive component, such as a dismissible alert, inspector, or subwindow.
+      the <code>&lt;dialog&gt;</code> html element represents a dialog box or
+      other interactive component, such as a dismissible alert, inspector, or
+      subwindow.
     </MdnDoc>
   </PageSection>
   <PageSection>
@@ -28,9 +29,7 @@ const title = "<dialog>";
         <div class="dialog-header">
           <h3 id="example1-title">simple alert</h3>
           <button type="submit" class="close" aria-label="close"
-            ><IconX
-              style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-            />
+            ><IconX class="close-icon" />
           </button>
         </div>
         <div class="dialog-body">
@@ -128,7 +127,7 @@ const title = "<dialog>";
 
   example2.addEventListener("close", () => {
     const actionResult = document.querySelector<HTMLElement>(
-      ".dialog-action-result"
+      ".dialog-action-result",
     );
     if (!actionResult) throw Error("actionResult element does not exists.");
     actionResult.textContent = example2.returnValue;
@@ -193,5 +192,11 @@ const title = "<dialog>";
 
   .close:active {
     color: rgb(var(--gray-100));
+  }
+
+  .close-icon {
+    height: 1rem;
+    vertical-align: -0.125em;
+    width: 1rem;
   }
 </style>

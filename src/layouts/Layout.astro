@@ -9,7 +9,7 @@ type Props = {
   description?: string;
 };
 
-const { props } = Astro;
+const { title, description } = Astro.props;
 ---
 
 <style>
@@ -33,7 +33,7 @@ const { props } = Astro;
 
 <html lang="en">
   <head>
-    <Head title={props.title} description={props.description} />
+    <Head title={title} description={description} />
   </head>
   <body>
     <Header />
