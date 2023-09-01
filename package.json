@@ -15,7 +15,7 @@
     "@astrojs/check": "0.2.0",
     "@astrojs/sitemap": "3.0.0",
     "@types/node": "18.17.12",
-    "astro": "3.0.3",
+    "astro": "3.0.5",
     "autoprefixer": "10.4.15",
     "postcss": "8.4.29",
     "postcss-html": "1.5.0",
