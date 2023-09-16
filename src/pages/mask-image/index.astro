@@ -1,0 +1,160 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import BackToHomeLink from "@/components/BackToHomeLink.astro";
+import BrowserSupport from "@/components/BrowserSupport.astro";
+import MdnDoc from "@/components/MdnDoc.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import PageSection from "@/components/PageSection.astro";
+import PageSubHeader from "@/components/PageSubHeader.astro";
+
+const title = "mask-image";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/mask-image" text={title}>
+      the mask-image css property sets the image that is used as mask layer for
+      an element. by default this means the alpha channel of the mask image will
+      be multiplied with the alpha channel of the element. this can be
+      controlled with the mask-mode property.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader
+      id="horizontal-scrollable-content"
+      title="horizontal scrollable content"
+    />
+    <p>try scrolling horizontally.</p>
+    <div class="example1-container">
+      <div class="example1">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
+        leo in orci dapibus tristique.
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader
+      id="vertically-scrollable-content"
+      title="vertically scrollable content"
+    />
+    <p>try scrolling vertically.</p>
+    <div class="example2-container">
+      <div class="example2">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
+        leo in orci dapibus tristique. mauris elementum iaculis erat eget
+        vehicula. in imperdiet enim quis nulla laoreet pretium. in blandit
+        lobortis ipsum sed pellentesque. suspendisse potenti. nullam
+        sollicitudin posuere nisi, vel dignissim orci pulvinar vel. nulla eu
+        lacus tortor. cras vel lobortis orci, vitae accumsan turpis. praesent
+        venenatis eros risus, at tempus urna tristique ac. duis fermentum neque
+        ante, eu venenatis diam scelerisque in. quisque sed cursus elit. nunc id
+        sem blandit, luctus diam quis, condimentum tellus.
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "mask-image",
+          chrome: "1",
+          firefox: "53",
+          safari: "15.4",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<script>
+  const container1 = document.querySelector<HTMLDivElement>(
+    ".example1-container",
+  );
+  if (!container1) throw Error("example1-container element does not exists.");
+
+  container1.addEventListener("scroll", () => {
+    const first = container1.firstChild as HTMLDivElement;
+
+    if (container1.scrollLeft === 0 && !first.classList.contains("example1")) {
+      first.classList.add("example1");
+      first.classList.remove("example1-extra");
+    }
+
+    if (container1.scrollLeft !== 0) {
+      first.classList.remove("example1");
+      first.classList.add("example1-extra");
+    }
+  });
+
+  const container2 = document.querySelector<HTMLDivElement>(
+    ".example2-container",
+  );
+  if (!container2) throw Error("example2-container element does not exists.");
+
+  container2.addEventListener("scroll", () => {
+    const first = container2.firstChild as HTMLDivElement;
+
+    if (container2.scrollTop === 0 && !first.classList.contains("example2")) {
+      first.classList.add("example2");
+    }
+
+    if (container2.scrollTop !== 0) {
+      first.classList.remove("example2");
+    }
+  });
+</script>
+
+<style>
+  .example1-container {
+    background-color: rgb(var(--gray-700));
+    border-bottom: 3px solid rgb(var(--pink-300));
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    margin-top: 1rem;
+    overflow: scroll;
+    padding: 1rem;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  @media (width >= 640px) {
+    .example1-container {
+      width: 50%;
+    }
+  }
+
+  .example1 {
+    mask-image: linear-gradient(to left, #0000, #000 20%);
+  }
+
+  .example1-extra::after {
+    content: "";
+    margin-right: 1rem;
+  }
+
+  .example2-container {
+    background-color: rgb(var(--gray-700));
+    border-bottom-right-radius: 0.25rem;
+    border-left: 3px solid rgb(var(--pink-300));
+    border-top-right-radius: 0.25rem;
+    height: 300px;
+    margin-top: 1rem;
+    overflow: scroll;
+    padding: 1rem;
+    width: 85%;
+  }
+
+  @media (width >= 640px) {
+    .example2-container {
+      width: 50%;
+    }
+  }
+
+  .example2 {
+    height: 270px;
+    mask-image: linear-gradient(to top, #0000, #000 20%);
+  }
+</style>
