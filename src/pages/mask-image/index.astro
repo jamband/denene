@@ -69,44 +69,6 @@ const title = "mask-image";
   <BackToHomeLink />
 </Layout>
 
-<script>
-  const container1 = document.querySelector<HTMLDivElement>(
-    ".example1-container",
-  );
-  if (!container1) throw Error("example1-container element does not exists.");
-
-  container1.addEventListener("scroll", () => {
-    const first = container1.firstChild as HTMLDivElement;
-
-    if (container1.scrollLeft === 0 && !first.classList.contains("example1")) {
-      first.classList.add("example1");
-      first.classList.remove("example1-extra");
-    }
-
-    if (container1.scrollLeft !== 0) {
-      first.classList.remove("example1");
-      first.classList.add("example1-extra");
-    }
-  });
-
-  const container2 = document.querySelector<HTMLDivElement>(
-    ".example2-container",
-  );
-  if (!container2) throw Error("example2-container element does not exists.");
-
-  container2.addEventListener("scroll", () => {
-    const first = container2.firstChild as HTMLDivElement;
-
-    if (container2.scrollTop === 0 && !first.classList.contains("example2")) {
-      first.classList.add("example2");
-    }
-
-    if (container2.scrollTop !== 0) {
-      first.classList.remove("example2");
-    }
-  });
-</script>
-
 <style>
   .example1-container {
     background-color: rgb(var(--gray-700));
@@ -114,9 +76,6 @@ const title = "mask-image";
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     margin-top: 1rem;
-    overflow: scroll;
-    padding: 1rem;
-    white-space: nowrap;
     width: 100%;
   }
 
@@ -128,11 +87,14 @@ const title = "mask-image";
 
   .example1 {
     mask-image: linear-gradient(to left, #0000, #000 20%);
+    overflow: scroll;
+    padding: 1rem;
+    white-space: nowrap;
   }
 
-  .example1-extra::after {
+  .example1::after {
     content: "";
-    margin-right: 1rem;
+    margin-right: 2.5rem;
   }
 
   .example2-container {
@@ -142,8 +104,6 @@ const title = "mask-image";
     border-top-right-radius: 0.25rem;
     height: 300px;
     margin-top: 1rem;
-    overflow: scroll;
-    padding: 1rem;
     width: 85%;
   }
 
@@ -154,7 +114,15 @@ const title = "mask-image";
   }
 
   .example2 {
-    height: 270px;
+    height: 285px;
     mask-image: linear-gradient(to top, #0000, #000 20%);
+    overflow: scroll;
+    padding: 1rem;
+  }
+
+  .example2::after {
+    content: "";
+    display: block;
+    margin-top: 1.5rem;
   }
 </style>
