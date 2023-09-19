@@ -1,0 +1,11 @@
+main {
+  margin: 0 auto;
+  padding: 7rem 1rem;
+  width: 100%;
+}
+
+@media (width >= 768px) {
+  main {
+    width: 768px;
+  }
+}

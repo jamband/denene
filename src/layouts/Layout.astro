@@ -12,25 +12,6 @@ type Props = {
 const { title, description } = Astro.props;
 ---
 
-<style>
-  main {
-    margin: 0 auto;
-    padding: 7rem 1rem;
-  }
-
-  @media (width >= 640px) {
-    main {
-      max-width: 640px;
-    }
-  }
-
-  @media (width >= 768px) {
-    main {
-      max-width: 768px;
-    }
-  }
-</style>
-
 <html lang="en">
   <head>
     <Head title={title} description={description} />
@@ -39,9 +20,8 @@ const { title, description } = Astro.props;
     <Header />
     <main><slot /></main>
     <Footer />
+    <script is:inline>
+      document.addEventListener("touchstart", () => {}, { passive: true });
+    </script>
   </body>
 </html>
-
-<script is:inline>
-  document.addEventListener("touchstart", () => {}, { passive: true });
-</script>
