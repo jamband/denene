@@ -27,25 +27,25 @@ const title = "<details>";
   </PageSection>
   <PageSection>
     <PageSubHeader title="what tools do you use to build this site?" />
-    <details>
-      <summary>hosting</summary>
-      <p>
-        <span class="tool">github pages</span> » you can use github pages to
-        host a website about yourself, your organization, or your project
+    <details class="tools">
+      <summary class="tools-summary">hosting</summary>
+      <p class="tools-content">
+        <span class="tools-tool">github pages</span> » you can use github pages
+        to host a website about yourself, your organization, or your project
         directly from a repository on github.com.
       </p>
     </details>
-    <details>
-      <summary>building</summary>
-      <p>
-        <span class="tool">astro</span> » build faster websites with astro's
-        next-gen island architecture.
+    <details class="tools">
+      <summary class="tools-summary">building</summary>
+      <p class="tools-content">
+        <span class="tools-tool">astro</span> » build faster websites with
+        astro's next-gen island architecture.
       </p>
     </details>
-    <details>
-      <summary>color palette</summary>
-      <p>
-        <span class="tool">tailwind css</span> » tailwind includes an
+    <details class="tools">
+      <summary class="tools-summary">color palette</summary>
+      <p class="tools-content">
+        <span class="tools-tool">tailwind css</span> » tailwind includes an
         expertly-crafted default color palette out-of-the-box that is a great
         starting point if you don't have your own specific branding in mind.
       </p>
@@ -101,18 +101,23 @@ const title = "<details>";
 </Layout>
 
 <style>
-  p {
-    margin-bottom: 1rem;
-  }
-
-  details {
+  .tools {
     border: 1px solid rgb(var(--gray-600));
     border-radius: 0.25rem;
     margin-bottom: 0.5rem;
     padding: 0.25rem 0.5rem;
   }
 
-  details > p {
+  .tools[open] {
+    color: rgb(var(--gray-100));
+    padding-bottom: 0.5rem;
+  }
+
+  .tools-summary {
+    padding: 0.25rem 0;
+  }
+
+  .tools-content {
     background: rgb(var(--gray-700));
     border-radius: 0.25rem;
     color: rgb(var(--gray-400));
@@ -120,16 +125,7 @@ const title = "<details>";
     padding: 1rem;
   }
 
-  details[open] {
-    color: rgb(var(--gray-100));
-    padding-bottom: 0.5rem;
-  }
-
-  summary {
-    padding: 0.25rem 0;
-  }
-
-  .tool {
+  .tools-tool {
     color: rgb(var(--gray-100));
     font-weight: bold;
   }
@@ -137,6 +133,7 @@ const title = "<details>";
   .dropdowns {
     display: flex;
     gap: 1rem;
+    margin: 1rem 0 0;
   }
 
   .dropdown {
