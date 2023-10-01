@@ -23,7 +23,7 @@ h1 {
   color: rgb(var(--gray-100));
   font-size: 3rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h2 {
