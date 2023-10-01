@@ -12,7 +12,7 @@ const title = "about";
 
 <Layout title={title}>
   <PageHeader title={title} />
-  <PageSection class="centering">
+  <PageSection class="description">
     <p>{APP_DESCRIPTION}.</p>
     <p>
       this website is an open source project. see
@@ -26,7 +26,10 @@ const title = "about";
 </Layout>
 
 <style>
-  .centering {
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     text-align: center;
   }
 
