@@ -1,0 +1,21 @@
+dialog {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: 0.25rem;
+  color: rgb(var(--gray-400));
+  width: 85%;
+}
+
+@media (width >= 640px) {
+  dialog {
+    width: 35rem;
+  }
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(8px);
+}
