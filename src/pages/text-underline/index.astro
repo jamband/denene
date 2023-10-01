@@ -8,6 +8,7 @@ import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
 import PageSubHeader from "@/components/PageSubHeader.astro";
+import PreCode from "@/components/PreCode.astro";
 import IconExternalLink from "@/icons/IconExternalLink.astro";
 
 const title = "text underline";
@@ -25,7 +26,7 @@ const title = "text underline";
   </PageSection>
   <PageSection>
     <PageSubHeader title="1" />
-    <pre><code>text-decoration: underline;</code></pre>
+    <PreCode code={`text-decoration: underline;`} />
     <a
       href="https://developer.mozilla.org/en-US/"
       class="example example1-link"
@@ -36,8 +37,10 @@ const title = "text underline";
   </PageSection>
   <PageSection>
     <PageSubHeader title="2" />
-    <pre><code>text-decoration: none;
-border-bottom: 1px solid currentcolor;</code></pre>
+    <PreCode
+      code={`text-decoration: none;
+border-bottom: 1px solid currentcolor;`}
+    />
     <a
       href="https://developer.mozilla.org/en-US/"
       class="example example2-link"
@@ -48,9 +51,11 @@ border-bottom: 1px solid currentcolor;</code></pre>
   </PageSection>
   <PageSection>
     <PageSubHeader title="3" />
-    <pre><code>text-decoration: underline;
+    <PreCode
+      code={`text-decoration: underline;
 text-decoration-thickness: 0.05em;
-text-underline-offset: 0.25em;</code></pre>
+text-underline-offset: 0.25em;`}
+    />
     <a
       href="https://developer.mozilla.org/en-US/"
       class="example example3-link"
@@ -61,8 +66,10 @@ text-underline-offset: 0.25em;</code></pre>
   </PageSection>
   <PageSection>
     <PageSubHeader title="4" />
-    <pre><code>text-decoration: none;
-background-image: linear-gradient(transparent 95%, currentcolor 0);</code></pre>
+    <PreCode
+      code={`text-decoration: none;
+background-image: linear-gradient(transparent 95%, currentcolor 0);`}
+    />
     <a
       href="https://developer.mozilla.org/en-US/"
       class="example example4-link"
@@ -73,8 +80,10 @@ background-image: linear-gradient(transparent 95%, currentcolor 0);</code></pre>
   </PageSection>
   <PageSection>
     <PageSubHeader title="5" />
-    <pre><code>text-decoration: none;
-box-shadow: 0 1px 0 0 currentcolor;</code></pre>
+    <PreCode
+      code={`text-decoration: none;
+box-shadow: 0 1px 0 0 currentcolor;`}
+    />
     <a
       href="https://developer.mozilla.org/en-US/"
       class="example example5-link"
