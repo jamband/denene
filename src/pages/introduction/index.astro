@@ -11,42 +11,37 @@ const title = "introduction";
 ---
 
 <Layout title={title}>
-  <article>
-    <header>
-      <PageHeader title={title} />
-    </header>
-    <PageSection>
-      <PageSubHeader title="1" />
-      <p>
-        this site does not use cookies. it uses html and css, and a little
-        javascript. it's an experimental site to think about what we can do in
-        such a situation.
-      </p>
-    </PageSection>
-    <PageSection>
-      <PageSubHeader title="2" />
-      <p>
-        as much as possible, this site does not use anything that works only
-        with pointing devices. e.g. such as
-        <Code code="hover" /> and <Code code="cursor" />. this is an experiment
-        on accessibility.
-      </p>
-    </PageSection>
-    <PageSection>
-      <PageSubHeader title="3" />
-      <p>
-        this site basically consists only of lowercase letters and symbols, does
-        not use uppercase letters. this is an experiment on information
-        overload.
-      </p>
-    </PageSection>
-    <PageSection>
-      <PageSubHeader title="4" />
-      <p>
-        this site also includes features that do not work on certain browsers.
-        for details, see browser support.
-      </p>
-    </PageSection>
-  </article>
+  <PageHeader title={title} />
+  <PageSection>
+    <PageSubHeader title="1" />
+    <p>
+      this site does not use cookies. it uses html and css, and a little
+      javascript. it's an experimental site to think about what we can do in
+      such a situation.
+    </p>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="2" />
+    <p>
+      as much as possible, this site does not use anything that works only with
+      pointing devices. e.g. such as
+      <Code code="hover" /> and <Code code="cursor" />. this is an experiment on
+      accessibility.
+    </p>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="3" />
+    <p>
+      this site basically consists only of lowercase letters and symbols, does
+      not use uppercase letters. this is an experiment on information overload.
+    </p>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="4" />
+    <p>
+      this site also includes features that do not work on certain browsers. for
+      details, see browser support.
+    </p>
+  </PageSection>
   <BackToHomeLink />
 </Layout>

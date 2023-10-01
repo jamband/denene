@@ -1,4 +1,7 @@
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
   margin: 0 auto;
   padding: 7rem 1rem;
   width: 100%;
