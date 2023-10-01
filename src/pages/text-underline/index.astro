@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
+import Code from "@/components/Code.astro";
 import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
@@ -16,7 +17,7 @@ const title = "text underline";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/text-decoration" text="text-decoration">
-      the <code>text-decoration</code> shorthand css property sets the
+      the <Code code="text-decoration" /> shorthand css property sets the
       appearance of decorative lines on text. it is a shorthand for
       text-decoration-line, text-decoration-color, text-decoration-style, and
       the newer text-decoration-thickness property.

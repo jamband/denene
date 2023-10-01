@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
+import Code from "@/components/Code.astro";
 import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
@@ -16,8 +17,8 @@ const title = "<dialog>";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/HTML/Element/dialog" text={title}>
-      the <code>&lt;dialog&gt;</code> html element represents a dialog box or
-      other interactive component, such as a dismissible alert, inspector, or
+      the <Code code="<dialog>" /> html element represents a dialog box or other
+      interactive component, such as a dismissible alert, inspector, or
       subwindow.
     </MdnDoc>
   </PageSection>
@@ -33,7 +34,9 @@ const title = "<dialog>";
           </button>
         </div>
         <div class="dialog-body">
-          <p>press the [x] button or the <code>esc</code> key to close it.</p>
+          <p>
+            press the [x] button or the <Code code="esc" /> key to close it.
+          </p>
         </div>
       </form>
     </dialog>
@@ -47,7 +50,7 @@ const title = "<dialog>";
           <h3 id="example2-title">confirm</h3>
         </div>
         <div class="dialog-body">
-          <p>you can also close it by pressing the <code>esc</code> key.</p>
+          <p>you can also close it by pressing the <Code code="esc" /> key.</p>
         </div>
         <footer class="dialog-footer">
           <button type="submit" value="it was canceled.">cancel</button>

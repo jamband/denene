@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
+import Code from "@/components/Code.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
 import PageSubHeader from "@/components/PageSubHeader.astro";
@@ -26,9 +27,9 @@ const title = "introduction";
       <PageSubHeader title="2" />
       <p>
         as much as possible, this site does not use anything that works only
-        with pointing devices. e.g. such as <code>hover</code> and <code
-          >cursor</code
-        >. this is an experiment on accessibility.
+        with pointing devices. e.g. such as
+        <Code code="hover" /> and <Code code="cursor" />. this is an experiment
+        on accessibility.
       </p>
     </PageSection>
     <PageSection>

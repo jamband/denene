@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
+import Code from "@/components/Code.astro";
 import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
@@ -14,10 +15,10 @@ const title = ":focus-within";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/:focus-within" text={title}>
-      the <code>:focus-within</code> css pseudo-class matches an element if the
-      element or any of its descendants are focused. in other words, it
+      the <Code code=":focus-within" /> css pseudo-class matches an element if
+      the element or any of its descendants are focused. in other words, it
       represents an element that is itself matched by the :focus pseudo-class or
-      has a descendant that is matched by <code>:focus</code>. (this includes
+      has a descendant that is matched by <Code code=":focus" />. (this includes
       descendants in shadow trees.)
     </MdnDoc>
   </PageSection>

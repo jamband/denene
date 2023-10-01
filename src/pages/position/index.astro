@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
+import Code from "@/components/Code.astro";
 import MdnDoc from "@/components/MdnDoc.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import PageSection from "@/components/PageSection.astro";
@@ -18,16 +19,17 @@ const [account, repository] = APP_NAME.split("/");
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/position" text={title}>
-      the <code>position</code> css property sets how an element is positioned
-      in a document. the top, right, bottom, and left properties determine the
-      final location of positioned elements.
+      the <Code code="position" /> css property sets how an element is
+      positioned in a document. the top, right, bottom, and left properties
+      determine the final location of positioned elements.
     </MdnDoc>
   </PageSection>
   <PageSection>
     <PageSubHeader title="overlay contents" />
     <p class="description">
-      an example of an overlay images using <code>position: relative;</code>
-       and <code>position: absolute;</code>.
+      an example of an overlay images using
+      <Code code="position: relative;" /> and
+      <Code code="position: absolute;" />.
     </p>
     <div class="example1">
       <StarImage />
@@ -41,7 +43,7 @@ const [account, repository] = APP_NAME.split("/");
   <PageSection>
     <PageSubHeader title="fixed position side content" />
     <p class="description">
-      using <code>position: sticky;</code>. please scroll down a lot.
+      using <Code code="position: sticky;" />. please scroll down a lot.
     </p>
     <div class="example2">
       <div class="example2-main">main</div>

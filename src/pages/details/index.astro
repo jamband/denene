@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 
 import BackToHomeLink from "@/components/BackToHomeLink.astro";
 import BrowserSupport from "@/components/BrowserSupport.astro";
+import Code from "@/components/Code.astro";
 import Dropdown from "@/components/Dropdown.astro";
 import DropdownDivider from "@/components/DropdownDivider.astro";
 import DropdownExternalLink from "@/components/DropdownExternalLink.astro";
@@ -19,10 +20,10 @@ const title = "<details>";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/HTML/Element/details" text={title}>
-      the <code>{title}</code> html element creates a disclosure widget in which
-      information is visible only when the widget is toggled into an "open"
-      state. a summary or label must be provided using the
-      <code>&lt;summary&gt;</code> element.
+      the <Code code={title} /> html element creates a disclosure widget in
+      which information is visible only when the widget is toggled into an
+      "open" state. a summary or label must be provided using the
+      <Code code="<summary>" /> element.
     </MdnDoc>
   </PageSection>
   <PageSection>
@@ -55,8 +56,8 @@ const title = "<details>";
     <PageSubHeader title="dropdown" />
     <p>
       it can also create something like dropdown as an alternative to
-      <code>&lt;select&gt;</code>. considering accessibility and semantics, it
-      would be better if there was something like <code>&lt;dropdown&gt;</code>.
+      <Code code="<select>" />. considering accessibility and semantics, it
+      would be better if there was something like <Code code="<dropdown>" />.
     </p>
     <div class="dropdowns">
       <Dropdown id="more-links" label="press me" class="dropdown">
