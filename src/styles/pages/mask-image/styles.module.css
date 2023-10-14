@@ -14,6 +14,7 @@
 }
 
 .example1 {
+  -webkit-mask-image: linear-gradient(to left, #0000, #000 20%);
   mask-image: linear-gradient(to left, #0000, #000 20%);
   overflow: scroll;
   padding: 1rem;
@@ -43,6 +44,7 @@
 
 .example2 {
   height: 285px;
+  -webkit-mask-image: linear-gradient(to top, #0000, #000 20%);
   mask-image: linear-gradient(to top, #0000, #000 20%);
   overflow: scroll;
   padding: 1rem;
