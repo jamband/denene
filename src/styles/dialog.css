@@ -17,5 +17,6 @@ html:has(dialog[open]) {
 }
 
 dialog::backdrop {
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
