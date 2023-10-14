@@ -1,35 +1,35 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/index.module.css";
+
+const links: Array<{ href: string; text: string }> = [
+  { href: "/introduction/", text: "introduction" },
+  { href: "/flexbox/", text: "flexbox" },
+  { href: "/grids/", text: "grids" },
+  { href: "/subgrid/", text: "subgrid" },
+  { href: "/center-an-element/", text: "center an element" },
+  { href: "/position/", text: "position" },
+  { href: "/transition/", text: "transition" },
+  { href: "/focus-within/", text: ":focus-within" },
+  { href: "/accent-color/", text: "accent-color" },
+  { href: "/text-underline/", text: "text underline" },
+  { href: "/mask-image/", text: "mask-image" },
+  { href: "/img/", text: `<img>` },
+  { href: "/details/", text: `<details>` },
+  { href: "/dialog/", text: `<dialog>` },
+];
 ---
 
 <Layout>
-  <ul>
-    <li><a href="/denene/introduction/">introduction</a></li>
-    <li><a href="/denene/flexbox/">flexbox</a></li>
-    <li><a href="/denene/grids/">grids</a></li>
-    <li><a href="/denene/subgrid/">subgrid</a></li>
-    <li><a href="/denene/center-an-element/">center an element</a></li>
-    <li><a href="/denene/position/">position</a></li>
-    <li><a href="/denene/transition/">transition</a></li>
-    <li><a href="/denene/focus-within/">:focus-within</a></li>
-    <li><a href="/denene/accent-color/">accent-color</a></li>
-    <li><a href="/denene/text-underline/">text underline</a></li>
-    <li><a href="/denene/mask-image/">mask-image</a></li>
-    <li><a href="/denene/img/">&lt;img&gt;</a></li>
-    <li><a href="/denene/details/">&lt;details&gt;</a></li>
-    <li><a href="/denene/dialog/">&lt;dialog&gt;</a></li>
+  <ul class={styles.list}>
+    {
+      links.map((link) => (
+        <li>
+          <a class={styles.link} href={`/denene${link.href}`}>
+            {link.text}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </Layout>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 2.1rem;
-    gap: 0.5rem;
-  }
-
-  a {
-    padding-bottom: 0.5rem;
-  }
-</style>

@@ -1,0 +1,45 @@
+---
+import { PageSubHeader } from "../page/sub-header";
+import styles from "./styles.module.css";
+
+type Props = {
+  items: Array<{
+    value: string;
+    chrome: string;
+    firefox: string;
+    safari: string;
+  }>;
+};
+
+const { items } = Astro.props;
+---
+
+<PageSubHeader title="browser support" />
+<table class={styles.container}>
+  <thead class={styles.header}>
+    <tr class={styles.tableRow}>
+      <th class={styles.tableHeader}></th>
+      <th class={styles.tableHeader}>chrome</th>
+      <th class={styles.tableHeader}>firefox</th>
+      <th class={styles.tableHeader}>safari</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      items.map((item) => (
+        <tr class={styles.tableRow}>
+          <td class={styles.tableData}>{item.value}</td>
+          <td class={styles.tableData}>{item.chrome}</td>
+          <td class={styles.tableData}>{item.firefox}</td>
+          {item.safari === "tp" ? (
+            <td class={styles.tableData}>
+              <abbr title="preview browser support">{item.safari}</abbr>
+            </td>
+          ) : (
+            <td class={styles.tableData}>{item.safari}</td>
+          )}
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

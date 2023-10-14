@@ -1,11 +1,11 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/transition/styles.module.css";
 
 const title = "transition";
 ---
@@ -26,15 +26,17 @@ const title = "transition";
       title="width"
       subTitle="e.g. loading indicator"
     />
-    <div class="example1">
-      <p class="hint">
+    <div class={styles.example1}>
+      <p class={styles.hint}>
         press the button below or use the keyboard to focus on the button and
         press the spacebar.
       </p>
-      <input type="checkbox" id="example1-action" />
-      <label for="example1-action" role="button">press me</label>
+      <input type="checkbox" id="example1-action" class={styles.checkbox} />
+      <label for="example1-action" class={styles.button} role="button"
+        >press me</label
+      >
       <div
-        class="example1-content"
+        class={styles.example1Content}
         role="progressbar"
         aria-labelledby="progressbar"
         aria-valuenow={0}
@@ -46,71 +48,17 @@ const title = "transition";
   </PageSection>
   <PageSection>
     <PageSubHeader title="opacity" subTitle="e.g. fade in / fade out" />
-    <p class="hint">
+    <p class={styles.hint}>
       press the button below or use the keyboard to focus on the button and
       press the spacebar.
     </p>
-    <div class="example2">
-      <input type="checkbox" id="example2-action" />
-      <label for="example2-action" role="button">press me</label>
-      <div class="example2-content">fade in / fade out</div>
+    <div class={styles.example2}>
+      <input type="checkbox" id="example2-action" class={styles.checkbox} />
+      <label for="example2-action" class={styles.button} role="button"
+        >press me</label
+      >
+      <div class={styles.example2Content}>fade in / fade out</div>
     </div>
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  label[role="button"] {
-    background: rgb(var(--gray-700));
-    border-radius: 0.25rem;
-    box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
-    color: rgb(var(--gray-100));
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    margin-right: 0.25rem;
-    padding: 0.5rem 1.1rem;
-  }
-
-  input[type="checkbox"] {
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
-  }
-
-  input[type="checkbox"]:focus + label {
-    box-shadow: var(--outline);
-  }
-
-  .hint {
-    margin-bottom: 1rem;
-  }
-
-  .example1 {
-    margin-bottom: 2rem;
-  }
-
-  .example1-content {
-    background: rgb(var(--pink-300));
-    height: 3px;
-    opacity: 0.8;
-    transition: width 3s cubic-bezier(0.1, 0.05, 0, 1);
-    width: 0%;
-  }
-
-  .example1 > input:checked ~ div {
-    width: 100%;
-  }
-
-  .example2-content {
-    background: rgb(var(--gray-700));
-    border-radius: 0.25rem;
-    color: rgb(var(--gray-400));
-    opacity: 0;
-    padding: 1rem;
-    transition: opacity 0.3s;
-  }
-
-  .example2 > input:checked ~ .example2-content {
-    opacity: 1;
-  }
-</style>

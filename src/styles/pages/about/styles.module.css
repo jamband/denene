@@ -1,0 +1,13 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.icon {
+  height: 1rem;
+  margin-left: 0.1rem;
+  vertical-align: -0.175em;
+  width: 1rem;
+}

@@ -1,12 +1,12 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/flexbox/styles.module.css";
 
 const title = "flexbox";
 ---
@@ -22,23 +22,23 @@ const title = "flexbox";
   </PageSection>
   <PageSection>
     <PageSubHeader title="row" subTitle="e.g. navigation header" />
-    <div class="row-container">
-      <a href="/denene/" class="row-box">home</a>
-      <a href="/denene/about/" class="row-box">about</a>
-      <a href="/denene/contact/" class="row-box">contact</a>
+    <div class={styles.rowContainer}>
+      <a href="/denene/" class={styles.rowBox}>home</a>
+      <a href="/denene/about/" class={styles.rowBox}>about</a>
+      <a href="/denene/contact/" class={styles.rowBox}>contact</a>
     </div>
   </PageSection>
   <PageSection>
-    <div class="anonymous-container">
-      <div class="anonymous-box">
+    <div class={styles.anonymousContainer}>
+      <div class={styles.anonymousBox}>
         <PageSubHeader title="column" subTitle="e.g. side navigation" />
-        <div class="column-container">
-          <a href="/denene/" class="column-box">home</a>
-          <a href="/denene/about" class="column-box">about</a>
-          <a href="/denene/contact/" class="column-box">contact</a>
+        <div class={styles.columnContainer}>
+          <a href="/denene/" class={styles.columnBox}>home</a>
+          <a href="/denene/about" class={styles.columnBox}>about</a>
+          <a href="/denene/contact/" class={styles.columnBox}>contact</a>
         </div>
       </div>
-      <div class="anonymous-box">
+      <div class={styles.anonymousBox}>
         <PageSubHeader title="grids and flexbox" />
         <MdnDoc
           path="Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#grid_and_flexbox"
@@ -66,57 +66,3 @@ const title = "flexbox";
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  .row-container {
-    display: flex;
-    font-weight: bold;
-    justify-content: space-around;
-  }
-
-  .row-box {
-    border-bottom: 1px solid rgb(var(--gray-600));
-    border-top: 1px solid rgb(var(--gray-600));
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-  }
-
-  @media (width >= 640px) {
-    .anonymous-container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .anonymous-box {
-      width: 100%;
-    }
-
-    .anonymous-box:first-child {
-      padding-right: 1rem;
-    }
-
-    .anonymous-box:last-child {
-      padding-left: 1rem;
-    }
-  }
-
-  .column-container {
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    margin-bottom: 3rem;
-  }
-
-  .column-box {
-    border-bottom: 1px solid rgb(var(--gray-600));
-    padding: 0.75em 1rem;
-    text-decoration: none;
-  }
-
-  .row-box:active,
-  .column-box:active {
-    background: rgb(var(--gray-700));
-  }
-</style>

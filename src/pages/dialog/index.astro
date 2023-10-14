@@ -1,14 +1,14 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import Code from "@/components/Code.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
-import IconX from "@/icons/IconX.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { IconX } from "@/icons/x";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/dialog/styles.module.css";
 
 const title = "<dialog>";
 ---
@@ -24,16 +24,20 @@ const title = "<dialog>";
   </PageSection>
   <PageSection>
     <PageSubHeader title="1" subTitle="e.g. simple alert" />
-    <button class="example1-button example-button">press me</button>
-    <dialog class="example1" aria-labelledby="example1-title">
+    <button id="example1-button" class={styles.exampleButton}>press me</button>
+    <dialog
+      id="example1"
+      class={styles.example1}
+      aria-labelledby="example1-title"
+    >
       <form method="dialog">
-        <div class="dialog-header">
+        <div class={styles.dialogHeader}>
           <h3 id="example1-title">simple alert</h3>
-          <button type="submit" class="close" aria-label="close"
-            ><IconX class="close-icon" />
+          <button type="submit" class={styles.close} aria-label="close"
+            ><IconX class={styles.closeIcon} />
           </button>
         </div>
-        <div class="dialog-body">
+        <div class={styles.dialogBody}>
           <p>
             press the [x] button or the <Code code="esc" /> key to close it.
           </p>
@@ -43,22 +47,26 @@ const title = "<dialog>";
   </PageSection>
   <PageSection>
     <PageSubHeader title="2" subTitle="e.g. confirm" />
-    <button class="example2-button example-button">press me</button>
-    <dialog class="example2" aria-labelledby="example2-title">
+    <button id="example2-button" class={styles.exampleButton}>press me</button>
+    <dialog
+      id="example2"
+      class={styles.example2}
+      aria-labelledby="example2-title"
+    >
       <form method="dialog">
-        <div class="dialog-header">
+        <div class={styles.dialogHeader}>
           <h3 id="example2-title">confirm</h3>
         </div>
-        <div class="dialog-body">
+        <div class={styles.dialogBody}>
           <p>you can also close it by pressing the <Code code="esc" /> key.</p>
         </div>
-        <footer class="dialog-footer">
+        <footer class={styles.dialogFooter}>
           <button type="submit" value="it was canceled.">cancel</button>
           <button type="submit" value="it was ok.">ok</button>
         </footer>
       </form>
     </dialog>
-    <p class="dialog-action-result"></p>
+    <p id="dialog-action-result" class={styles.dialogActionResult}></p>
   </PageSection>
   <PageSection>
     <BrowserSupport
@@ -94,18 +102,18 @@ const title = "<dialog>";
 </Layout>
 
 <script>
-  const example1 = document.querySelector<HTMLDialogElement>(".example1");
+  const example1 = document.querySelector<HTMLDialogElement>("#example1");
   if (!example1) throw Error("example1 element does not exists.");
 
   const example1Button =
-    document.querySelector<HTMLButtonElement>(".example1-button");
+    document.querySelector<HTMLButtonElement>("#example1-button");
   if (!example1Button) throw Error("example1Button element does not exists.");
 
-  const example2 = document.querySelector<HTMLDialogElement>(".example2");
+  const example2 = document.querySelector<HTMLDialogElement>("#example2");
   if (!example2) throw Error("example2 element does not exists.");
 
   const example2Button =
-    document.querySelector<HTMLButtonElement>(".example2-button");
+    document.querySelector<HTMLButtonElement>("#example2-button");
   if (!example2Button) throw Error("example2Button element does not exists.");
 
   example1Button.addEventListener("click", () => {
@@ -130,75 +138,9 @@ const title = "<dialog>";
 
   example2.addEventListener("close", () => {
     const actionResult = document.querySelector<HTMLElement>(
-      ".dialog-action-result",
+      "#dialog-action-result",
     );
     if (!actionResult) throw Error("actionResult element does not exists.");
     actionResult.textContent = example2.returnValue;
   });
 </script>
-
-<style>
-  .example-button {
-    background: rgb(var(--gray-700));
-    box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
-    color: rgb(var(--gray-100));
-  }
-
-  .dialog-header {
-    align-items: center;
-    border-bottom: 1px solid rgb(var(--gray-600));
-    color: rgb(var(--gray-100));
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: bold;
-    justify-content: space-between;
-  }
-
-  .dialog-header > button {
-    background: rgb(var(--gray-500));
-  }
-
-  .dialog-body {
-    margin-top: 1rem;
-  }
-
-  .dialog-footer {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: flex-end;
-    margin-top: 1rem;
-  }
-
-  .dialog-footer > button {
-    background: rgb(var(--gray-600));
-    box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-800));
-    color: rgb(var(--gray-100));
-  }
-
-  .dialog-action-result {
-    color: rgb(var(--pink-300));
-    font-weight: bold;
-    margin: 0.5rem 0;
-  }
-
-  .dialog-action-result::before {
-    color: rgb(var(--gray-400));
-    content: "» ";
-    margin-left: 0.25rem;
-  }
-
-  .close {
-    color: rgb(var(--gray-400));
-    padding: 0.25rem 0.5rem;
-  }
-
-  .close:active {
-    color: rgb(var(--gray-100));
-  }
-
-  .close-icon {
-    height: 1.5rem;
-    vertical-align: -0.175em;
-    width: 1.5rem;
-  }
-</style>

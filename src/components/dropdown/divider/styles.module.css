@@ -1,0 +1,4 @@
+.container {
+  border-bottom: 1px solid rgb(var(--gray-600));
+  margin: 0.25rem 0;
+}

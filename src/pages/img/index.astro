@@ -1,14 +1,14 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import Code from "@/components/Code.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
-import IconExternalLink from "@/icons/IconExternalLink.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { IconExternalLink } from "@/icons/external-link";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/img/styles.module.css";
 import { Image } from "astro:assets";
 
 const title = "<img>";
@@ -29,8 +29,8 @@ const image = (id: string, width: number, quality: number) => {
   </PageSection>
   <PageSection>
     <PageSubHeader title="object-fit" />
-    <p>please compare it with the original image.</p>
-    <div class="object-fit">
+    <p class={styles.description}>please compare it with the original image.</p>
+    <div class={styles.objectFit}>
       <div>
         <Image
           src={image("1488508872907-592763824245", 300, 60)}
@@ -40,9 +40,10 @@ const image = (id: string, width: number, quality: number) => {
         />
         <a
           href={image("1488508872907-592763824245", 300, 60)}
+          class={styles.link}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink class="external-link-icon" />
+          >original<IconExternalLink class={styles.icon} />
         </a>
       </div>
       <div class="box">
@@ -54,9 +55,10 @@ const image = (id: string, width: number, quality: number) => {
         />
         <a
           href={image("1565079527389-eb2640ee27fc", 300, 60)}
+          class={styles.link}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink class="external-link-icon" />
+          >original<IconExternalLink class={styles.icon} />
         </a>
       </div>
       <div class="box">
@@ -68,9 +70,10 @@ const image = (id: string, width: number, quality: number) => {
         />
         <a
           href={image("1563350316-9f7fc841d2c4", 300, 60)}
+          class={styles.link}
           target="_blank"
           rel="noreferrer"
-          >original<IconExternalLink class="external-link-icon" />
+          >original<IconExternalLink class={styles.icon} />
         </a>
       </div>
     </div>
@@ -81,7 +84,7 @@ const image = (id: string, width: number, quality: number) => {
       please scroll down. you can check lazy loading with chrome developer tools
       and so on.
     </p>
-    <div class="lazy-loading">
+    <div class={styles.lazyLoading}>
       <Image
         src={image("1582385272046-abd3a86f5a1a", 500, 60)}
         width="500"
@@ -155,14 +158,16 @@ const image = (id: string, width: number, quality: number) => {
         alt=""
       />
     </div>
-  </PageSection>
-  <PageSection>
-    <p class="text-center">
+    <div class={styles.lazyLoadingFooter}>
       all photos from
-      <a href="https://unsplash.com" target="_blank" rel="noreferrer"
-        >unsplash<IconExternalLink class="external-link-icon" />
+      <a
+        href="https://unsplash.com"
+        class={styles.link}
+        target="_blank"
+        rel="noreferrer"
+        >unsplash<IconExternalLink class={styles.icon} />
       </a>
-    </p>
+    </div>
   </PageSection>
   <PageSection>
     <BrowserSupport
@@ -190,58 +195,3 @@ const image = (id: string, width: number, quality: number) => {
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  p {
-    margin-bottom: 1rem;
-  }
-
-  .object-fit {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .object-fit img {
-    aspect-ratio: 1 / 1;
-    background: rgb(var(--gray-700));
-    border-radius: 50%;
-    height: 100%;
-    margin-bottom: 0.25rem;
-    object-fit: cover;
-    width: 234px;
-  }
-
-  .lazy-loading {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr;
-  }
-
-  @media (width >= 640px) {
-    .lazy-loading {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .lazy-loading img {
-    aspect-ratio: 2 / 3;
-    background: rgb(var(--gray-700));
-    border-radius: 0.25rem;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .external-link-icon {
-    height: 1rem;
-    margin-left: 0.1rem;
-    vertical-align: -0.125em;
-    width: 1rem;
-  }
-</style>

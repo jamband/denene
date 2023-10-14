@@ -1,15 +1,15 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import Code from "@/components/Code.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
-import StarImage from "@/components/StarImage.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { StarImage } from "@/components/star-image";
 import { APP_NAME } from "@/constants/app";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/position/styles.module.css";
 
 const title = "position";
 const [account, repository] = APP_NAME.split("/");
@@ -26,15 +26,16 @@ const [account, repository] = APP_NAME.split("/");
   </PageSection>
   <PageSection>
     <PageSubHeader title="overlay contents" />
-    <p class="description">
+    <p class={styles.description}>
       an example of an overlay images using
       <Code code="position: relative;" /> and
       <Code code="position: absolute;" />.
     </p>
-    <div class="example1">
+    <div class={styles.example1}>
       <StarImage />
-      <p class="example1-text">
-        <span class="account">{account}/</span><span class="repository"
+      <p class={styles.example1Text}>
+        <span class={styles.account}>{account}/</span><span
+          class={styles.repository}
           >{repository}
         </span>
       </p>
@@ -42,12 +43,12 @@ const [account, repository] = APP_NAME.split("/");
   </PageSection>
   <PageSection>
     <PageSubHeader title="fixed position side content" />
-    <p class="description">
+    <p class={styles.description}>
       using <Code code="position: sticky;" />. please scroll down a lot.
     </p>
-    <div class="example2">
-      <div class="example2-main">main</div>
-      <div class="example2-side">side</div>
+    <div class={styles.example2}>
+      <div class={styles.example2Main}>main</div>
+      <div class={styles.example2Side}>side</div>
     </div>
   </PageSection>
   <PageSection>
@@ -64,61 +65,3 @@ const [account, repository] = APP_NAME.split("/");
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  .description {
-    margin-bottom: 1rem;
-  }
-
-  .example1 {
-    position: relative;
-  }
-
-  .example1-text {
-    font-family: var(--font-mono);
-    font-weight: bold;
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .example1-text > .account {
-    color: rgb(var(--gray-100));
-    font-size: 0.85rem;
-  }
-
-  .example1-text > .repository {
-    color: rgb(var(--pink-300));
-  }
-
-  .example2 {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .example2-main {
-    background: rgb(var(--gray-700));
-    border-radius: 0.25rem;
-    font-family: var(--font-mono);
-    font-weight: bold;
-    height: 100vh;
-    padding: 1rem;
-    width: 100%;
-  }
-
-  .example2-side {
-    background: rgb(var(--gray-700));
-    border-radius: 0.25rem;
-    font-family: var(--font-mono);
-    font-weight: bold;
-    height: 3.5em;
-    padding: 1rem;
-    position: sticky;
-    top: 5em;
-    width: 40%;
-  }
-</style>

@@ -1,0 +1,15 @@
+---
+import styles from "./styles.module.css";
+
+type Props = {
+  id?: string;
+  title: string;
+  subTitle?: string;
+};
+
+const { id, title, subTitle } = Astro.props;
+---
+
+<h2 id={id} class={styles.container}>
+  {title}{!!subTitle && <small class={styles.subTitle}>{subTitle}</small>}
+</h2>

@@ -1,0 +1,39 @@
+---
+import { IconChevronDown } from "@/icons/chevron-down";
+import { IconDotsHorizontal } from "@/icons/dots-horizontal";
+import styles from "./styles.module.css";
+
+type Props = {
+  id: string;
+  label?: string;
+  class?: string;
+};
+
+const { id, label, class: className, ...attributes } = Astro.props;
+---
+
+<details class={styles.container}>
+  <summary
+    id={id}
+    aria-expanded={false}
+    aria-label={label ? null : "more"}
+    class:list={[styles.button, className]}
+    {...attributes}
+  >
+    {
+      label ? (
+        <div class={styles.label}>
+          {label}
+          <IconChevronDown class={styles.icon} />
+        </div>
+      ) : (
+        <div class={styles.dots}>
+          <IconDotsHorizontal class={styles.icon} />
+        </div>
+      )
+    }
+  </summary>
+  <div class={styles.menu} aria-labelledby={id}>
+    <slot />
+  </div>
+</details>

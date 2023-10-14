@@ -1,0 +1,25 @@
+---
+import { IconExternalLink } from "@/icons/external-link";
+import styles from "./styles.module.css";
+
+type Props = {
+  path: string;
+  text: string;
+};
+
+const { path, text } = Astro.props;
+const _prefix = "https://developer.mozilla.org/en-US/docs/";
+---
+
+<blockquote class={styles.container} cite={_prefix + path}>
+  <p><slot /></p>
+  <footer class={styles.footer}>
+    <a
+      class={styles.link}
+      href={_prefix + path}
+      target="_blank"
+      rel="noreferrer"
+      >mdn » {text}<IconExternalLink class={styles.icon} />
+    </a>
+  </footer>
+</blockquote>

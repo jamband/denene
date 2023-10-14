@@ -1,0 +1,63 @@
+.exampleButton {
+  background: rgb(var(--gray-700));
+  box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
+  color: rgb(var(--gray-100));
+}
+
+.dialogHeader {
+  align-items: center;
+  border-bottom: 1px solid rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.dialogHeader > button {
+  background: rgb(var(--gray-500));
+}
+
+.dialogBody {
+  margin-top: 1rem;
+}
+
+.dialogFooter {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.dialogFooter > button {
+  background: rgb(var(--gray-600));
+  box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-800));
+  color: rgb(var(--gray-100));
+}
+
+.dialogActionResult {
+  color: rgb(var(--pink-300));
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.dialogActionResult::before {
+  color: rgb(var(--gray-400));
+  content: "» ";
+  margin-left: 0.25rem;
+}
+
+.close {
+  color: rgb(var(--gray-400));
+  padding: 0.25rem 0.5rem;
+}
+
+.close:active {
+  color: rgb(var(--gray-100));
+}
+
+.closeIcon {
+  height: 1.5rem;
+  vertical-align: -0.175em;
+  width: 1.5rem;
+}

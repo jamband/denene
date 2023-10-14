@@ -1,0 +1,16 @@
+---
+import { APP_NAME } from "@/constants/app";
+import styles from "./styles.module.css";
+
+const [_account, _repository] = APP_NAME.split("/");
+---
+
+<header class={styles.container}>
+  <nav class={styles.navigation} aria-label="header navigation">
+    <a class={styles.link} href="/denene/">
+      <span class={styles.account}>{_account}/</span><span
+        class={styles.repository}>{_repository}</span
+      >
+    </a>
+  </nav>
+</header>

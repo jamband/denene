@@ -1,0 +1,38 @@
+.example {
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+  text-underline-offset: auto;
+}
+
+.example1Link {
+  text-decoration: underline;
+}
+
+.example2Link {
+  border-bottom: 1px solid currentcolor;
+  text-decoration: none;
+}
+
+.example3Link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.25em;
+}
+
+.example4Link {
+  background-image: linear-gradient(transparent 95%, currentcolor 0);
+  text-decoration: none;
+}
+
+.example5Link {
+  box-shadow: 0 1px 0 0 currentcolor;
+  text-decoration: none;
+}
+
+.icon {
+  height: 1rem;
+  margin-left: 0.1rem;
+  vertical-align: -0.175em;
+  width: 1rem;
+}

@@ -1,12 +1,12 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/mask-image/styles.module.css";
 
 const title = "mask-image";
 ---
@@ -27,8 +27,8 @@ const title = "mask-image";
       title="horizontal scrollable content"
     />
     <p>try scrolling horizontally.</p>
-    <div class="example1-container">
-      <div class="example1">
+    <div class={styles.example1Container}>
+      <div class={styles.example1}>
         lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
         leo in orci dapibus tristique.
       </div>
@@ -40,8 +40,8 @@ const title = "mask-image";
       title="vertically scrollable content"
     />
     <p>try scrolling vertically.</p>
-    <div class="example2-container">
-      <div class="example2">
+    <div class={styles.example2Container}>
+      <div class={styles.example2}>
         lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
         leo in orci dapibus tristique. mauris elementum iaculis erat eget
         vehicula. in imperdiet enim quis nulla laoreet pretium. in blandit
@@ -68,61 +68,3 @@ const title = "mask-image";
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  .example1-container {
-    background-color: rgb(var(--gray-700));
-    border-bottom: 3px solid rgb(var(--pink-300));
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    margin-top: 1rem;
-    width: 100%;
-  }
-
-  @media (width >= 640px) {
-    .example1-container {
-      width: 50%;
-    }
-  }
-
-  .example1 {
-    mask-image: linear-gradient(to left, #0000, #000 20%);
-    overflow: scroll;
-    padding: 1rem;
-    white-space: nowrap;
-  }
-
-  .example1::after {
-    content: "";
-    margin-right: 2.5rem;
-  }
-
-  .example2-container {
-    background-color: rgb(var(--gray-700));
-    border-bottom-right-radius: 0.25rem;
-    border-left: 3px solid rgb(var(--pink-300));
-    border-top-right-radius: 0.25rem;
-    height: 300px;
-    margin-top: 1rem;
-    width: 85%;
-  }
-
-  @media (width >= 640px) {
-    .example2-container {
-      width: 50%;
-    }
-  }
-
-  .example2 {
-    height: 285px;
-    mask-image: linear-gradient(to top, #0000, #000 20%);
-    overflow: scroll;
-    padding: 1rem;
-  }
-
-  .example2::after {
-    content: "";
-    display: block;
-    margin-top: 1.5rem;
-  }
-</style>

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.radioContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.example1,
+.example2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.example1 {
+  accent-color: rgb(var(--blue-300));
+}
+
+.example2 {
+  accent-color: rgb(var(--pink-300));
+}
+
+.checkbox,
+.radio,
+.range {
+  align-items: baseline;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.progress {
+  align-items: baseline;
+  display: flex;
+  gap: 0.5rem;
+}

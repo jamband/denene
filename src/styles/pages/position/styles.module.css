@@ -1,0 +1,55 @@
+.description {
+  margin-bottom: 1rem;
+}
+
+.example1 {
+  position: relative;
+}
+
+.example1Text {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.example1Text > .account {
+  color: rgb(var(--gray-100));
+  font-size: 0.85rem;
+}
+
+.example1Text > .repository {
+  color: rgb(var(--pink-300));
+}
+
+.example2 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  text-align: center;
+}
+
+.example2Main {
+  background: rgb(var(--gray-700));
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  height: 100vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+.example2Side {
+  background: rgb(var(--gray-700));
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  height: 3.5em;
+  padding: 1rem;
+  position: sticky;
+  top: 5em;
+  width: 40%;
+}

@@ -1,0 +1,52 @@
+.container {
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.flex {
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: rgb(var(--gray-700));
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.grid {
+  aspect-ratio: 4 / 3;
+  background: rgb(var(--gray-700));
+  display: grid;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 50%;
+}
+
+.positionTransform {
+  aspect-ratio: 16 / 9;
+  background: rgb(var(--gray-700));
+  position: relative;
+  width: 75%;
+}
+
+@media (width <= 640px) {
+  .flex {
+    width: 50%;
+  }
+
+  .grid {
+    width: 75%;
+  }
+
+  .positionTransform {
+    width: 100%;
+  }
+}
+
+.positionTransformBox {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

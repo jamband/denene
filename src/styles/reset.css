@@ -1,8 +1,5 @@
-summary,
 progress,
-input[type="checkbox"],
-input[type="radio"],
-input[type="range"] {
+summary {
   all: revert;
 }
 

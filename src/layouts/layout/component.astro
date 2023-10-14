@@ -1,0 +1,27 @@
+---
+import { Footer } from "../footer";
+import { Head } from "../head";
+import { Header } from "../header";
+import styles from "./styles.module.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <Head title={title} description={description} />
+  <body>
+    <Header />
+    <main class={styles.container}>
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline>
+      document.addEventListener("touchstart", () => {}, { passive: true });
+    </script>
+  </body>
+</html>

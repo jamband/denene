@@ -1,0 +1,28 @@
+.container {
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  border-bottom: 1px solid rgb(var(--gray-600));
+}
+
+.tableRow {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+
+.tableHeader {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+
+.tableData {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+
+.tableData:is(:first-child) {
+  overflow-x: scroll;
+}

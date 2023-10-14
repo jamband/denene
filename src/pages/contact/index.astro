@@ -1,42 +1,29 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
 import { APP_REPOSITORY_URL } from "@/constants/app";
-import IconExternalLink from "@/icons/IconExternalLink.astro";
+import { IconExternalLink } from "@/icons/external-link";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/contact/styles.module.css";
 
 const title = "contact";
 ---
 
 <Layout title={title}>
   <PageHeader title={title} />
-  <PageSection class="description">
+  <PageSection class={styles.description}>
     <p>
       please to the message via
       <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer"
-        >twitter<IconExternalLink class="external-link-icon" />
+        >twitter<IconExternalLink class={styles.icon} />
       </a>
        or
       <a href={`${APP_REPOSITORY_URL}/issues`} target="_blank" rel="noreferrer"
-        >github<IconExternalLink class="external-link-icon" />
+        >github<IconExternalLink class={styles.icon} />
       </a>
        issues. thank you.
     </p>
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  .description {
-    text-align: center;
-  }
-
-  .external-link-icon {
-    height: 1rem;
-    margin-left: 0.1rem;
-    vertical-align: -0.175em;
-    width: 1rem;
-  }
-</style>

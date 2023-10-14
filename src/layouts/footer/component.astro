@@ -1,0 +1,17 @@
+---
+import { APP_REPOSITORY_URL } from "@/constants/app";
+import styles from "./styles.module.css";
+---
+
+<footer class={styles.container}>
+  <nav class={styles.navigation} aria-label="footer navigation">
+    <a class={styles.link} href="/denene/about/">about</a>
+    <a class={styles.link} href="/denene/contact/">contact</a>
+    <a
+      class={styles.link}
+      href={APP_REPOSITORY_URL}
+      target="_blank"
+      rel="noreferrer">github</a
+    >
+  </nav>
+</footer>

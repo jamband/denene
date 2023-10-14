@@ -1,0 +1,58 @@
+.objectFit {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.objectFit img {
+  aspect-ratio: 1 / 1;
+  background: rgb(var(--gray-700));
+  border-radius: 50%;
+  height: 100%;
+  margin-bottom: 0.25rem;
+  object-fit: cover;
+  width: 234px;
+}
+
+.lazyLoading {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+}
+
+@media (width >= 640px) {
+  .lazyLoading {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lazyLoading img {
+  aspect-ratio: 2 / 3;
+  background: rgb(var(--gray-700));
+  border-radius: 0.25rem;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.lazyLoadingFooter {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  gap: 0.125rem;
+  justify-content: center;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}

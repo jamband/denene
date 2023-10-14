@@ -1,0 +1,43 @@
+.boxContainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.box {
+  background: rgb(var(--gray-700));
+  border-radius: 0.5rem;
+  display: grid;
+}
+
+.boxSubgrid {
+  gap: 0;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.boxTitle {
+  align-self: center;
+  color: rgb(var(--gray-100));
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+}
+
+.boxSubtitle {
+  color: rgb(var(--gray-400));
+  font-size: 1.0625rem;
+  font-weight: normal;
+}
+
+.boxImage {
+  aspect-ratio: 16 / 9;
+  background: rgb(var(--gray-600));
+  border: 2px dashed rgb(var(--pink-300) / 80%);
+}
+
+.boxDescription {
+  align-self: center;
+  font-size: 1.0625rem;
+  padding: 0.75rem 1rem;
+}

@@ -1,0 +1,43 @@
+.toolsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tools {
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.tools[open] {
+  color: rgb(var(--gray-100));
+  padding-bottom: 0.5rem;
+}
+
+.toolsSummary {
+  padding: 0.25rem 0;
+}
+
+.toolsContent {
+  background: rgb(var(--gray-700));
+  border-radius: 0.25rem;
+  color: rgb(var(--gray-400));
+  padding: 1rem;
+}
+
+.toolsTool {
+  color: rgb(var(--gray-100));
+  font-weight: bold;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dropdown {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+}

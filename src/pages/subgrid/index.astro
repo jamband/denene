@@ -1,13 +1,13 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import Code from "@/components/Code.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
-import PageSubHeader from "@/components/PageSubHeader.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/subgrid/styles.module.css";
 
 const title = "subgrid";
 ---
@@ -31,35 +31,35 @@ const title = "subgrid";
   </PageSection>
   <PageSection>
     <PageSubHeader title="without subgrid" />
-    <div class="box-container">
-      <div class="box">
-        <div class="box-title">title</div>
-        <div class="box-image"></div>
-        <div class="box-description">description<br />description</div>
+    <div class={styles.boxContainer}>
+      <div class={styles.box}>
+        <div class={styles.boxTitle}>title</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description<br />description</div>
       </div>
-      <div class="box">
-        <div class="box-title">
-          title<br /><span class="box-subtitle">subtitle</span>
+      <div class={styles.box}>
+        <div class={styles.boxTitle}>
+          title<br /><span class={styles.boxSubtitle}>subtitle</span>
         </div>
-        <div class="box-image"></div>
-        <div class="box-description">description</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description</div>
       </div>
     </div>
   </PageSection>
   <PageSection>
     <PageSubHeader title="with subgrid" />
-    <div class="box-container">
-      <div class="box box-subgrid">
-        <div class="box-title">title</div>
-        <div class="box-image"></div>
-        <div class="box-description">description<br />description</div>
+    <div class={styles.boxContainer}>
+      <div class:list={[styles.box, styles.boxSubgrid]}>
+        <div class={styles.boxTitle}>title</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description<br />description</div>
       </div>
-      <div class="box box-subgrid">
-        <div class="box-title">
-          title<br /><span class="box-subtitle">subtitle</span>
+      <div class:list={[styles.box, styles.boxSubgrid]}>
+        <div class={styles.boxTitle}>
+          title<br /><span class={styles.boxSubtitle}>subtitle</span>
         </div>
-        <div class="box-image"></div>
-        <div class="box-description">description</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description</div>
       </div>
     </div>
   </PageSection>
@@ -77,49 +77,3 @@ const title = "subgrid";
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  .box-container {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .box {
-    background: rgb(var(--gray-700));
-    border-radius: 0.5rem;
-    display: grid;
-  }
-
-  .box-subgrid {
-    gap: 0;
-    grid-row: span 3;
-    grid-template-rows: subgrid;
-  }
-
-  .box-title {
-    align-self: center;
-    color: rgb(var(--gray-100));
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding: 0.75rem 1rem;
-  }
-
-  .box-subtitle {
-    color: rgb(var(--gray-400));
-    font-size: 1.0625rem;
-    font-weight: normal;
-  }
-
-  .box-image {
-    aspect-ratio: 16 / 9;
-    background: rgb(var(--gray-600));
-    border: 2px dashed rgb(var(--pink-300) / 80%);
-  }
-
-  .box-description {
-    align-self: center;
-    font-size: 1.0625rem;
-    padding: 0.75rem 1rem;
-  }
-</style>

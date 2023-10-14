@@ -1,12 +1,12 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import BackToHomeLink from "@/components/BackToHomeLink.astro";
-import BrowserSupport from "@/components/BrowserSupport.astro";
-import Code from "@/components/Code.astro";
-import MdnDoc from "@/components/MdnDoc.astro";
-import PageHeader from "@/components/PageHeader.astro";
-import PageSection from "@/components/PageSection.astro";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { Layout } from "@/layouts/layout";
+import styles from "@/styles/pages/focus-within/styles.module.css";
 
 const title = ":focus-within";
 ---
@@ -22,14 +22,15 @@ const title = ":focus-within";
       descendants in shadow trees.)
     </MdnDoc>
   </PageSection>
-  <PageSection>
+  <PageSection class={styles.formContainer}>
     <form>
-      <fieldset class="example1">
+      <fieldset class={styles.example1}>
         <legend>#1</legend>
         <label for="username1">username</label>
         <input
           type="text"
           id="username1"
+          class={styles.textbox}
           placeholder="focus here"
           autocomplete="username"
         />
@@ -37,18 +38,20 @@ const title = ":focus-within";
         <input
           type="password"
           id="password1"
+          class={styles.textbox}
           placeholder="focus here"
           autocomplete="current-password"
         />
       </fieldset>
     </form>
     <form>
-      <fieldset class="example2">
+      <fieldset class={styles.example2}>
         <legend>#2</legend>
         <label for="username2">username</label>
         <input
           type="text"
           id="username2"
+          class={styles.textbox}
           placeholder="focus here"
           autocomplete="username"
         />
@@ -56,6 +59,7 @@ const title = ":focus-within";
         <input
           type="password"
           id="password2"
+          class={styles.textbox}
           placeholder="focus here"
           autocomplete="current-password"
         />
@@ -82,29 +86,3 @@ const title = ":focus-within";
   </PageSection>
   <BackToHomeLink />
 </Layout>
-
-<style>
-  form {
-    margin-bottom: 2.5rem;
-  }
-
-  input[type="text"] {
-    margin-bottom: 1rem;
-  }
-
-  .example1:focus-within {
-    border: 1px solid rgb(var(--blue-300));
-  }
-
-  .example1:focus-within > legend {
-    color: rgb(var(--blue-300));
-  }
-
-  .example2:focus-within {
-    border: 1px solid rgb(var(--pink-300));
-  }
-
-  .example2:focus-within > legend {
-    color: rgb(var(--pink-300));
-  }
-</style>

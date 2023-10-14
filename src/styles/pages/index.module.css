@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.1rem;
+  gap: 0.5rem;
+}
+
+.link {
+  padding-bottom: 0.5rem;
+}
