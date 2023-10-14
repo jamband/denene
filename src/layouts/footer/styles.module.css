@@ -17,7 +17,7 @@
   gap: 1rem;
 }
 
-@media (width >= 640px) {
+@media (min-width: 768px) {
   .navigation {
     gap: 2rem;
   }

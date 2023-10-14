@@ -3,10 +3,10 @@ dialog {
   border: 1px solid rgb(var(--gray-600));
   border-radius: 0.25rem;
   color: rgb(var(--gray-400));
-  width: 85%;
+  width: 90%;
 }
 
-@media (width >= 640px) {
+@media (min-width: 768px) {
   dialog {
     width: 35rem;
   }

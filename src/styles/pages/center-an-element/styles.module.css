@@ -11,7 +11,13 @@
   background: rgb(var(--gray-700));
   display: flex;
   justify-content: center;
-  width: 25%;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    width: 25%;
+  }
 }
 
 .grid {
@@ -20,27 +26,25 @@
   display: grid;
   grid-template-rows: 1fr;
   place-items: center;
-  width: 50%;
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    width: 50%;
+  }
 }
 
 .positionTransform {
   aspect-ratio: 16 / 9;
   background: rgb(var(--gray-700));
   position: relative;
-  width: 75%;
+  width: 100%;
 }
 
-@media (width <= 640px) {
-  .flex {
-    width: 50%;
-  }
-
-  .grid {
-    width: 75%;
-  }
-
+@media (min-width: 768px) {
   .positionTransform {
-    width: 100%;
+    width: 75%;
   }
 }
 

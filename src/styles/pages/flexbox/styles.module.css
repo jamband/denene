@@ -13,20 +13,26 @@
   width: 100%;
 }
 
-@media (width >= 640px) {
+@media (min-width: 768px) {
   .anonymousContainer {
     display: flex;
     justify-content: space-between;
   }
+}
 
+@media (min-width: 768px) {
   .anonymousBox {
     width: 100%;
   }
+}
 
+@media (min-width: 768px) {
   .anonymousBox:first-child {
     padding-right: 1rem;
   }
+}
 
+@media (min-width: 768px) {
   .anonymousBox:last-child {
     padding-left: 1rem;
   }
