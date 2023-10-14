@@ -1,12 +1,6 @@
 {
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-order"],
-  "overrides": [
-    {
-      "files": ["**/*.astro"],
-      "customSyntax": "postcss-html"
-    }
-  ],
   "rules": {
     "declaration-property-value-no-unknown": true,
     "media-feature-range-notation": "prefix",
