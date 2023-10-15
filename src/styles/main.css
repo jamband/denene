@@ -1,9 +1,9 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 3.75rem;
+  gap: 4rem;
   margin: 0 auto;
-  padding: 7rem 1rem;
+  padding: 7.25rem 1rem;
   width: 100%;
 }
 
