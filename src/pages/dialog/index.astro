@@ -17,8 +17,8 @@ const title = "<dialog>";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/HTML/Element/dialog" text={title}>
-      the <Code code="<dialog>" /> html element represents a dialog box or other
-      interactive component, such as a dismissible alert, inspector, or
+      the <Code code="<dialog>" inline /> html element represents a dialog box
+      or other interactive component, such as a dismissible alert, inspector, or
       subwindow.
     </MdnDoc>
   </PageSection>
@@ -39,7 +39,8 @@ const title = "<dialog>";
         </div>
         <div class={styles.dialogBody}>
           <p>
-            press the [x] button or the <Code code="esc" /> key to close it.
+            press the [x] button or the <Code code="esc" inline /> key to close
+            it.
           </p>
         </div>
       </form>
@@ -58,7 +59,10 @@ const title = "<dialog>";
           <h3 id="example2-title">confirm</h3>
         </div>
         <div class={styles.dialogBody}>
-          <p>you can also close it by pressing the <Code code="esc" /> key.</p>
+          <p>
+            you can also close it by pressing the <Code code="esc" inline />
+            key.
+          </p>
         </div>
         <footer class={styles.dialogFooter}>
           <button type="submit" value="it was canceled.">cancel</button>

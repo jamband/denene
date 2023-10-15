@@ -19,7 +19,7 @@ const [account, repository] = APP_NAME.split("/");
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/position" text={title}>
-      the <Code code="position" /> css property sets how an element is
+      the <Code code="position" inline /> css property sets how an element is
       positioned in a document. the top, right, bottom, and left properties
       determine the final location of positioned elements.
     </MdnDoc>
@@ -28,8 +28,8 @@ const [account, repository] = APP_NAME.split("/");
     <PageSubHeader title="overlay contents" />
     <p class={styles.description}>
       an example of an overlay images using
-      <Code code="position: relative;" /> and
-      <Code code="position: absolute;" />.
+      <Code code="position: relative;" inline /> and
+      <Code code="position: absolute;" inline />.
     </p>
     <div class={styles.example1}>
       <StarImage />
@@ -44,7 +44,7 @@ const [account, repository] = APP_NAME.split("/");
   <PageSection>
     <PageSubHeader title="fixed position side content" />
     <p class={styles.description}>
-      using <Code code="position: sticky;" />. please scroll down a lot.
+      using <Code code="position: sticky;" inline />. please scroll down a lot.
     </p>
     <div class={styles.example2}>
       <div class={styles.example2Main}>main</div>

@@ -1,9 +1,17 @@
 ---
 type Props = {
   code: string;
+  inline?: boolean;
 };
 
-const { code } = Astro.props;
+const { code, inline } = Astro.props;
 ---
 
-<code>{code}</code>
+{
+  inline ? (
+    <code>{code}</code>
+  ) : (
+    // prettier-ignore
+    <pre><code>{code}</code></pre>
+  )
+}

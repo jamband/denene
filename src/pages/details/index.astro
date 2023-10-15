@@ -20,10 +20,10 @@ const title = "<details>";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/HTML/Element/details" text={title}>
-      the <Code code={title} /> html element creates a disclosure widget in
-      which information is visible only when the widget is toggled into an
+      the <Code code={title} inline /> html element creates a disclosure widget
+      in which information is visible only when the widget is toggled into an
       "open" state. a summary or label must be provided using the
-      <Code code="<summary>" /> element.
+      <Code code="<summary>" inline /> element.
     </MdnDoc>
   </PageSection>
   <PageSection>
@@ -59,8 +59,9 @@ const title = "<details>";
     <PageSubHeader title="dropdown" />
     <p>
       it can also create something like dropdown as an alternative to
-      <Code code="<select>" />. considering accessibility and semantics, it
-      would be better if there was something like <Code code="<dropdown>" />.
+      <Code code="<select>" inline />. considering accessibility and semantics,
+      it would be better if there was something like
+      <Code code="<dropdown>" inline />.
     </p>
     <div class={styles.dropdowns}>
       <Dropdown id="more-links" label="press me" class={styles.dropdown}>
