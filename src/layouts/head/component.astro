@@ -7,6 +7,7 @@ type Props = {
 };
 
 const { title, description } = Astro.props;
+
 const _title = title ? `${title} ･ ${APP_NAME}` : APP_NAME;
 const _description = description ?? APP_DESCRIPTION;
 ---
