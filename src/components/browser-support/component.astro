@@ -16,27 +16,27 @@ const { items } = Astro.props;
 
 <PageSubHeader title="browser support" />
 <table class={styles.container}>
-  <thead class={styles.header}>
-    <tr class={styles.tableRow}>
-      <th class={styles.tableHeader}></th>
-      <th class={styles.tableHeader}>chrome</th>
-      <th class={styles.tableHeader}>firefox</th>
-      <th class={styles.tableHeader}>safari</th>
+  <thead class={styles.headerContainer}>
+    <tr class={styles.row}>
+      <th class={styles.header}></th>
+      <th class={styles.header}>chrome</th>
+      <th class={styles.header}>firefox</th>
+      <th class={styles.header}>safari</th>
     </tr>
   </thead>
   <tbody>
     {
       items.map((item) => (
-        <tr class={styles.tableRow}>
-          <td class={styles.tableData}>{item.value}</td>
-          <td class={styles.tableData}>{item.chrome}</td>
-          <td class={styles.tableData}>{item.firefox}</td>
+        <tr class={styles.row}>
+          <td class={styles.data}>{item.value}</td>
+          <td class={styles.data}>{item.chrome}</td>
+          <td class={styles.data}>{item.firefox}</td>
           {item.safari === "tp" ? (
-            <td class={styles.tableData}>
+            <td class={styles.data}>
               <abbr title="preview browser support">{item.safari}</abbr>
             </td>
           ) : (
-            <td class={styles.tableData}>{item.safari}</td>
+            <td class={styles.data}>{item.safari}</td>
           )}
         </tr>
       ))

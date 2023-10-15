@@ -1,28 +1,43 @@
 .container {
+  margin-top: 1rem;
   table-layout: fixed;
   text-align: center;
+  white-space: nowrap;
   width: 100%;
 }
 
-.header {
+.headerContainer {
   border-bottom: 1px solid rgb(var(--gray-600));
 }
 
-.tableRow {
+.row {
   padding: 0.5rem 0.75rem;
   vertical-align: middle;
 }
 
-.tableHeader {
-  padding: 0.5rem 0.75rem;
+.header {
+  padding: 0.75rem;
   vertical-align: middle;
 }
 
-.tableData {
-  padding: 0.5rem 0.75rem;
+.data {
+  padding: 0.75rem;
   vertical-align: middle;
 }
 
-.tableData:is(:first-child) {
+.data:is(:first-child) {
+  -webkit-mask-image: linear-gradient(to left, #0000, #000 20%);
+  mask-image: linear-gradient(to left, #0000, #000 20%);
   overflow-x: scroll;
+}
+
+.data:is(:first-child)::after {
+  content: "";
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .data:is(:first-child)::after {
+    margin-right: 1.25rem;
+  }
 }
