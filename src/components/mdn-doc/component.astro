@@ -14,7 +14,7 @@ const _content = (await Astro.slots.render("default")).trim();
 ---
 
 <blockquote class={styles.container} cite={_prefix + path}>
-  <p set:html={_content} />
+  <p class={styles.content} set:html={_content} />
   <footer class={styles.footer}>
     <a
       class={styles.link}

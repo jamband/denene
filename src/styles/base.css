@@ -36,18 +36,6 @@ a {
   text-underline-offset: 0.25em;
 }
 
-blockquote p::before {
-  color: rgb(var(--gray-100));
-  content: "\201C";
-  font-weight: 600;
-}
-
-blockquote p::after {
-  color: rgb(var(--gray-100));
-  content: "\201D";
-  font-weight: 600;
-}
-
 button {
   border-radius: 0.25rem;
   font-weight: bold;

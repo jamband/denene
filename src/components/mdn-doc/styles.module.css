@@ -4,6 +4,18 @@
   gap: 0.5rem;
 }
 
+.content::before {
+  color: rgb(var(--gray-100));
+  content: "\201C";
+  font-weight: 600;
+}
+
+.content::after {
+  color: rgb(var(--gray-100));
+  content: "\201D";
+  font-weight: 600;
+}
+
 .footer {
   text-align: center;
 }
