@@ -8,11 +8,13 @@ type Props = {
 };
 
 const { path, text } = Astro.props;
+
 const _prefix = "https://developer.mozilla.org/en-US/docs/";
+const _content = (await Astro.slots.render("default")).trim();
 ---
 
 <blockquote class={styles.container} cite={_prefix + path}>
-  <p><slot /></p>
+  <p set:html={_content} />
   <footer class={styles.footer}>
     <a
       class={styles.link}
