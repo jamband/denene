@@ -6,6 +6,7 @@
 
 - hosting: github pages
 - building: astro
+- styling: css modules
 - color palette: tailwind css
 
 ## license
