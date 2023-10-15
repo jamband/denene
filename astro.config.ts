@@ -6,4 +6,9 @@ export default defineConfig({
   base: "denene/",
   trailingSlash: "always",
   integrations: [sitemap()],
+  vite: {
+    build: {
+      assetsInlineLimit: 2048,
+    },
+  },
 });
