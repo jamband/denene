@@ -1,0 +1,77 @@
+---
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "./styles.module.css";
+
+const title = "transition";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/CSS_Transitions" text={title}>
+      css transitions is a module of css that lets you create gradual
+      transitions between the values of specific css properties. the behavior of
+      these transitions can be controlled by specifying their timing function,
+      duration, and other attributes.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader
+      id="progressbar"
+      title="width"
+      subTitle="e.g. loading indicator"
+    />
+    <div class={styles.example1}>
+      <p class={styles.hint}>
+        press the button below or use the keyboard to focus on the button and
+        press the spacebar.
+      </p>
+      <input type="checkbox" id="example1-action" class={styles.checkbox} />
+      <label for="example1-action" class={styles.button} role="button"
+        >press me</label
+      >
+      <div
+        class={styles.example1Content}
+        role="progressbar"
+        aria-labelledby="progressbar"
+        aria-valuenow={0}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="opacity" subTitle="e.g. fade in / fade out" />
+    <p class={styles.hint}>
+      press the button below or use the keyboard to focus on the button and
+      press the spacebar.
+    </p>
+    <div class={styles.example2}>
+      <input type="checkbox" id="example2-action" class={styles.checkbox} />
+      <label for="example2-action" class={styles.button} role="button"
+        >press me</label
+      >
+      <div class={styles.example2Content}>fade in / fade out</div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "transition",
+          chrome: "26",
+          firefox: "16",
+          safari: "9",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>

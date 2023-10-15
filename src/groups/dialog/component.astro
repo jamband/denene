@@ -1,0 +1,150 @@
+---
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { IconX } from "@/icons/x";
+import { Layout } from "@/layouts/layout";
+import styles from "./styles.module.css";
+
+const title = "<dialog>";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/HTML/Element/dialog" text={title}>
+      the <Code code="<dialog>" inline /> html element represents a dialog box
+      or other interactive component, such as a dismissible alert, inspector, or
+      subwindow.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="1" subTitle="e.g. simple alert" />
+    <button id="example1-button" class={styles.exampleButton}>press me</button>
+    <dialog
+      id="example1"
+      class={styles.example1}
+      aria-labelledby="example1-title"
+    >
+      <form method="dialog">
+        <div class={styles.dialogHeader}>
+          <h3 id="example1-title">simple alert</h3>
+          <button type="submit" class={styles.close} aria-label="close"
+            ><IconX class={styles.closeIcon} />
+          </button>
+        </div>
+        <div class={styles.dialogBody}>
+          <p>
+            press the [x] button or the <Code code="esc" inline /> key to close
+            it.
+          </p>
+        </div>
+      </form>
+    </dialog>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="2" subTitle="e.g. confirm" />
+    <button id="example2-button" class={styles.exampleButton}>press me</button>
+    <dialog
+      id="example2"
+      class={styles.example2}
+      aria-labelledby="example2-title"
+    >
+      <form method="dialog">
+        <div class={styles.dialogHeader}>
+          <h3 id="example2-title">confirm</h3>
+        </div>
+        <div class={styles.dialogBody}>
+          <p>
+            you can also close it by pressing the <Code code="esc" inline />
+             key.
+          </p>
+        </div>
+        <footer class={styles.dialogFooter}>
+          <button type="submit" value="it was canceled.">cancel</button>
+          <button type="submit" value="it was ok.">ok</button>
+        </footer>
+      </form>
+    </dialog>
+    <p id="dialog-action-result" class={styles.dialogActionResult}></p>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: title,
+          chrome: "37",
+          firefox: "98",
+          safari: "15.4",
+        },
+        {
+          value: "::backdrop",
+          chrome: "37",
+          firefox: "47",
+          safari: "15.4",
+        },
+        {
+          value: "backdrop-filter",
+          chrome: "76",
+          firefox: "103",
+          safari: "9",
+        },
+        {
+          value: "scrollbar-gutter",
+          chrome: "94",
+          firefox: "97",
+          safari: "No",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<script>
+  const example1 = document.querySelector<HTMLDialogElement>("#example1");
+  if (!example1) throw Error("example1 element does not exists.");
+
+  const example1Button =
+    document.querySelector<HTMLButtonElement>("#example1-button");
+  if (!example1Button) throw Error("example1Button element does not exists.");
+
+  const example2 = document.querySelector<HTMLDialogElement>("#example2");
+  if (!example2) throw Error("example2 element does not exists.");
+
+  const example2Button =
+    document.querySelector<HTMLButtonElement>("#example2-button");
+  if (!example2Button) throw Error("example2Button element does not exists.");
+
+  example1Button.addEventListener("click", () => {
+    example1.showModal();
+  });
+
+  example1.addEventListener("click", (event) => {
+    if (["A", "DIALOG"].includes((event.target as HTMLElement).nodeName)) {
+      example1.close();
+    }
+  });
+
+  example2Button.addEventListener("click", () => {
+    example2.showModal();
+  });
+
+  example2.addEventListener("click", (event) => {
+    if (["A", "DIALOG"].includes((event.target as HTMLElement).nodeName)) {
+      example2.close();
+    }
+  });
+
+  example2.addEventListener("close", () => {
+    const actionResult = document.querySelector<HTMLElement>(
+      "#dialog-action-result",
+    );
+    if (!actionResult) throw Error("actionResult element does not exists.");
+    actionResult.textContent = example2.returnValue;
+  });
+</script>

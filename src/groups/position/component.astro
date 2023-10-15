@@ -1,0 +1,67 @@
+---
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { StarImage } from "@/components/star-image";
+import { APP_NAME } from "@/constants/app";
+import { Layout } from "@/layouts/layout";
+import styles from "./styles.module.css";
+
+const title = "position";
+const [account, repository] = APP_NAME.split("/");
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/position" text={title}>
+      the <Code code="position" inline /> css property sets how an element is
+      positioned in a document. the top, right, bottom, and left properties
+      determine the final location of positioned elements.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="overlay contents" />
+    <p class={styles.description}>
+      an example of an overlay images using
+      <Code code="position: relative;" inline /> and
+      <Code code="position: absolute;" inline />.
+    </p>
+    <div class={styles.example1}>
+      <StarImage />
+      <p class={styles.example1Text}>
+        <span class={styles.account}>{account}/</span><span
+          class={styles.repository}
+          >{repository}
+        </span>
+      </p>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="fixed position side content" />
+    <p class={styles.description}>
+      using <Code code="position: sticky;" inline />. please scroll down a lot.
+    </p>
+    <div class={styles.example2}>
+      <div class={styles.example2Main}>main</div>
+      <div class={styles.example2Side}>side</div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "position: sticky",
+          chrome: "56",
+          firefox: "32",
+          safari: "13",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>

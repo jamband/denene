@@ -1,0 +1,68 @@
+---
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "./styles.module.css";
+
+const title = "flexbox";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Learn/CSS/CSS_layout/Flexbox" text={title}>
+      flexbox is a one-dimensional layout method for arranging items in rows or
+      columns. items flex (expand) to fill additional space or shrink to fit
+      into smaller spaces. this article explains all the fundamentals.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="row" subTitle="e.g. navigation header" />
+    <div class={styles.rowContainer}>
+      <a href="/denene/" class={styles.rowBox}>home</a>
+      <a href="/denene/about/" class={styles.rowBox}>about</a>
+      <a href="/denene/contact/" class={styles.rowBox}>contact</a>
+    </div>
+  </PageSection>
+  <PageSection>
+    <div class={styles.anonymousContainer}>
+      <div class={styles.anonymousBox}>
+        <PageSubHeader title="column" subTitle="e.g. side navigation" />
+        <div class={styles.columnContainer}>
+          <a href="/denene/" class={styles.columnBox}>home</a>
+          <a href="/denene/about" class={styles.columnBox}>about</a>
+          <a href="/denene/contact/" class={styles.columnBox}>contact</a>
+        </div>
+      </div>
+      <div class={styles.anonymousBox}>
+        <PageSubHeader title="grids and flexbox" />
+        <MdnDoc
+          path="Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout#grid_and_flexbox"
+          text="grids and flexbox"
+        >
+          the basic difference between css grid layout and css flexbox layout is
+          that flexbox was designed for layout in one dimension - either a row
+          or a column. grid was designed for two-dimensional layout - rows, and
+          columns at the same time.
+        </MdnDoc>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "display: flex",
+          chrome: "29",
+          firefox: "20",
+          safari: "9",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>

@@ -1,26 +1,7 @@
 ---
-import { BackToHomeLink } from "@/components/back-to-home-link";
-import { PageHeader } from "@/components/page/header";
-import { PageSection } from "@/components/page/section";
-import { APP_DESCRIPTION, APP_NAME, APP_REPOSITORY_URL } from "@/constants/app";
-import { IconExternalLink } from "@/icons/external-link";
-import { Layout } from "@/layouts/layout";
-import styles from "@/styles/pages/about/styles.module.css";
+import "@/styles/app.css";
 
-const title = "about";
+import { Base } from "@/groups/about";
 ---
 
-<Layout title={title}>
-  <PageHeader title={title} />
-  <PageSection class={styles.description}>
-    <p>{APP_DESCRIPTION}.</p>
-    <p>
-      this website is an open source project. see
-      <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer"
-        >github {APP_NAME}<IconExternalLink class={styles.icon} />
-      </a>
-       for details.
-    </p>
-  </PageSection>
-  <BackToHomeLink />
-</Layout>
+<Base />

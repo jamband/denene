@@ -1,0 +1,83 @@
+---
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "./styles.module.css";
+
+const title = "subgrid";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/CSS_grid_layout/Subgrid" text={title}>
+      when you add <Code code="display: grid" inline /> to a grid container,
+      only the direct children become grid items and can then be placed on the
+      grid you created. the children of these items display in normal flow.<br
+      /><br />
+       you can "nest" grids by making a grid item a grid container. these grids,
+      however, are independent of the parent grid and of each other, meaning
+      that they do not take their track sizing from the parent grid. this makes
+      it difficult to line nested grid items up with the main grid.<br /><br />
+       if you set the value <Code code="subgrid" inline /> on
+      <Code code="grid-template-columns" inline />, <Code
+        code="grid-template-rows"
+        inline
+      />
+       or both, instead of creating a new track listing the nested grid uses the
+      tracks defined on the parent.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="without subgrid" />
+    <div class={styles.boxContainer}>
+      <div class={styles.box}>
+        <div class={styles.boxTitle}>title</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description<br />description</div>
+      </div>
+      <div class={styles.box}>
+        <div class={styles.boxTitle}>
+          title<br /><span class={styles.boxSubtitle}>subtitle</span>
+        </div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description</div>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="with subgrid" />
+    <div class={styles.boxContainer}>
+      <div class:list={[styles.box, styles.boxSubgrid]}>
+        <div class={styles.boxTitle}>title</div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description<br />description</div>
+      </div>
+      <div class:list={[styles.box, styles.boxSubgrid]}>
+        <div class={styles.boxTitle}>
+          title<br /><span class={styles.boxSubtitle}>subtitle</span>
+        </div>
+        <div class={styles.boxImage}></div>
+        <div class={styles.boxDescription}>description</div>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "subgrid",
+          chrome: "117",
+          firefox: "71",
+          safari: "16",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
