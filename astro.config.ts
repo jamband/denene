@@ -6,13 +6,4 @@ export default defineConfig({
   base: "denene/",
   trailingSlash: "always",
   integrations: [sitemap()],
-  vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          assetFileNames: "assets/[hash][extname]",
-        },
-      },
-    },
-  },
 });
