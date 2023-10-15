@@ -1,8 +1,14 @@
-.example {
+.link {
   align-items: center;
   display: inline-flex;
+  gap: 0.1rem;
   text-decoration: none;
   text-underline-offset: auto;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
 }
 
 .example1Link {
@@ -28,11 +34,4 @@
 .example5Link {
   box-shadow: 0 1px 0 0 currentcolor;
   text-decoration: none;
-}
-
-.icon {
-  height: 1rem;
-  margin-left: 0.1rem;
-  vertical-align: -0.175em;
-  width: 1rem;
 }

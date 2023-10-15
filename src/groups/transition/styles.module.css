@@ -19,15 +19,11 @@
   box-shadow: var(--outline);
 }
 
-.hint {
-  margin-bottom: 1rem;
-}
-
 .example1 {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
-.example1Content {
+.example1Transition {
   background: rgb(var(--pink-300));
   height: 3px;
   opacity: 0.8;
@@ -35,11 +31,15 @@
   width: 0%;
 }
 
-.example1 > .checkbox:checked ~ div {
+.example1Checkbox:checked ~ .example1Transition {
   width: 100%;
 }
 
-.example2Content {
+.example2 {
+  margin-top: 1rem;
+}
+
+.example2Transition {
   background: rgb(var(--gray-700));
   border-radius: 0.25rem;
   color: rgb(var(--gray-400));
@@ -48,6 +48,6 @@
   transition: opacity 0.3s;
 }
 
-.example2 > .checkbox:checked ~ .example2Content {
+.example2Checkbox:checked ~ .example2Transition {
   opacity: 1;
 }

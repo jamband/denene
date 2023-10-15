@@ -27,44 +27,52 @@ const title = ":focus-within";
   <PageSection class={styles.formContainer}>
     <form>
       <fieldset class={styles.example1}>
-        <legend>#1</legend>
-        <label for="username1">username</label>
-        <input
-          type="text"
-          id="username1"
-          class={styles.textbox}
-          placeholder="focus here"
-          autocomplete="username"
-        />
-        <label for="password1">password</label>
-        <input
-          type="password"
-          id="password1"
-          class={styles.textbox}
-          placeholder="focus here"
-          autocomplete="current-password"
-        />
+        <legend class={styles.title}>#1</legend>
+        <div class={styles.form}>
+          <div>
+            <label for="username1">username</label>
+            <input
+              type="text"
+              id="username1"
+              placeholder="focus here"
+              autocomplete="username"
+            />
+          </div>
+          <div>
+            <label for="password1">password</label>
+            <input
+              type="password"
+              id="password1"
+              placeholder="focus here"
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
       </fieldset>
     </form>
     <form>
       <fieldset class={styles.example2}>
-        <legend>#2</legend>
-        <label for="username2">username</label>
-        <input
-          type="text"
-          id="username2"
-          class={styles.textbox}
-          placeholder="focus here"
-          autocomplete="username"
-        />
-        <label for="password2">password</label>
-        <input
-          type="password"
-          id="password2"
-          class={styles.textbox}
-          placeholder="focus here"
-          autocomplete="current-password"
-        />
+        <legend class={styles.title}>#2</legend>
+        <div class={styles.form}>
+          <div>
+            <label for="username2">username</label>
+            <input
+              type="text"
+              id="username2"
+              placeholder="focus here"
+              autocomplete="username"
+            />
+          </div>
+          <div>
+            <label for="password2">password</label>
+            <input
+              type="password"
+              id="password2"
+              placeholder="focus here"
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
       </fieldset>
     </form>
   </PageSection>

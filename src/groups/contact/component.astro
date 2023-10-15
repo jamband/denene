@@ -12,14 +12,22 @@ const title = "contact";
 
 <Layout title={title}>
   <PageHeader title={title} />
-  <PageSection class={styles.description}>
+  <PageSection class={styles.container}>
     <p>
       please to the message via
-      <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer"
+      <a
+        href="https://twitter.com/livejam_db"
+        class={styles.link}
+        target="_blank"
+        rel="noreferrer"
         >twitter<IconExternalLink class={styles.icon} />
       </a>
        or
-      <a href={`${APP_REPOSITORY_URL}/issues`} target="_blank" rel="noreferrer"
+      <a
+        href={`${APP_REPOSITORY_URL}/issues`}
+        class={styles.link}
+        target="_blank"
+        rel="noreferrer"
         >github<IconExternalLink class={styles.icon} />
       </a>
        issues. thank you.

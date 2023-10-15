@@ -27,17 +27,21 @@ const title = "transition";
       title="width"
       subTitle="e.g. loading indicator"
     />
+    <p>
+      press the button below or use the keyboard to focus on the button and
+      press the spacebar.
+    </p>
     <div class={styles.example1}>
-      <p class={styles.hint}>
-        press the button below or use the keyboard to focus on the button and
-        press the spacebar.
-      </p>
-      <input type="checkbox" id="example1-action" class={styles.checkbox} />
+      <input
+        type="checkbox"
+        id="example1-action"
+        class:list={[styles.checkbox, styles.example1Checkbox]}
+      />
       <label for="example1-action" class={styles.button} role="button"
         >press me</label
       >
       <div
-        class={styles.example1Content}
+        class={styles.example1Transition}
         role="progressbar"
         aria-labelledby="progressbar"
         aria-valuenow={0}
@@ -49,16 +53,20 @@ const title = "transition";
   </PageSection>
   <PageSection>
     <PageSubHeader title="opacity" subTitle="e.g. fade in / fade out" />
-    <p class={styles.hint}>
+    <p>
       press the button below or use the keyboard to focus on the button and
       press the spacebar.
     </p>
     <div class={styles.example2}>
-      <input type="checkbox" id="example2-action" class={styles.checkbox} />
+      <input
+        type="checkbox"
+        id="example2-action"
+        class:list={[styles.checkbox, styles.example2Checkbox]}
+      />
       <label for="example2-action" class={styles.button} role="button"
         >press me</label
       >
-      <div class={styles.example2Content}>fade in / fade out</div>
+      <div class={styles.example2Transition}>fade in / fade out</div>
     </div>
   </PageSection>
   <PageSection>

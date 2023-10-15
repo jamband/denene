@@ -12,11 +12,15 @@ const title = "about";
 
 <Layout title={title}>
   <PageHeader title={title} />
-  <PageSection class={styles.description}>
+  <PageSection class={styles.container}>
     <p>{APP_DESCRIPTION}.</p>
     <p>
       this website is an open source project. see
-      <a href={APP_REPOSITORY_URL} target="_blank" rel="noreferrer"
+      <a
+        href={APP_REPOSITORY_URL}
+        class={styles.link}
+        target="_blank"
+        rel="noreferrer"
         >github {APP_NAME}<IconExternalLink class={styles.icon} />
       </a>
        for details.

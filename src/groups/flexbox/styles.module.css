@@ -13,6 +13,10 @@
   width: 100%;
 }
 
+.rowBox:active {
+  background: rgb(var(--gray-700));
+}
+
 @media (min-width: 768px) {
   .anonymousContainer {
     display: flex;
@@ -51,7 +55,6 @@
   text-decoration: none;
 }
 
-.rowBox:active,
 .columnBox:active {
   background: rgb(var(--gray-700));
 }

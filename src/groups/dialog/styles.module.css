@@ -1,7 +1,13 @@
-.exampleButton {
+.button {
   background: rgb(var(--gray-700));
   box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
   color: rgb(var(--gray-100));
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .dialogHeader {
@@ -14,12 +20,10 @@
   justify-content: space-between;
 }
 
-.dialogHeader > button {
-  background: rgb(var(--gray-500));
-}
-
-.dialogBody {
-  margin-top: 1rem;
+.dialogMain {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
 }
 
 .dialogFooter {
@@ -29,27 +33,31 @@
   margin-top: 1rem;
 }
 
-.dialogFooter > button {
+.dialogFooterButton {
   background: rgb(var(--gray-600));
   box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-800));
   color: rgb(var(--gray-100));
+  padding: 0.3rem 0.75rem;
 }
 
-.dialogActionResult {
+.actionResult {
   color: rgb(var(--pink-300));
   font-weight: bold;
   margin: 0.5rem 0;
 }
 
-.dialogActionResult::before {
+.actionResult::before {
   color: rgb(var(--gray-400));
   content: "» ";
   margin-left: 0.25rem;
 }
 
 .close {
+  align-items: center;
+  background: transparent;
   color: rgb(var(--gray-400));
-  padding: 0.25rem 0.5rem;
+  display: flex;
+  padding: 0.5rem;
 }
 
 .close:active {
@@ -58,6 +66,5 @@
 
 .closeIcon {
   height: 1.5rem;
-  vertical-align: -0.175em;
   width: 1.5rem;
 }

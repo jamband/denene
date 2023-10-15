@@ -16,12 +16,12 @@
   transform: translate(-50%, -50%);
 }
 
-.example1Text > .account {
+.account {
   color: rgb(var(--gray-100));
   font-size: 0.85rem;
 }
 
-.example1Text > .repository {
+.repository {
   color: rgb(var(--pink-300));
 }
 

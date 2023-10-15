@@ -19,7 +19,7 @@
   padding: 0.25rem 0;
 }
 
-.toolsContent {
+.toolsMain {
   background: rgb(var(--gray-700));
   border-radius: 0.25rem;
   color: rgb(var(--gray-400));

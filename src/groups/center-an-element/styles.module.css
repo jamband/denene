@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.flex {
+.withFlex {
   align-items: center;
   aspect-ratio: 1 / 1;
   background: rgb(var(--gray-700));
@@ -15,12 +15,12 @@
 }
 
 @media (min-width: 768px) {
-  .flex {
+  .withFlex {
     width: 25%;
   }
 }
 
-.grid {
+.withGrid {
   aspect-ratio: 4 / 3;
   background: rgb(var(--gray-700));
   display: grid;
@@ -30,12 +30,12 @@
 }
 
 @media (min-width: 768px) {
-  .grid {
+  .withGrid {
     width: 50%;
   }
 }
 
-.positionTransform {
+.withPositionAndTransform {
   aspect-ratio: 16 / 9;
   background: rgb(var(--gray-700));
   position: relative;
@@ -43,12 +43,12 @@
 }
 
 @media (min-width: 768px) {
-  .positionTransform {
+  .withPositionAndTransform {
     width: 75%;
   }
 }
 
-.positionTransformBox {
+.withPositionAndTransformBox {
   left: 50%;
   position: absolute;
   top: 50%;

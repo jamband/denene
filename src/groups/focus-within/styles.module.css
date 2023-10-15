@@ -4,15 +4,17 @@
   gap: 3rem;
 }
 
-.textbox {
-  margin-bottom: 1rem;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .example1:focus-within {
   border: 1px solid rgb(var(--blue-300));
 }
 
-.example1:focus-within > legend {
+.example1:focus-within > .title {
   color: rgb(var(--blue-300));
 }
 
@@ -20,6 +22,6 @@
   border: 1px solid rgb(var(--pink-300));
 }
 
-.example2:focus-within > legend {
+.example2:focus-within > .title {
   color: rgb(var(--pink-300));
 }
