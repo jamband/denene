@@ -1,5 +1,6 @@
 ---
 import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
 import { MdnDoc } from "@/components/mdn-doc";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
@@ -59,6 +60,18 @@ const title = "transition";
       >
       <div class={styles.example2Content}>fade in / fade out</div>
     </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "transition",
+          chrome: "26",
+          firefox: "16",
+          safari: "9",
+        },
+      ]}
+    />
   </PageSection>
   <BackToHomeLink />
 </Layout>
