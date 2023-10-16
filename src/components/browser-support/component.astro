@@ -19,16 +19,18 @@ const { items } = Astro.props;
   <thead class={styles.headerContainer}>
     <tr class={styles.row}>
       <th class={styles.header}></th>
-      <th class={styles.header}>chrome</th>
-      <th class={styles.header}>firefox</th>
-      <th class={styles.header}>safari</th>
+      <th scope="col" class={styles.header}>chrome</th>
+      <th scope="col" class={styles.header}>firefox</th>
+      <th scope="col" class={styles.header}>safari</th>
     </tr>
   </thead>
   <tbody>
     {
       items.map((item) => (
         <tr class={styles.row}>
-          <td class={styles.data}>{item.value}</td>
+          <th scope="row" class={styles.data}>
+            {item.value}
+          </th>
           <td class={styles.data}>{item.chrome}</td>
           <td class={styles.data}>{item.firefox}</td>
           {item.safari === "tp" ? (
