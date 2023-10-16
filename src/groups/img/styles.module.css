@@ -1,8 +1,14 @@
-.objectFit {
-  align-items: center;
+.objectFitContainer {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.objectFit {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .objectFitImage {

@@ -31,8 +31,8 @@ const image = (id: string, width: number, quality: number) => {
   <PageSection>
     <PageSubHeader title="object-fit" />
     <p class={styles.description}>please compare it with the original image.</p>
-    <div class={styles.objectFit}>
-      <div>
+    <div class={styles.objectFitContainer}>
+      <div class={styles.objectFit}>
         <Image
           src={image("1488508872907-592763824245", 300, 60)}
           width="300"
@@ -48,7 +48,7 @@ const image = (id: string, width: number, quality: number) => {
           >original<IconExternalLink class={styles.icon} />
         </a>
       </div>
-      <div>
+      <div class={styles.objectFit}>
         <Image
           src={image("1565079527389-eb2640ee27fc", 300, 60)}
           width="300"
@@ -64,7 +64,7 @@ const image = (id: string, width: number, quality: number) => {
           >original<IconExternalLink class={styles.icon} />
         </a>
       </div>
-      <div>
+      <div class={styles.objectFit}>
         <Image
           src={image("1563350316-9f7fc841d2c4", 300, 60)}
           width="300"
