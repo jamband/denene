@@ -5,13 +5,8 @@
 .button {
   border-radius: 0.25rem;
   color: rgb(var(--gray-400));
-  list-style: none;
   padding: 0.5rem 0.9rem;
   white-space: nowrap;
-}
-
-.button::-webkit-details-marker {
-  display: none;
 }
 
 .container[open] .button {

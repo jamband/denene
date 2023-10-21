@@ -1,7 +1,6 @@
 @import url("the-new-css-reset");
 
-progress,
-summary {
+progress {
   all: revert;
 }
 

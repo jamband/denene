@@ -10,6 +10,7 @@ import { MdnDoc } from "@/components/mdn-doc";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { PageSubHeader } from "@/components/page/sub-header";
+import { IconX } from "@/icons/x";
 import { Layout } from "@/layouts/layout";
 import styles from "./styles.module.css";
 
@@ -30,7 +31,9 @@ const title = "<details>";
     <PageSubHeader title="what tools do you use to build this site?" />
     <div class={styles.toolsContainer}>
       <details class={styles.tools}>
-        <summary class={styles.toolsSummary}>hosting</summary>
+        <summary class={styles.toolsSummary}
+          >hosting<IconX class={styles.toolsSummaryIcon} /></summary
+        >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>github pages</span> » you can use
           github pages to host a website about yourself, your organization, or
@@ -38,14 +41,18 @@ const title = "<details>";
         </p>
       </details>
       <details class={styles.tools}>
-        <summary class={styles.toolsSummary}>building</summary>
+        <summary class={styles.toolsSummary}
+          >building<IconX class={styles.toolsSummaryIcon} /></summary
+        >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>astro</span> » build faster websites
           with astro's next-gen island architecture.
         </p>
       </details>
       <details class={styles.tools}>
-        <summary class={styles.toolsSummary}>styling</summary>
+        <summary class={styles.toolsSummary}
+          >styling<IconX class={styles.toolsSummaryIcon} /></summary
+        >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>css modules</span> » a css module is a
           css file in which all class names and animation names are scoped
@@ -53,7 +60,9 @@ const title = "<details>";
         </p>
       </details>
       <details class={styles.tools}>
-        <summary class={styles.toolsSummary}>color palette</summary>
+        <summary class={styles.toolsSummary}
+          >color palette<IconX class={styles.toolsSummaryIcon} /></summary
+        >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>tailwind css</span> » tailwind includes
           an expertly-crafted default color palette out-of-the-box that is a
