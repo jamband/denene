@@ -8,13 +8,11 @@
 .main::before {
   color: rgb(var(--gray-100));
   content: "\201C";
-  font-weight: 600;
 }
 
 .main::after {
   color: rgb(var(--gray-100));
   content: "\201D";
-  font-weight: 600;
 }
 
 .link {

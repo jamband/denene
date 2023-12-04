@@ -1,6 +1,5 @@
 .rowContainer {
   display: flex;
-  font-weight: bold;
   justify-content: space-around;
 }
 
@@ -45,7 +44,6 @@
 .columnContainer {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
   margin-bottom: 3rem;
 }
 

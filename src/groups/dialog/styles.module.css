@@ -16,7 +16,6 @@
   color: rgb(var(--gray-100));
   display: flex;
   font-size: 1.5rem;
-  font-weight: bold;
   justify-content: space-between;
 }
 
@@ -36,7 +35,6 @@
 
 .actionResult {
   color: rgb(var(--pink-300));
-  font-weight: bold;
   margin: 0.5rem 0;
 }
 
