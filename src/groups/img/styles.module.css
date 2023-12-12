@@ -23,6 +23,7 @@
 
 .link {
   align-items: center;
+  border-radius: var(--rounded);
   display: flex;
   gap: 0.1rem;
   justify-content: center;
@@ -44,7 +45,7 @@
 .lazyLoadingImage {
   aspect-ratio: 2 / 3;
   background: rgb(var(--gray-700));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   height: 100%;
   object-fit: cover;
   width: 100%;

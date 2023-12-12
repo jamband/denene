@@ -17,10 +17,11 @@
 
 .link {
   align-items: center;
+  border-radius: var(--rounded);
   display: flex;
   gap: 0.1rem;
   justify-content: center;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .icon {

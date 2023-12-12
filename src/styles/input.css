@@ -1,6 +1,6 @@
 fieldset {
   border: 1px solid rgb(var(--gray-600));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   padding: 1rem;
 }
 
@@ -18,7 +18,7 @@ input[type="text"],
 input[type="password"] {
   background: rgb(var(--gray-900));
   border: 1px solid rgb(var(--gray-600));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   display: block;
   padding: 0.5rem 1rem;
 }

@@ -1,6 +1,6 @@
 .container {
   background: rgb(var(--gray-700));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   height: 100%;
   width: 100%;
 }

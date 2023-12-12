@@ -33,7 +33,7 @@
 
 .example2Main {
   background: rgb(var(--gray-700));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   font-family: var(--font-mono);
   height: 100vh;
   padding: 1rem;
@@ -42,7 +42,7 @@
 
 .example2Side {
   background: rgb(var(--gray-700));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   font-family: var(--font-mono);
   height: 3.5em;
   padding: 1rem;

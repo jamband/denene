@@ -5,7 +5,8 @@ progress {
 }
 
 :focus {
-  outline: revert;
+  outline: 2px solid rgb(var(--gray-400));
+  outline-offset: 0.1rem;
 }
 
 ::marker {

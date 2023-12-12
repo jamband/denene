@@ -1,7 +1,7 @@
 dialog {
   background: rgb(var(--gray-700));
   border: 1px solid rgb(var(--gray-600));
-  border-radius: 0.25rem;
+  border-radius: var(--rounded);
   color: rgb(var(--gray-400));
   width: 90%;
 }

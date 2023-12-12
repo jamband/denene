@@ -7,6 +7,7 @@
 
 .link {
   align-items: center;
+  border-radius: var(--rounded);
   display: inline-flex;
 }
 

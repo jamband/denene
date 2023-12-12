@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   font-size: 2.1rem;
-  gap: 0.5rem;
+  gap: 1rem;
+  line-height: 1.2;
 }
 
 .link {
+  border-radius: var(--rounded);
   padding-bottom: 0.5rem;
 }

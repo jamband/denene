@@ -1,6 +1,9 @@
 :root {
+  /* font family */
   /* stylelint-disable-next-line value-keyword-case */
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* color */
   --gray-100: 236 239 244;
   --gray-400: 183 180 199;
   --gray-600: 53 51 60;
@@ -9,5 +12,12 @@
   --gray-900: 2 0 9;
   --pink-300: 215 134 178;
   --blue-300: 147 197 253;
-  --outline: 0 0 0 0.125rem rgb(var(--gray-400));
+
+  /* border radius */
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-lg: 0.5rem;
+
+  /* outline */
+  --outline: 0 0 0 0.1rem rgb(var(--gray-400));
 }

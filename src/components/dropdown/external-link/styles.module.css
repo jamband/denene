@@ -1,5 +1,6 @@
 .container {
   align-items: center;
+  border-radius: var(--rounded);
   color: rgb(var(--gray-400));
   display: inline-flex;
   gap: 0.1rem;
