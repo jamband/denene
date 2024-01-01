@@ -12,13 +12,13 @@
     "clean": "node scripts/clean.js"
   },
   "dependencies": {
-    "@astrojs/check": "0.3.1",
-    "@astrojs/sitemap": "3.0.3",
-    "astro": "4.0.4",
+    "@astrojs/check": "0.3.4",
+    "@astrojs/sitemap": "3.0.4",
+    "astro": "4.0.8",
     "prettier": "3.1.1",
-    "prettier-plugin-astro": "0.12.2",
-    "stylelint": "16.0.1",
-    "stylelint-config-standard": "35.0.0",
+    "prettier-plugin-astro": "0.12.3",
+    "stylelint": "16.1.0",
+    "stylelint-config-standard": "36.0.0",
     "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.2",
     "typescript": "5.3.3"
