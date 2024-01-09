@@ -1,6 +1,5 @@
 .link {
   align-items: center;
-  border-radius: var(--rounded);
   display: inline-flex;
   gap: 0.1rem;
   text-decoration: none;
