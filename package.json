@@ -14,8 +14,8 @@
   "dependencies": {
     "@astrojs/check": "0.4.1",
     "@astrojs/sitemap": "3.0.4",
-    "astro": "4.1.1",
-    "prettier": "3.1.1",
+    "astro": "4.1.2",
+    "prettier": "3.2.2",
     "prettier-plugin-astro": "0.12.3",
     "stylelint": "16.1.0",
     "stylelint-config-standard": "36.0.0",
