@@ -1,6 +1,5 @@
 pre {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded);
   color: rgb(var(--gray-100) / 90%);
   display: block;
   font-family: var(--font-mono);
@@ -13,7 +12,6 @@ pre {
 
 :not(pre) > code {
   background: rgb(var(--gray-600));
-  border-radius: var(--rounded);
   color: rgb(var(--gray-100) / 90%);
   font-family: var(--font-mono);
   font-size: 0.85rem;

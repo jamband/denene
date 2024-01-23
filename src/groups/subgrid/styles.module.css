@@ -6,7 +6,6 @@
 
 .box {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded-lg);
   display: grid;
 }
 

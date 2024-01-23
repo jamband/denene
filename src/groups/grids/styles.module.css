@@ -15,7 +15,6 @@
 
 .box {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded);
   display: grid;
   font-size: 0.9rem;
   place-items: center;

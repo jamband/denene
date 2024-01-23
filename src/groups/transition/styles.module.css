@@ -1,6 +1,5 @@
 .button {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded);
   box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
   color: rgb(var(--gray-100));
   display: inline-block;
@@ -40,7 +39,6 @@
 
 .example2Transition {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded);
   color: rgb(var(--gray-400));
   opacity: 0;
   padding: 1rem;

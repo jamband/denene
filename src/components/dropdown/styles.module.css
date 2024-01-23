@@ -3,7 +3,6 @@
 }
 
 .button {
-  border-radius: var(--rounded);
   color: rgb(var(--gray-400));
   padding: 0.5rem 0.9rem;
   white-space: nowrap;
@@ -42,7 +41,6 @@
 
 .main {
   background: rgb(var(--gray-700));
-  border-radius: var(--rounded);
   box-shadow: 0.1rem 0.1rem 0.3rem rgb(var(--gray-900) / 20%);
   display: flex;
   flex-direction: column;

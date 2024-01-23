@@ -13,11 +13,6 @@
   --pink-300: 215 134 178;
   --blue-300: 147 197 253;
 
-  /* border radius */
-  --rounded-sm: 0.125rem;
-  --rounded: 0.25rem;
-  --rounded-lg: 0.5rem;
-
   /* outline */
   --outline: 0 0 0 0.1rem rgb(var(--gray-400));
 }
