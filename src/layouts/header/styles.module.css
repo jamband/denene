@@ -18,10 +18,6 @@
   text-decoration: none;
 }
 
-.link:active {
-  background-color: rgb(var(--gray-600));
-}
-
 .account {
   color: rgb(var(--gray-100));
   font-size: 0.95rem;

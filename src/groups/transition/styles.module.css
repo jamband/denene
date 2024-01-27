@@ -1,6 +1,6 @@
 .button {
   background: rgb(var(--gray-700));
-  box-shadow: 0.05rem 0.1rem 0.1rem rgb(var(--gray-900));
+  border: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
   display: inline-block;
   margin-bottom: 1rem;

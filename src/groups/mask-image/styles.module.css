@@ -1,8 +1,6 @@
 .example1Container {
   background-color: rgb(var(--gray-700));
   border-bottom: 3px solid rgb(var(--pink-300));
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
   margin-top: 1rem;
   width: 100%;
 }
@@ -28,9 +26,7 @@
 
 .example2Container {
   background-color: rgb(var(--gray-700));
-  border-bottom-right-radius: 0.25rem;
   border-left: 3px solid rgb(var(--pink-300));
-  border-top-right-radius: 0.25rem;
   height: 300px;
   margin-top: 1rem;
   width: 85%;
