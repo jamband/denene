@@ -1,7 +1,217 @@
 ---
 import "@/styles/app.css";
 
-import { Base } from "@/groups/img";
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { IconExternalLink } from "@/icons/external-link";
+import { Layout } from "@/layouts/layout";
+import { Image } from "astro:assets";
+import styles from "./_styles.module.css";
+
+const title = "<img>";
+
+const image = (id: string, width: number, quality: number) => {
+  return `https://images.unsplash.com/photo-${id}?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=${width}&q=${quality}`;
+};
 ---
 
-<Base />
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/HTML/Element/img" text={title}>
+      the <Code code={title} inline /> html element embeds an image into the document.
+      use both width and height to set the intrinsic size of the image, allowing
+      it to take up space before it loads, to mitigate content layout shifts.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="object-fit" />
+    <p class={styles.description}>please compare it with the original image.</p>
+    <div class={styles.objectFitContainer}>
+      <div class={styles.objectFit}>
+        <Image
+          src={image("1488508872907-592763824245", 300, 60)}
+          width="300"
+          height="200"
+          class={styles.objectFitImage}
+          loading="eager"
+          alt=""
+        />
+        <a
+          href={image("1488508872907-592763824245", 300, 60)}
+          class={styles.link}
+          target="_blank"
+          rel="noreferrer"
+          >original<IconExternalLink class={styles.icon} />
+        </a>
+      </div>
+      <div class={styles.objectFit}>
+        <Image
+          src={image("1565079527389-eb2640ee27fc", 300, 60)}
+          width="300"
+          height="200"
+          class={styles.objectFitImage}
+          loading="eager"
+          alt=""
+        />
+        <a
+          href={image("1565079527389-eb2640ee27fc", 300, 60)}
+          class={styles.link}
+          target="_blank"
+          rel="noreferrer"
+          >original<IconExternalLink class={styles.icon} />
+        </a>
+      </div>
+      <div class={styles.objectFit}>
+        <Image
+          src={image("1563350316-9f7fc841d2c4", 300, 60)}
+          width="300"
+          height="200"
+          class={styles.objectFitImage}
+          loading="eager"
+          alt=""
+        />
+        <a
+          href={image("1563350316-9f7fc841d2c4", 300, 60)}
+          class={styles.link}
+          target="_blank"
+          rel="noreferrer"
+          >original<IconExternalLink class={styles.icon} />
+        </a>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="lazy loading" />
+    <p>
+      please scroll down. you can check lazy loading with chrome developer tools
+      and so on.
+    </p>
+    <div class={styles.lazyLoading}>
+      <Image
+        src={image("1582385272046-abd3a86f5a1a", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1498163641090-1df07c039069", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1533618821901-9e69d5f5360e", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1517462964-21fdcec3f25b", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1505151228723-18d0f726f3b1", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1591014441032-1c4302d2191b", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1465406325903-9d93ee82f613", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1555524554-0fdb51cd5020", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1519076381129-b4234ae7e573", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1516522973472-f009f23bba59", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1475533168657-e24d0e870a8a", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+      <Image
+        src={image("1611417352875-b015dc152660", 500, 60)}
+        width="500"
+        height="750"
+        class={styles.lazyLoadingImage}
+        alt=""
+      />
+    </div>
+    <div class={styles.lazyLoadingFooter}>
+      all photos from
+      <a
+        href="https://unsplash.com"
+        class={styles.link}
+        target="_blank"
+        rel="noreferrer"
+        >unsplash<IconExternalLink class={styles.icon} />
+      </a>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "loading",
+          chrome: "77",
+          firefox: "75",
+          safari: "15.4",
+        },
+        {
+          value: "aspect-ratio",
+          chrome: "88",
+          firefox: "89",
+          safari: "15",
+        },
+        {
+          value: "object-fit",
+          chrome: "32",
+          firefox: "36",
+          safari: "10",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
