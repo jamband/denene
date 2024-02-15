@@ -28,7 +28,7 @@ const { items } = Astro.props;
     {
       items.map((item) => (
         <tr class={styles.row}>
-          <th scope="row" class={styles.data}>
+          <th scope="row" class={styles.data} tabindex="0">
             {item.value}
           </th>
           <td class={styles.data}>{item.chrome}</td>
