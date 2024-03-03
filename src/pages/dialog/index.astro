@@ -103,18 +103,20 @@ const title = "<dialog>";
 
 <script>
   const example1 = document.querySelector<HTMLDialogElement>("#example1");
-  if (!example1) throw Error("#example1 element does not exists.");
+  if (!example1) throw new Error("#example1 element does not exists.");
 
   const example1Button =
     document.querySelector<HTMLButtonElement>("#example1-button");
-  if (!example1Button) throw Error("#example1-button element does not exists.");
+  if (!example1Button)
+    throw new Error("#example1-button element does not exists.");
 
   const example2 = document.querySelector<HTMLDialogElement>("#example2");
-  if (!example2) throw Error("#example2 element does not exists.");
+  if (!example2) throw new Error("#example2 element does not exists.");
 
   const example2Button =
     document.querySelector<HTMLButtonElement>("#example2-button");
-  if (!example2Button) throw Error("#example2-button element does not exists.");
+  if (!example2Button)
+    throw new Error("#example2-button element does not exists.");
 
   example1Button.addEventListener("click", () => {
     example1.showModal();
@@ -138,7 +140,8 @@ const title = "<dialog>";
 
   example2.addEventListener("close", () => {
     const actionResult = document.querySelector<HTMLElement>("#action-result");
-    if (!actionResult) throw Error("#action-result element does not exists.");
+    if (!actionResult)
+      throw new Error("#action-result element does not exists.");
     actionResult.textContent = example2.returnValue;
   });
 </script>
