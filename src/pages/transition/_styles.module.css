@@ -6,6 +6,8 @@
   margin-bottom: 1rem;
   margin-right: 0.25rem;
   padding: 0.5rem 1.1rem;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .checkbox {

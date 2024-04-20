@@ -19,6 +19,8 @@
   display: flex;
   outline: none;
   padding: 0.25rem 0.5rem;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .toolsSummary:focus-visible {
