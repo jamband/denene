@@ -7,7 +7,7 @@
 .objectFit {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.25rem;
 }
 

@@ -13,7 +13,7 @@
 
 .navigation {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   gap: 1rem;
 }
 

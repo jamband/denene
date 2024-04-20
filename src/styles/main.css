@@ -1,6 +1,6 @@
 main {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 4rem;
   margin: 0 auto;
   padding: 7.25rem 1rem;

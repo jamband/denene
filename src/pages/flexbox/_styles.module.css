@@ -39,7 +39,7 @@
 
 .columnContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   margin-bottom: 3rem;
 }
 

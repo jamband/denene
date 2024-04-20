@@ -1,6 +1,6 @@
 .toolsContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.5rem;
 }
 
