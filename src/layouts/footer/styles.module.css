@@ -24,7 +24,7 @@
 }
 
 .link {
-  color: rgb(var(--gray-100));
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-200));
   padding: 0.25rem 1.5rem;
-  text-decoration: none;
 }

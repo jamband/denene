@@ -7,9 +7,9 @@
   border-bottom: 1px solid rgb(var(--gray-600));
   border-top: 1px solid rgb(var(--gray-600));
   color: rgb(var(--pink-300));
+  font-weight: 600;
   padding: 1rem;
   text-align: center;
-  text-decoration: none;
   width: 100%;
 }
 
@@ -47,6 +47,6 @@
 .columnBox {
   border-bottom: 1px solid rgb(var(--gray-600));
   color: rgb(var(--pink-300));
+  font-weight: 600;
   padding: 0.75em 1rem;
-  text-decoration: none;
 }

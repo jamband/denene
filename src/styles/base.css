@@ -30,6 +30,8 @@ a {
 }
 
 button {
+  border-radius: var(--rounded);
+  font-weight: 600;
   padding: 0.5rem 1.1rem;
 }
 
@@ -39,4 +41,8 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+svg {
+  vertical-align: middle;
 }

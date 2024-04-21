@@ -3,6 +3,7 @@
 }
 
 .button {
+  border-radius: var(--rounded);
   color: rgb(var(--gray-100));
   padding: 0.5rem 0.9rem;
   -webkit-user-select: none;
@@ -40,6 +41,7 @@
 .main {
   background: rgb(var(--gray-700));
   border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
   display: flex;
   flex-flow: column;
   margin: 0.5rem 0 0 -0.2rem;

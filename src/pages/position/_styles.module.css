@@ -6,8 +6,13 @@
   position: relative;
 }
 
+.example1Image {
+  border-radius: var(--rounded);
+}
+
 .example1Text {
   font-family: var(--font-mono);
+  font-weight: 700;
   left: 50%;
   position: absolute;
   text-align: center;
@@ -33,7 +38,9 @@
 
 .example2Main {
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   font-family: var(--font-mono);
+  font-weight: 600;
   height: 100vh;
   padding: 1rem;
   width: 100%;
@@ -41,7 +48,9 @@
 
 .example2Side {
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   font-family: var(--font-mono);
+  font-weight: 600;
   height: 3.5em;
   padding: 1rem;
   position: sticky;

@@ -5,6 +5,10 @@
 }
 
 .dialog {
+  border-radius: var(--rounded);
+}
+
+.dialogInner {
   display: flex;
   flex-flow: column;
   gap: 1rem;
@@ -16,6 +20,7 @@
   color: rgb(var(--gray-100));
   display: flex;
   font-size: 1.5rem;
+  font-weight: 600;
   justify-content: space-between;
 }
 

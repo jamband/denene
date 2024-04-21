@@ -10,12 +10,20 @@
   gap: 1.5rem;
 }
 
+.example1 {
+  border-radius: var(--rounded);
+}
+
 .example1:focus-within {
   border: 1px solid rgb(var(--blue-300));
 }
 
 .example1:focus-within > .title {
   color: rgb(var(--blue-300));
+}
+
+.example2 {
+  border-radius: var(--rounded);
 }
 
 .example2:focus-within {

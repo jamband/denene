@@ -1,5 +1,11 @@
 ---
 import styles from "./styles.module.css";
+
+type Props = {
+  class?: string;
+};
+
+const { class: className } = Astro.props;
 ---
 
 <svg
@@ -7,7 +13,7 @@ import styles from "./styles.module.css";
   width="880"
   height="450"
   viewBox="0 0 880 450"
-  class={styles.container}
+  class:list={[styles.container, className]}
   role="img"
   aria-label="star"
 >

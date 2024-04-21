@@ -3,7 +3,7 @@ type Props = {
   class?: string;
 };
 
-const { class: className, ...attributes } = Astro.props;
+const { class: className } = Astro.props;
 ---
 
-<section class={className} {...attributes}><slot /></section>
+<section class={className}><slot /></section>

@@ -7,6 +7,11 @@
 }
 
 .link {
-  border-bottom: 2px solid rgb(var(--pink-300) / 50%);
+  border-radius: var(--rounded);
   color: rgb(var(--pink-300));
+  font-weight: 600;
+  text-decoration-color: rgb(var(--pink-300) / 50%);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.3rem;
 }

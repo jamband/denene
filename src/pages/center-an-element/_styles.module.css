@@ -8,6 +8,7 @@
   align-items: center;
   aspect-ratio: 1 / 1;
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   display: flex;
   justify-content: center;
   width: 50%;
@@ -22,6 +23,7 @@
 .withGrid {
   aspect-ratio: 4 / 3;
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   display: grid;
   grid-template-rows: 1fr;
   place-items: center;
@@ -37,6 +39,7 @@
 .withPositionAndTransform {
   aspect-ratio: 16 / 9;
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   position: relative;
   width: 100%;
 }

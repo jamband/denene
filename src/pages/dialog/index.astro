@@ -26,8 +26,12 @@ const title = "<dialog>";
   <PageSection>
     <PageSubHeader title="1" subTitle="e.g. simple alert" />
     <button id="example1-button" class={styles.button}>press me</button>
-    <dialog id="example1" aria-labelledby="example1-title">
-      <form method="dialog" class={styles.dialog}>
+    <dialog
+      id="example1"
+      class={styles.dialog}
+      aria-labelledby="example1-title"
+    >
+      <form method="dialog" class={styles.dialogInner}>
         <div class={styles.dialogHeader}>
           <h3 id="example1-title">simple alert</h3>
           <button type="submit" class={styles.close} aria-label="close"
@@ -43,8 +47,12 @@ const title = "<dialog>";
   <PageSection>
     <PageSubHeader title="2" subTitle="e.g. confirm" />
     <button id="example2-button" class={styles.button}>press me</button>
-    <dialog id="example2" aria-labelledby="example2-title">
-      <form method="dialog" class={styles.dialog}>
+    <dialog
+      id="example2"
+      class={styles.dialog}
+      aria-labelledby="example2-title"
+    >
+      <form method="dialog" class={styles.dialogInner}>
         <div class={styles.dialogHeader}>
           <h3 id="example2-title">confirm</h3>
         </div>

@@ -1,6 +1,7 @@
 .example1Container {
   background-color: rgb(var(--gray-700));
-  border-bottom: 3px solid rgb(var(--pink-300));
+  border-bottom: 3px solid rgb(var(--pink-300) / 75%);
+  border-radius: var(--rounded) var(--rounded) 0 0;
   margin-top: 1rem;
   width: 100%;
 }
@@ -29,7 +30,8 @@
 
 .example2Container {
   background-color: rgb(var(--gray-700));
-  border-left: 3px solid rgb(var(--pink-300));
+  border-left: 3px solid rgb(var(--pink-300) / 75%);
+  border-radius: 0 var(--rounded) var(--rounded) 0;
   height: 300px;
   margin-top: 1rem;
   width: 85%;

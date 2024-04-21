@@ -12,6 +12,7 @@
 .example1,
 .example2 {
   align-items: start;
+  border-radius: var(--rounded);
   display: flex;
   flex-flow: column;
   gap: 0.5rem;

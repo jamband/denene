@@ -12,10 +12,11 @@ pre {
 
 :not(pre) > code {
   background: rgb(var(--gray-600));
+  border-radius: var(--rounded);
   color: rgb(var(--gray-100) / 90%);
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  padding: 0.075rem 0.25rem;
+  padding: 0.1rem 0.3rem;
   white-space: nowrap;
   word-wrap: break-word;
 }
