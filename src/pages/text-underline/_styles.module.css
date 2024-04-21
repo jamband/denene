@@ -1,37 +1,45 @@
 .link {
   align-items: center;
+  color: rgb(var(--pink-300));
   display: inline-flex;
   gap: 0.1rem;
+  line-height: 1.2;
   text-decoration: none;
   text-underline-offset: auto;
 }
 
 .icon {
-  height: 1rem;
-  width: 1rem;
+  color: rgb(var(--pink-300) / 75%);
+  height: 1.125rem;
+  width: 1.125rem;
 }
 
 .example1Link {
-  text-decoration: underline;
+  text-decoration-color: rgb(var(--pink-300) / 50%);
+  text-decoration-line: underline;
 }
 
 .example2Link {
-  border-bottom: 1px solid currentcolor;
+  border-bottom: 1px solid rgb(var(--pink-300) / 50%);
   text-decoration: none;
 }
 
 .example3Link {
-  text-decoration: underline;
+  text-decoration-color: rgb(var(--pink-300) / 50%);
+  text-decoration-line: underline;
   text-decoration-thickness: 0.05em;
   text-underline-offset: 0.25em;
 }
 
 .example4Link {
-  background-image: linear-gradient(transparent 95%, currentcolor 0);
+  background-image: linear-gradient(
+    transparent 95%,
+    rgb(var(--pink-300) / 50%) 0
+  );
   text-decoration: none;
 }
 
 .example5Link {
-  box-shadow: 0 1px 0 0 currentcolor;
+  box-shadow: 0 1px 0 0 rgb(var(--pink-300) / 50%);
   text-decoration: none;
 }

@@ -21,13 +21,6 @@
   width: 234px;
 }
 
-.link {
-  align-items: center;
-  display: flex;
-  gap: 0.1rem;
-  justify-content: center;
-}
-
 .lazyLoading {
   display: grid;
   gap: 1em;
@@ -55,9 +48,4 @@
   gap: 0.25rem;
   justify-content: center;
   margin-top: 2rem;
-}
-
-.icon {
-  height: 1rem;
-  width: 1rem;
 }

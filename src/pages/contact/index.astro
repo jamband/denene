@@ -2,10 +2,10 @@
 import "@/styles/app.css";
 
 import { BackToHomeLink } from "@/components/back-to-home-link";
+import { ExternalLink } from "@/components/external-link";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { APP_REPOSITORY_URL } from "@/constants/app";
-import { IconExternalLink } from "@/icons/external-link";
 import { Layout } from "@/layouts/layout";
 import styles from "./_styles.module.css";
 
@@ -17,21 +17,9 @@ const title = "contact";
   <PageSection class={styles.container}>
     <p>
       please to the message via
-      <a
-        href="https://twitter.com/livejam_db"
-        class={styles.link}
-        target="_blank"
-        rel="noreferrer"
-        >x<IconExternalLink class={styles.icon} />
-      </a>
+      <ExternalLink href="https://twitter.com/livejam_db">x</ExternalLink>
       or
-      <a
-        href={`${APP_REPOSITORY_URL}/issues`}
-        class={styles.link}
-        target="_blank"
-        rel="noreferrer"
-        >github<IconExternalLink class={styles.icon} />
-      </a>
+      <ExternalLink href={`${APP_REPOSITORY_URL}/issues`}>github</ExternalLink>
       issues. thank you.
     </p>
   </PageSection>

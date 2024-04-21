@@ -2,10 +2,10 @@
 import "@/styles/app.css";
 
 import { BackToHomeLink } from "@/components/back-to-home-link";
+import { ExternalLink } from "@/components/external-link";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { APP_DESCRIPTION, APP_NAME, APP_REPOSITORY_URL } from "@/constants/app";
-import { IconExternalLink } from "@/icons/external-link";
 import { Layout } from "@/layouts/layout";
 import styles from "./_styles.module.css";
 
@@ -18,13 +18,7 @@ const title = "about";
     <p>{APP_DESCRIPTION}.</p>
     <p>
       this website is an open source project. see
-      <a
-        href={APP_REPOSITORY_URL}
-        class={styles.link}
-        target="_blank"
-        rel="noreferrer"
-        >github {APP_NAME}<IconExternalLink class={styles.icon} />
-      </a>
+      <ExternalLink href={APP_REPOSITORY_URL}>github {APP_NAME}</ExternalLink>
       for details.
     </p>
   </PageSection>

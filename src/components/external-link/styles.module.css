@@ -1,0 +1,14 @@
+.container {
+  align-items: center;
+  border-bottom: 2px solid rgb(var(--pink-300) / 50%);
+  color: rgb(var(--pink-300));
+  display: inline-flex;
+  gap: 0.1rem;
+  line-height: 1.2;
+}
+
+.icon {
+  color: rgb(var(--pink-300) / 75%);
+  height: 1.125rem;
+  width: 1.125rem;
+}

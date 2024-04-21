@@ -27,7 +27,10 @@ const title = "text underline";
   </PageSection>
   <PageSection>
     <PageSubHeader title="1" />
-    <Code code={`text-decoration: underline;`} />
+    <Code
+      code={`text-decoration-color: rgb(var(--pink-300) / 50%);
+text-decoration-line: underline;`}
+    />
     <a
       href="https://developer.mozilla.org/en-US/"
       class:list={[styles.link, styles.example1Link]}
@@ -39,8 +42,8 @@ const title = "text underline";
   <PageSection>
     <PageSubHeader title="2" />
     <Code
-      code={`text-decoration: none;
-border-bottom: 1px solid currentcolor;`}
+      code={`border-bottom: 1px solid rgb(var(--pink-300) / 50%);
+text-decoration: none;`}
     />
     <a
       href="https://developer.mozilla.org/en-US/"
@@ -53,7 +56,8 @@ border-bottom: 1px solid currentcolor;`}
   <PageSection>
     <PageSubHeader title="3" />
     <Code
-      code={`text-decoration: underline;
+      code={`text-decoration-color: rgb(var(--pink-300) / 50%);
+text-decoration-line: underline;
 text-decoration-thickness: 0.05em;
 text-underline-offset: 0.25em;`}
     />
@@ -68,8 +72,8 @@ text-underline-offset: 0.25em;`}
   <PageSection>
     <PageSubHeader title="4" />
     <Code
-      code={`text-decoration: none;
-background-image: linear-gradient(transparent 95%, currentcolor 0);`}
+      code={`background-image: linear-gradient(transparent 95%, rgb(var(--pink-300) / 50%) 0);
+text-decoration: none;`}
     />
     <a
       href="https://developer.mozilla.org/en-US/"
@@ -82,8 +86,8 @@ background-image: linear-gradient(transparent 95%, currentcolor 0);`}
   <PageSection>
     <PageSubHeader title="5" />
     <Code
-      code={`text-decoration: none;
-box-shadow: 0 1px 0 0 currentcolor;`}
+      code={`box-shadow: 0 1px 0 0 rgb(var(--pink-300) / 50%);
+text-decoration: none;`}
     />
     <a
       href="https://developer.mozilla.org/en-US/"

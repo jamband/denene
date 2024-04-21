@@ -4,11 +4,11 @@ import "@/styles/app.css";
 import { BackToHomeLink } from "@/components/back-to-home-link";
 import { BrowserSupport } from "@/components/browser-support";
 import { Code } from "@/components/code";
+import { ExternalLink } from "@/components/external-link";
 import { MdnDoc } from "@/components/mdn-doc";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { PageSubHeader } from "@/components/page/sub-header";
-import { IconExternalLink } from "@/icons/external-link";
 import { Layout } from "@/layouts/layout";
 import { Image } from "astro:assets";
 import styles from "./_styles.module.css";
@@ -42,13 +42,9 @@ const image = (id: string, width: number, quality: number) => {
           loading="eager"
           alt=""
         />
-        <a
-          href={image("1488508872907-592763824245", 300, 60)}
-          class={styles.link}
-          target="_blank"
-          rel="noreferrer"
-          >original<IconExternalLink class={styles.icon} />
-        </a>
+        <ExternalLink href={image("1488508872907-592763824245", 300, 60)}
+          >original</ExternalLink
+        >
       </div>
       <div class={styles.objectFit}>
         <Image
@@ -59,13 +55,9 @@ const image = (id: string, width: number, quality: number) => {
           loading="eager"
           alt=""
         />
-        <a
-          href={image("1565079527389-eb2640ee27fc", 300, 60)}
-          class={styles.link}
-          target="_blank"
-          rel="noreferrer"
-          >original<IconExternalLink class={styles.icon} />
-        </a>
+        <ExternalLink href={image("1565079527389-eb2640ee27fc", 300, 60)}
+          >original</ExternalLink
+        >
       </div>
       <div class={styles.objectFit}>
         <Image
@@ -76,13 +68,9 @@ const image = (id: string, width: number, quality: number) => {
           loading="eager"
           alt=""
         />
-        <a
-          href={image("1563350316-9f7fc841d2c4", 300, 60)}
-          class={styles.link}
-          target="_blank"
-          rel="noreferrer"
-          >original<IconExternalLink class={styles.icon} />
-        </a>
+        <ExternalLink href={image("1563350316-9f7fc841d2c4", 300, 60)}
+          >original</ExternalLink
+        >
       </div>
     </div>
   </PageSection>
@@ -180,13 +168,7 @@ const image = (id: string, width: number, quality: number) => {
     </div>
     <div class={styles.lazyLoadingFooter}>
       all photos from
-      <a
-        href="https://unsplash.com"
-        class={styles.link}
-        target="_blank"
-        rel="noreferrer"
-        >unsplash<IconExternalLink class={styles.icon} />
-      </a>
+      <ExternalLink href="https://unsplash.com">unsplash</ExternalLink>
     </div>
   </PageSection>
   <PageSection>

@@ -2,10 +2,11 @@
   display: flex;
   flex-flow: column;
   font-size: 2.1rem;
-  gap: 1rem;
+  gap: 1.5rem;
   line-height: 1.2;
 }
 
 .link {
-  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(var(--pink-300) / 50%);
+  color: rgb(var(--pink-300));
 }

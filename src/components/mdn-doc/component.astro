@@ -1,5 +1,5 @@
 ---
-import { IconExternalLink } from "@/icons/external-link";
+import { ExternalLink } from "../external-link";
 import styles from "./styles.module.css";
 
 type Props = {
@@ -16,12 +16,6 @@ const _content = (await Astro.slots.render("default")).trim();
 <blockquote class={styles.container} cite={_prefix + path}>
   <p class={styles.main} set:html={_content} />
   <footer>
-    <a
-      class={styles.link}
-      href={_prefix + path}
-      target="_blank"
-      rel="noreferrer"
-      >mdn » {text}<IconExternalLink class={styles.icon} />
-    </a>
+    <ExternalLink href={_prefix + path}>mdn » {text}</ExternalLink>
   </footer>
 </blockquote>

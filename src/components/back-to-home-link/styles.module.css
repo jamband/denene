@@ -1,8 +1,9 @@
 .container {
-  display: flex;
-  justify-content: center;
-}
-
-.link {
+  align-self: center;
+  color: rgb(var(--pink-300));
   padding: 0.5rem 1.5rem;
+  text-decoration-color: rgb(var(--pink-300) / 50%);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.25rem;
 }

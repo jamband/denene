@@ -1,5 +1,5 @@
 html {
-  line-height: 1.5;
+  line-height: 1.6;
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
 }
@@ -26,12 +26,7 @@ h2 {
 }
 
 a {
-  color: rgb(var(--pink-300));
   cursor: default;
-  display: inline-block;
-  text-decoration: underline;
-  text-decoration-thickness: 0.05em;
-  text-underline-offset: 0.25em;
 }
 
 button {
