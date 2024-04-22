@@ -1,5 +1,6 @@
 pre {
   background: rgb(var(--gray-700));
+  border-radius: var(--rounded);
   color: rgb(var(--gray-100) / 90%);
   display: block;
   font-family: var(--font-mono);
