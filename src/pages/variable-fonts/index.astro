@@ -1,0 +1,141 @@
+---
+import "@/styles/app.css";
+import "@/styles/fonts/open-sans.css";
+
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "./_styles.module.css";
+
+const title = "variable fonts";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc
+      path="Web/CSS/CSS_fonts/Variable_fonts_guide"
+      text={`${title} guide`}
+    >
+      variable fonts are an evolution of the opentype font specification that
+      enables many different variations of a typeface to be incorporated into a
+      single file, rather than having a separate font file for every width,
+      weight, or style. they let you access all the variations contained in a
+      given font file via css and a single <Code code="@font-face" inline /> reference.
+      this article will give you all you need to know to get you started using variable
+      fonts.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="weight" subTitle="represented by the wght tag" />
+    <div class={styles.weight}>
+      <div class={styles.weightText}>weight</div>
+      <div class={styles.weightValue}>625</div>
+      <fieldset class={styles.weightFieldset}>
+        <label for="weight">adjust weight:</label>
+        <input
+          type="range"
+          id="weight"
+          class={styles.weightInput}
+          value="625"
+          min="300"
+          max="800"
+        />
+      </fieldset>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="width" subTitle="represented by the wdth tag" />
+    <div class={styles.width}>
+      <div class={styles.widthText}>width</div>
+      <div class={styles.widthValue}>090</div>
+      <fieldset class={styles.widthFieldset}>
+        <label for="width">adjust width:</label>
+        <input
+          type="range"
+          id="width"
+          class={styles.widthInput}
+          value="90"
+          min="75"
+          max="100"
+        />
+      </fieldset>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "font-variation-settings",
+          chrome: "62",
+          firefox: "62",
+          safari: "11",
+        },
+        {
+          value: "font-optical-sizing",
+          chrome: "79",
+          firefox: "62",
+          safari: "11",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<script>
+  import styles from "./_styles.module.css";
+
+  // weight
+  const weightTextSelector = `.${styles.weightText}`;
+  const weightText = document.querySelector<HTMLDivElement>(weightTextSelector);
+  if (!weightText)
+    throw new Error(`${weightTextSelector} element does not exists.`);
+
+  const weightValueSelector = `.${styles.weightValue}`;
+  const weightValue =
+    document.querySelector<HTMLSpanElement>(weightValueSelector);
+  if (!weightValue)
+    throw new Error(`${weightValueSelector} element does not exists.`);
+
+  const weightInputSelector = `.${styles.weightInput}`;
+  const weightInput =
+    document.querySelector<HTMLInputElement>(weightInputSelector);
+  if (!weightInput)
+    throw new Error(`${weightInputSelector} element does not exists.`);
+
+  weightInput.addEventListener("input", (event) => {
+    weightText.style.fontWeight = (event.target as HTMLInputElement).value;
+    weightValue.textContent = weightText.style.fontWeight;
+  });
+
+  // width
+  const widthTextSelector = `.${styles.widthText}`;
+  const widthText = document.querySelector<HTMLDivElement>(widthTextSelector);
+  if (!widthText)
+    throw new Error(`${widthTextSelector} element does not exists.`);
+
+  const widthValueSelector = `.${styles.widthValue}`;
+  const widthValue =
+    document.querySelector<HTMLSpanElement>(widthValueSelector);
+  if (!widthValue)
+    throw new Error(`${widthValueSelector} element does not exists.`);
+
+  const widthInputSelector = `.${styles.widthInput}`;
+  const widthInput =
+    document.querySelector<HTMLInputElement>(widthInputSelector);
+  if (!widthInput)
+    throw new Error(`${widthInputSelector} element does not exists.`);
+
+  widthInput.addEventListener("input", (event) => {
+    widthText.style.fontStretch = `${(event.target as HTMLInputElement).value}%`;
+    widthValue.textContent = widthText.style.fontStretch
+      .replace("%", "")
+      .padStart(3, "0");
+  });
+</script>
