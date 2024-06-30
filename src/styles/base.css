@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: rgb(var(--gray-800));
+  background: rgb(var(--gray-800));
   color: rgb(var(--gray-400));
   cursor: default;
   font-family: system-ui, Arial, sans-serif;
