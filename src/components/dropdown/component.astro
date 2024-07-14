@@ -9,7 +9,7 @@ type Props = {
   class?: string;
 };
 
-const { id, label, class: className, ...attributes } = Astro.props;
+const { id, label, class: className } = Astro.props;
 ---
 
 <details class={styles.container}>
@@ -18,7 +18,6 @@ const { id, label, class: className, ...attributes } = Astro.props;
     aria-expanded={false}
     aria-label={label ? null : "more"}
     class:list={[styles.button, className]}
-    {...attributes}
   >
     {
       label ? (
