@@ -1,38 +1,10 @@
 ---
 import "@/styles/app.css";
 
+import { Home } from "@/components/home";
 import { Layout } from "@/layouts/layout";
-import styles from "./_styles/index.module.css";
-
-const links: Array<{ href: string; text: string }> = [
-  { href: "introduction", text: "introduction" },
-  { href: "flexbox", text: "flexbox" },
-  { href: "grids", text: "grids" },
-  { href: "subgrid", text: "subgrid" },
-  { href: "center-an-element", text: "center an element" },
-  { href: "position", text: "position" },
-  { href: "transition", text: "transition" },
-  { href: "focus-within", text: ":focus-within" },
-  { href: "accent-color", text: "accent-color" },
-  { href: "text-underline", text: "text underline" },
-  { href: "mask-image", text: "mask-image" },
-  { href: "img", text: `<img>` },
-  { href: "details", text: `<details>` },
-  { href: "dialog", text: `<dialog>` },
-  { href: "variable-fonts", text: "variable fonts" },
-];
 ---
 
 <Layout>
-  <ul class={styles.container}>
-    {
-      links.map((link) => (
-        <li>
-          <a class={styles.link} href={`/denene/${link.href}/`}>
-            {link.text}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <Home />
 </Layout>

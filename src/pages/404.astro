@@ -1,17 +1,10 @@
 ---
 import "@/styles/app.css";
 
-import { BackToHomeLink } from "@/components/back-to-home-link";
+import { NotFound } from "@/components/not-found";
 import { Layout } from "@/layouts/layout";
-import styles from "./_styles/404.module.css";
-
-const title = "not found";
 ---
 
-<Layout title={title}>
-  <div class={styles.container}>
-    <h1>{title}</h1>
-    <p>this page does not exist.</p>
-    <BackToHomeLink />
-  </div>
+<Layout title="not found">
+  <NotFound />
 </Layout>
