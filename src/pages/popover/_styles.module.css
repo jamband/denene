@@ -1,0 +1,81 @@
+.dialogButton {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+}
+
+.dialog {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  height: fit-content;
+  inset: 0;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .dialog {
+    width: 35rem;
+  }
+}
+
+.dialog::backdrop {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+html:has(.dialog[popover]:popover-open) {
+  overflow: hidden;
+}
+
+.dialogInner {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.dialogHeader {
+  border-bottom: 1px solid rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 0 0.5rem;
+}
+
+.dialogMain {
+  color: rgb(var(--gray-400));
+}
+
+.toastButton {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+  margin: 1rem 0 0;
+}
+
+.toast {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-100));
+  font-size: 0.925rem;
+  font-weight: 600;
+  height: fit-content;
+  inset: auto 16px auto auto;
+  overflow: scroll;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  white-space: nowrap;
+  width: 10rem;
+}
+
+@media (min-width: 768px) {
+  .toast {
+    font-size: 1.0625rem;
+    width: 15rem;
+  }
+}

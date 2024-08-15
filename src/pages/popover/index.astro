@@ -1,0 +1,131 @@
+---
+import "@/styles/app.css";
+
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { Code } from "@/components/code";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { Layout } from "@/layouts/layout";
+import styles from "./_styles.module.css";
+
+const title = "popover";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/HTML/Global_attributes/popover" text={title}>
+      the popover global attribute is used to designate an element as a popover
+      element.<br /><br />
+      popover elements are hidden via <Code code="display: none" inline /> until
+      opened via an invoking/control element (i.e. a <Code
+        code="<button>"
+        inline
+      />
+      or <Code code={`<input type="button" />`} inline /> with a popovertarget attribute)
+      or a HTMLElement.showPopover() call.<br /><br />
+      When open, popover elements will appear above all other elements in the top
+      layer, and won't be influenced by parent elements <Code
+        code="position"
+        inline
+      /> or <Code code="overflow" inline /> styling.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="1" subTitle="e.g. dialog" />
+    <button
+      type="button"
+      class={styles.dialogButton}
+      popovertarget="dialogTarget">show dialog</button
+    >
+    <div id="dialogTarget" class={styles.dialog} popover autofocus>
+      <div class={styles.dialogInner}>
+        <div class={styles.dialogHeader}>how to close this dialog</div>
+        <div class={styles.dialogMain}>
+          you can close the dialog by pressing the <Code code="esc" inline /> key,
+          and you can also be dismissed by selecting outside the dialog area too.
+        </div>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="2" subTitle="e.g. toast" />
+    <p>you can be pressed multiple times.</p>
+    <button type="button" id="toastButton" class={styles.toastButton}
+      >generate toast</button
+    >
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: title,
+          chrome: "114",
+          firefox: "125",
+          safari: "17",
+        },
+        {
+          value: "::backdrop",
+          chrome: "37",
+          firefox: "47",
+          safari: "15.4",
+        },
+        {
+          value: "backdrop-filter",
+          chrome: "76",
+          firefox: "103",
+          safari: "9",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>
+
+<script>
+  import styles from "./_styles.module.css";
+
+  let selector = "";
+
+  selector = "#toastButton";
+  const toastButton = document.querySelector<HTMLButtonElement>(selector);
+  if (!toastButton) throw new Error(`${selector} does not exists.`);
+
+  toastButton.addEventListener("click", () => {
+    const toast = document.createElement("div");
+    toast.popover = "manual";
+    toast.classList.add(styles.toast);
+    toast.classList.add(`${styles.toast}new`);
+
+    document.body.append(toast);
+    toast.showPopover();
+
+    setTimeout(() => {
+      toast.hidePopover();
+      toast.remove();
+    }, 4000);
+
+    toast.addEventListener("toggle", (event) => {
+      if ((event as ToggleEvent).newState === "open") {
+        selector = `.${styles.toast}`;
+        const toasts = document.querySelectorAll<HTMLDivElement>(selector);
+        if (!toasts.length) throw new Error(`${selector} does not exists.`);
+
+        toasts.forEach((element, index) => {
+          toast.textContent = `toast${index + 1}`;
+
+          if (element.classList.contains(`${styles.toast}new`)) {
+            element.style.top = "16px";
+            element.classList.remove(`${styles.toast}new`);
+          } else {
+            const previousTopValue = element.style.top.replace("px", "");
+            element.style.top = `${parseInt(previousTopValue) + 68}px`;
+          }
+        });
+      }
+    });
+  });
+</script>
