@@ -1,43 +1,69 @@
-.dialogButton {
+@keyframes drawer-open {
+  from {
+    translate: 20rem 0;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes drawer-close {
+  from {
+    display: block;
+    translate: 0 0;
+  }
+
+  to {
+    display: none;
+    translate: 20rem 0;
+  }
+}
+
+.drawerButton {
   background: rgb(var(--gray-700));
   border: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
 }
 
-.dialog {
+.drawer {
+  animation: drawer-close 0.3s;
   background: rgb(var(--gray-700));
-  border: 1px solid rgb(var(--gray-600));
-  border-radius: var(--rounded);
-  height: fit-content;
-  inset: 0;
-  margin: auto;
+  border-left: 1px solid rgb(var(--gray-600));
+  height: 100%;
+  inset: 0 0 auto auto;
   padding: 1rem 1.5rem;
   position: fixed;
-  width: 90%;
+  width: 100%;
+  z-index: 110;
 }
 
 @media (min-width: 768px) {
-  .dialog {
-    width: 35rem;
+  .drawer {
+    width: 20rem;
   }
 }
 
-.dialog::backdrop {
+.drawer:popover-open {
+  animation: drawer-open 0.3s;
+}
+
+.drawer:popover-open::backdrop {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
-html:has(.dialog[popover]:popover-open) {
+html:has(.drawer:popover-open) {
   overflow: hidden;
 }
 
-.dialogInner {
+.drawerInner {
   display: flex;
   flex-flow: column;
   gap: 1rem;
 }
 
-.dialogHeader {
+.drawerHeader {
   border-bottom: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
   font-size: 1.5rem;
@@ -45,7 +71,7 @@ html:has(.dialog[popover]:popover-open) {
   padding: 0 0 0.5rem;
 }
 
-.dialogMain {
+.drawerMain {
   color: rgb(var(--gray-400));
 }
 

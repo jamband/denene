@@ -35,18 +35,18 @@ const title = "popover";
     </MdnDoc>
   </PageSection>
   <PageSection>
-    <PageSubHeader title="1" subTitle="e.g. dialog" />
+    <PageSubHeader title="1" subTitle="e.g. drawer" />
     <button
       type="button"
-      class={styles.dialogButton}
-      popovertarget="dialogTarget">show dialog</button
+      class={styles.drawerButton}
+      popovertarget="drawerTarget">show drawer</button
     >
-    <div id="dialogTarget" class={styles.dialog} popover autofocus>
-      <div class={styles.dialogInner}>
-        <div class={styles.dialogHeader}>how to close this dialog</div>
-        <div class={styles.dialogMain}>
-          you can close the dialog by pressing the <Code code="esc" inline /> key,
-          and you can also be dismissed by selecting outside the dialog area too.
+    <div id="drawerTarget" class={styles.drawer} popover autofocus>
+      <div class={styles.drawerInner}>
+        <div class={styles.drawerHeader}>how to close this dialog</div>
+        <div class={styles.drawerMain}>
+          you can close the drawer by pressing the <Code code="esc" inline /> key,
+          and you can also be dismissed by selecting outside the drawer area too.
         </div>
       </div>
     </div>
