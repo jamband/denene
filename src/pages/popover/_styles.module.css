@@ -66,13 +66,26 @@ html:has(.drawer:popover-open) {
 .drawerHeader {
   border-bottom: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   padding: 0 0 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .drawerHeader {
+    font-size: 1.5rem;
+  }
+}
+
 .drawerMain {
   color: rgb(var(--gray-400));
+  font-size: 0.925rem;
+}
+
+@media (min-width: 768px) {
+  .drawerMain {
+    font-size: 1.0625rem;
+  }
 }
 
 .toastButton {
