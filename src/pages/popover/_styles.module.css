@@ -54,6 +54,8 @@ html:has(.dialog[popover]:popover-open) {
   border: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
   margin: 1rem 0 0;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .toast {
