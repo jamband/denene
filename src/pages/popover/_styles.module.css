@@ -48,11 +48,6 @@
   animation: drawer-open 0.3s;
 }
 
-.drawer:popover-open::backdrop {
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-}
-
 html:has(.drawer:popover-open) {
   overflow: hidden;
 }
@@ -79,7 +74,10 @@ html:has(.drawer:popover-open) {
 
 .drawerMain {
   color: rgb(var(--gray-400));
+  display: flex;
+  flex-flow: column;
   font-size: 0.925rem;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -93,6 +91,7 @@ html:has(.drawer:popover-open) {
   border: 1px solid rgb(var(--gray-400) / 10%);
   color: rgb(var(--gray-100));
   font-size: 0.925rem;
+  margin: 1rem 0 0;
   padding: 0.3rem 0.75rem;
 }
 

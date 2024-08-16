@@ -45,8 +45,14 @@ const title = "popover";
       <div class={styles.drawerInner}>
         <div class={styles.drawerHeader}>how to close this drawer</div>
         <div class={styles.drawerMain}>
-          you can close the drawer by pressing the <Code code="esc" inline /> key,
-          and you can also be dismissed by selecting outside the drawer area too.
+          <p>
+            you can close the drawer by pressing the <Code code="esc" inline /> key,
+            and you can also be dismissed by selecting outside the drawer area too.
+          </p>
+          <p>
+            unlike dialog, popover do not deactivate the rest of the page by
+            default.
+          </p>
         </div>
         <div class={styles.drawerFooter}>
           <button type="button" class={styles.drawerFooterButton} autofocus
