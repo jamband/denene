@@ -41,12 +41,17 @@ const title = "popover";
       class={styles.drawerButton}
       popovertarget="drawerTarget">show drawer</button
     >
-    <div id="drawerTarget" class={styles.drawer} popover autofocus>
+    <div id="drawerTarget" class={styles.drawer} popover>
       <div class={styles.drawerInner}>
         <div class={styles.drawerHeader}>how to close this drawer</div>
         <div class={styles.drawerMain}>
           you can close the drawer by pressing the <Code code="esc" inline /> key,
           and you can also be dismissed by selecting outside the drawer area too.
+        </div>
+        <div class={styles.drawerFooter}>
+          <button type="button" class={styles.drawerFooterButton} autofocus
+            >close drawer</button
+          >
         </div>
       </div>
     </div>
@@ -90,6 +95,21 @@ const title = "popover";
 
   let selector = "";
 
+  // drawer
+  selector = "#drawerTarget";
+  const drawer = document.querySelector<HTMLElement>(selector);
+  if (!drawer) throw new Error(`${selector} does not exists.`);
+
+  selector = `.${styles.drawerFooterButton}`;
+  const drawerFooterButton =
+    document.querySelector<HTMLButtonElement>(selector);
+  if (!drawerFooterButton) throw new Error(`${selector} does not exists.`);
+
+  drawerFooterButton.addEventListener("click", () => {
+    drawer.hidePopover();
+  });
+
+  // toast
   selector = "#toastButton";
   const toastButton = document.querySelector<HTMLButtonElement>(selector);
   if (!toastButton) throw new Error(`${selector} does not exists.`);
