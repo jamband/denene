@@ -112,7 +112,11 @@ const title = "popover";
   if (!drawerFooterButton) throw new Error(`${selector} does not exists.`);
 
   drawerFooterButton.addEventListener("click", () => {
-    drawer.hidePopover();
+    if ("popover" in HTMLElement.prototype) {
+      drawer.hidePopover();
+    } else {
+      drawer.style.display = "none";
+    }
   });
 
   // toast
