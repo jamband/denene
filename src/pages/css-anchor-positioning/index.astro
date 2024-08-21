@@ -1,0 +1,124 @@
+---
+import "@/styles/app.css";
+
+import { BackToHomeLink } from "@/components/back-to-home-link";
+import { BrowserSupport } from "@/components/browser-support";
+import { links } from "@/components/home";
+import { MdnDoc } from "@/components/mdn-doc";
+import { PageHeader } from "@/components/page/header";
+import { PageSection } from "@/components/page/section";
+import { PageSubHeader } from "@/components/page/sub-header";
+import { IconChevronDown } from "@/icons/chevron-down";
+import { Layout } from "@/layouts/layout";
+import styles from "./_styles.module.css";
+
+const title = "css anchor positioning";
+---
+
+<Layout title={title}>
+  <PageHeader title={title} />
+  <PageSection>
+    <MdnDoc path="Web/CSS/CSS_anchor_positioning" text={title}>
+      the css anchor positioning module defines features that allow you to
+      tether elements together. certain elements are defined as anchor elements;
+      anchor-positioned elements can then have their size and position set based
+      on the size and location of the anchor elements to which they are bound.
+    </MdnDoc>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="tooltip" subTitle=`with popover and ${title}` />
+    <div class={styles.tooltips}>
+      <button
+        type="button"
+        class={styles.tooltip1Button}
+        popovertarget="tooltip1target">tooltip1</button
+      >
+      <div id="tooltip1target" class={styles.tooltip1} popover>
+        tooltip1 content
+      </div>
+      <button
+        type="button"
+        class={styles.tooltip2Button}
+        popovertarget="tooltip2target">tooltip2</button
+      >
+      <div id="tooltip2target" class={styles.tooltip2} popover>
+        this tooltip will automatically flip from top to bottom when it goes
+        offscreen.
+      </div>
+      <button
+        type="button"
+        class={styles.tooltip3Button}
+        popovertarget="tooltip3target">tooltip3</button
+      >
+      <div id="tooltip3target" class={styles.tooltip3} popover>
+        tooltip3 content
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <PageSubHeader title="dropdown" subTitle=`with popover and ${title}` />
+    <div class={styles.dropdowns}>
+      <button
+        type="button"
+        class={styles.dropdown1Button}
+        popovertarget="dropdown1target"
+        >dropdown1<IconChevronDown class={styles.dropdown1ButtonIcon} /></button
+      >
+      <div id="dropdown1target" class={styles.dropdown1} popover>
+        <div class={styles.dropdown1Content}>
+          <a href="/denene/" class={styles.dropdown1Link}>home</a>
+          <a href="/denene/about/" class={styles.dropdown1Link}>about</a>
+          <a href="/denene/contact/" class={styles.dropdown1Link}>contact</a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class={styles.dropdown2Button}
+        popovertarget="dropdown2target"
+        >dropdown2<IconChevronDown class={styles.dropdown2ButtonIcon} /></button
+      >
+      <div id="dropdown2target" class={styles.dropdown2} popover>
+        <div class={styles.dropdown2Content}>
+          {
+            links.map((link) => (
+              <a href={`/denene/${link.href}/`} class={styles.dropdown2Link}>
+                {link.text}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection>
+    <BrowserSupport
+      items={[
+        {
+          value: "anchor-name",
+          chrome: "125",
+          firefox: "no",
+          safari: "no",
+        },
+        {
+          value: "position-anchor",
+          chrome: "125",
+          firefox: "no",
+          safari: "no",
+        },
+        {
+          value: "position-area",
+          chrome: "?",
+          firefox: "?",
+          safari: "?",
+        },
+        {
+          value: "position-try-options",
+          chrome: "?",
+          firefox: "?",
+          safari: "?",
+        },
+      ]}
+    />
+  </PageSection>
+  <BackToHomeLink />
+</Layout>

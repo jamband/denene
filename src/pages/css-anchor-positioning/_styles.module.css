@@ -1,0 +1,274 @@
+/*
+ * "inset-area" has been changed to "position-area".
+ * however, in chrome 127, "inset-area" works and "position-area" does not work.
+ * therefore, we will temporarily use "inset-area" here.
+ * when "position-area" works in chrome, we will change "inset-area" to "position-area".
+ */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    display: block;
+    opacity: 1;
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.tooltips {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  margin: 2rem 0 0;
+}
+
+.tooltip1Button {
+  anchor-name: --tooltip1;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  padding: 0.5rem 1rem;
+}
+
+.tooltip1 {
+  animation: fade-out 0.075s;
+  background: rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  inset-area: right;
+  margin: 0 0 0 1rem;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  position-anchor: --tooltip1;
+}
+
+@supports not (position-anchor: --tooltip1) {
+  .tooltip1 {
+    display: none;
+  }
+}
+
+.tooltip1:popover-open {
+  animation: fade-in 0.1s;
+}
+
+.tooltip1::before {
+  border: solid transparent;
+  border-color: transparent;
+  border-right-color: rgb(var(--gray-600));
+  border-width: 0.5rem;
+  content: "";
+  height: 0;
+  inset: 50% 100% auto auto;
+  margin: -0.6rem 0 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.tooltip2Button {
+  anchor-name: --tooltip2;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  padding: 0.5rem 1rem;
+}
+
+.tooltip2 {
+  animation: fade-out 0.075s;
+  background: rgb(var(--gray-600));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  inset-area: top;
+  margin: 0 0 0.75rem;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  position-anchor: --tooltip2;
+  position-try-options: flip-block;
+  width: 20rem;
+}
+
+@supports not (position-anchor: --tooltip2) {
+  .tooltip2 {
+    display: none;
+  }
+}
+
+.tooltip2:popover-open {
+  animation: fade-in 0.1s;
+}
+
+.tooltip3Button {
+  anchor-name: --tooltip3;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  padding: 0.5rem 1rem;
+}
+
+.tooltip3 {
+  animation: fade-out 0.075s;
+  background: rgb(var(--gray-600));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  inset-area: left;
+  margin: 0 1rem 0 0;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  position-anchor: --tooltip3;
+}
+
+@supports not (position-anchor: --tooptip3) {
+  .tooltip3 {
+    display: none;
+  }
+}
+
+.tooltip3:popover-open {
+  animation: fade-in 0.1s;
+}
+
+.tooltip3::before {
+  border: solid transparent;
+  border-color: transparent;
+  border-left-color: rgb(var(--gray-600));
+  border-width: 0.5rem;
+  content: "";
+  height: 0;
+  inset: auto auto 50% 100%;
+  margin: 0 0 -0.4rem;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.dropdown1Button {
+  align-items: center;
+  anchor-name: --dropdown1;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+}
+
+.dropdown1ButtonIcon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.dropdown1 {
+  animation: fade-out 0.075s;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  inset-area: bottom span-right;
+  margin: 0.5rem 0 0;
+  position: fixed;
+  position-anchor: --dropdown1;
+}
+
+@supports not (position-anchor: --dropdown1) {
+  .dropdown1 {
+    display: none;
+  }
+}
+
+.dropdown1:popover-open {
+  animation: fade-in 0.1s;
+}
+
+.dropdown1Content {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  width: 10rem;
+}
+
+.dropdown1Link {
+  border-radius: var(--rounded);
+  padding: 0.4rem 0.5rem;
+}
+
+.dropdown1Link:active,
+.dropdown1Link:focus-visible {
+  background: rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+}
+
+.dropdown2Button {
+  align-items: center;
+  anchor-name: --dropdown2;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+}
+
+.dropdown2ButtonIcon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.dropdown2 {
+  animation: fade-out 0.075s;
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  inset-area: bottom span-left;
+  margin: 0.5rem 0 0;
+  position: fixed;
+  position-anchor: --dropdown2;
+}
+
+@supports not (position-anchor: --dropdown2) {
+  .dropdown2 {
+    display: none;
+  }
+}
+
+.dropdown2:popover-open {
+  animation: fade-in 0.1s;
+}
+
+.dropdown2Content {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  max-height: 15rem;
+  overflow: scroll;
+  padding: 0.75rem 0.5rem;
+  width: fit-content;
+}
+
+.dropdown2Link {
+  border-radius: var(--rounded);
+  padding: 0.4rem 0.5rem;
+}
+
+.dropdown2Link:active,
+.dropdown2Link:focus-visible {
+  background: rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+}
