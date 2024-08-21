@@ -4,13 +4,14 @@
   font-size: 2.1rem;
   gap: 1.5rem;
   line-height: 1.2;
+  padding: 1rem;
 }
 
 .link {
   border-radius: var(--rounded);
   color: rgb(var(--pink-300));
   font-weight: 600;
-  padding: 0.25rem 1rem 0.5rem;
+  padding: 0.25rem 0 0.5rem;
   text-decoration-color: rgb(var(--pink-300) / 50%);
   text-decoration-line: underline;
   text-decoration-thickness: 0.1rem;
