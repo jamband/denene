@@ -4,14 +4,13 @@ import "@/styles/app.css";
 import { BackToHomeLink } from "@/components/back-to-home-link";
 import { BrowserSupport } from "@/components/browser-support";
 import { Code } from "@/components/code";
-import { Dropdown } from "@/components/dropdown";
-import { DropdownDivider } from "@/components/dropdown/divider";
-import { DropdownExternalLink } from "@/components/dropdown/external-link";
-import { DropdownLink } from "@/components/dropdown/link";
 import { MdnDoc } from "@/components/mdn-doc";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { PageSubHeader } from "@/components/page/sub-header";
+import { IconChevronDown } from "@/icons/chevron-down";
+import { IconDotsHorizontal } from "@/icons/dots-horizontal";
+import { IconExternalLink } from "@/icons/external-link";
 import { IconX } from "@/icons/x";
 import { Layout } from "@/layouts/layout";
 import styles from "./_styles.module.css";
@@ -82,24 +81,44 @@ const title = "<details>";
       <Code code="<dropdown>" inline />.
     </p>
     <div class={styles.dropdowns}>
-      <Dropdown id="more-links" label="press me" class={styles.dropdown}>
-        <DropdownLink href="/denene/">home</DropdownLink>
-        <DropdownLink href="/denene/about/">about</DropdownLink>
-        <DropdownLink href="/denene/contact/">contact</DropdownLink>
-        <DropdownDivider />
-        <DropdownExternalLink href="https://github.com/jamband/denene">
-          github
-        </DropdownExternalLink>
-      </Dropdown>
-      <Dropdown id="more-links-without-label" class={styles.dropdown}>
-        <DropdownLink href="/denene/">home</DropdownLink>
-        <DropdownLink href="/denene/about/">about</DropdownLink>
-        <DropdownLink href="/denene/contact/">contact</DropdownLink>
-        <DropdownDivider />
-        <DropdownExternalLink href="https://github.com/jamband/denene">
-          github
-        </DropdownExternalLink>
-      </Dropdown>
+      <details id="dropdown1" class={styles.dropdown}>
+        <summary class={styles.dropdownButton}
+          >press me<IconChevronDown
+            class={styles.dropdownButtonIcon}
+          /></summary
+        >
+        <div class={styles.dropdownContent}>
+          <a href="/denene/" class={styles.dropdownLink}>home</a>
+          <a href="/denene/about/" class={styles.dropdownLink}>about</a>
+          <a href="/denene/contact/" class={styles.dropdownLink}>contact</a>
+          <hr class={styles.dropdownDivider} />
+          <a
+            href="https://github.com/jamband/denene"
+            class={styles.dropdownLink}
+            rel="noreferrer"
+            target="_blank"
+            >github<IconExternalLink class={styles.dropdownLinkIcon} /></a
+          >
+        </div>
+      </details>
+      <details id="dropdown2" class={styles.dropdown}>
+        <summary class={styles.dropdownButton}
+          ><IconDotsHorizontal class={styles.dropdownButtonIcon} /></summary
+        >
+        <div class={styles.dropdownContent}>
+          <a href="/denene/" class={styles.dropdownLink}>home</a>
+          <a href="/denene/about/" class={styles.dropdownLink}>about</a>
+          <a href="/denene/contact/" class={styles.dropdownLink}>contact</a>
+          <hr class={styles.dropdownDivider} />
+          <a
+            href="https://github.com/jamband/denene"
+            class={styles.dropdownLink}
+            rel="noreferrer"
+            target="_blank"
+            >github<IconExternalLink class={styles.dropdownLinkIcon} /></a
+          >
+        </div>
+      </details>
     </div>
   </PageSection>
   <PageSection>
@@ -122,3 +141,50 @@ const title = "<details>";
   </PageSection>
   <BackToHomeLink />
 </Layout>
+
+<script>
+  const closeDropdownOnEscapeKeyDown = (
+    element: HTMLElement,
+    event: KeyboardEvent,
+  ) => {
+    if (event.key === "Escape") {
+      element.removeAttribute("open");
+    }
+  };
+
+  const closeDropdownOnFocusOut = (element: HTMLElement, event: FocusEvent) => {
+    if (!element.contains(event.relatedTarget as HTMLElement)) {
+      setTimeout(() => {
+        element.removeAttribute("open");
+      }, 100);
+    }
+  };
+
+  let selector = "";
+
+  // dropdown1
+  selector = "#dropdown1";
+  const dropdown1 = document.querySelector<HTMLDetailsElement>(selector);
+  if (!dropdown1) throw new Error(`${selector} does not exists.`);
+
+  dropdown1.addEventListener("keydown", (event) => {
+    closeDropdownOnEscapeKeyDown(dropdown1, event);
+  });
+
+  dropdown1.addEventListener("focusout", (event) => {
+    closeDropdownOnFocusOut(dropdown1, event);
+  });
+
+  // dropdown2
+  selector = "#dropdown2";
+  const dropdown2 = document.querySelector<HTMLDetailsElement>(selector);
+  if (!dropdown2) throw new Error(`${selector} does not exists.`);
+
+  dropdown2.addEventListener("keydown", (event) => {
+    closeDropdownOnEscapeKeyDown(dropdown2, event);
+  });
+
+  dropdown2.addEventListener("focusout", (event) => {
+    closeDropdownOnFocusOut(dropdown2, event);
+  });
+</script>
