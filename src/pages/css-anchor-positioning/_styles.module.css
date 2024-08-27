@@ -95,7 +95,7 @@
   padding: 1rem 1.5rem;
   position: fixed;
   position-anchor: --tooltip2;
-  position-try-options: flip-block;
+  position-try-fallbacks: flip-block;
   width: 20rem;
 }
 
