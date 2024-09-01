@@ -30,7 +30,10 @@ const title = "mask-image";
     />
     <p>try scrolling horizontally.</p>
     <div class={styles.example1Container}>
-      <div class={styles.example1} tabindex="0">
+      <div
+        class:list={[styles.example1, styles.example1MaskRight]}
+        tabindex="0"
+      >
         lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
         leo in orci dapibus tristique.
       </div>
@@ -43,7 +46,10 @@ const title = "mask-image";
     />
     <p>try scrolling vertically.</p>
     <div class={styles.example2Container}>
-      <div class={styles.example2} tabindex="0">
+      <div
+        class:list={[styles.example2, styles.example2MaskBottom]}
+        tabindex="0"
+      >
         lorem ipsum dolor sit amet, consectetur adipiscing elit. integer vitae
         leo in orci dapibus tristique. mauris elementum iaculis erat eget
         vehicula. in imperdiet enim quis nulla laoreet pretium. in blandit
@@ -76,3 +82,59 @@ const title = "mask-image";
   </PageSection>
   <BackToHomeLink />
 </Layout>
+
+<script>
+  import styles from "./_styles.module.css";
+
+  let selector = "";
+
+  // example1
+  selector = `.${styles.example1}`;
+  const example1 = document.querySelector(selector);
+  if (!example1) throw new Error(`${selector} does not exists.`);
+
+  example1.addEventListener("scroll", () => {
+    const scrollLeft = example1.scrollLeft;
+    const scrollWidth = example1.scrollWidth;
+    const clientWidth = example1.clientWidth;
+
+    if (scrollLeft <= 10) {
+      example1.classList.remove(styles.example1Mask, styles.example1MaskLeft);
+      example1.classList.add(styles.example1MaskRight);
+    } else if (scrollLeft + clientWidth + 10 >= scrollWidth) {
+      example1.classList.remove(styles.example1Mask, styles.example1MaskRight);
+      example1.classList.add(styles.example1MaskLeft);
+    } else {
+      example1.classList.remove(
+        styles.example1MaskLeft,
+        styles.example1MaskRight,
+      );
+      example1.classList.add(styles.example1Mask);
+    }
+  });
+
+  // example2
+  selector = `.${styles.example2}`;
+  const example2 = document.querySelector(selector);
+  if (!example2) throw new Error(`${selector} does not exists.`);
+
+  example2.addEventListener("scroll", () => {
+    const scrollTop = example2.scrollTop;
+    const scrollHeight = example2.scrollHeight;
+    const clientHeight = example2.clientHeight;
+
+    if (scrollTop <= 10) {
+      example2.classList.remove(styles.example2Mask, styles.example2MaskTop);
+      example2.classList.add(styles.example2MaskBottom);
+    } else if (scrollTop + clientHeight + 10 >= scrollHeight) {
+      example2.classList.remove(styles.example2Mask, styles.example2MaskBottom);
+      example2.classList.add(styles.example2MaskTop);
+    } else {
+      example2.classList.remove(
+        styles.example2MaskTop,
+        styles.example2MaskBottom,
+      );
+      example2.classList.add(styles.example2Mask);
+    }
+  });
+</script>
