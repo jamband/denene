@@ -3,7 +3,7 @@
   color: rgb(var(--pink-300));
   display: inline-flex;
   gap: 0.1rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .icon {
