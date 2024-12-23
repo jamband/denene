@@ -14,7 +14,7 @@
 
 .example1 {
   overflow: scroll;
-  overscroll-behavior: contain;
+  overscroll-behavior: contain auto;
   padding: 1rem 0 1rem 1rem;
   white-space: nowrap;
 }
