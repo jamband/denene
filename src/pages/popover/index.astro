@@ -94,73 +94,72 @@ const title = "popover";
     />
   </PageSection>
   <BackToHomeLink />
-</Layout>
+  <script>
+    import styles from "./_styles.module.css";
 
-<script>
-  import styles from "./_styles.module.css";
+    let selector = "";
 
-  let selector = "";
+    // drawer
+    selector = "#drawerTarget";
+    const drawer = document.querySelector<HTMLElement>(selector);
+    if (!drawer) throw new Error(`${selector} does not exists.`);
 
-  // drawer
-  selector = "#drawerTarget";
-  const drawer = document.querySelector<HTMLElement>(selector);
-  if (!drawer) throw new Error(`${selector} does not exists.`);
+    selector = `.${styles.drawerFooterButton}`;
+    const drawerFooterButton =
+      document.querySelector<HTMLButtonElement>(selector);
+    if (!drawerFooterButton) throw new Error(`${selector} does not exists.`);
 
-  selector = `.${styles.drawerFooterButton}`;
-  const drawerFooterButton =
-    document.querySelector<HTMLButtonElement>(selector);
-  if (!drawerFooterButton) throw new Error(`${selector} does not exists.`);
-
-  drawerFooterButton.addEventListener("click", () => {
-    if ("popover" in HTMLElement.prototype) {
-      drawer.hidePopover();
-    } else {
-      drawer.style.display = "none";
-    }
-  });
-
-  // toast
-  selector = "#toastButton";
-  const toastButton = document.querySelector<HTMLButtonElement>(selector);
-  if (!toastButton) throw new Error(`${selector} does not exists.`);
-
-  toastButton.addEventListener("click", () => {
-    const toast = document.createElement("div");
-    toast.popover = "manual";
-    toast.classList.add(styles.toast);
-    toast.classList.add(`${styles.toast}new`);
-
-    document.body.append(toast);
-    toast.showPopover();
-
-    setTimeout(() => {
-      toast.hidePopover();
-      toast.remove();
-    }, 4000);
-
-    toast.addEventListener("toggle", (event) => {
-      if ((event as ToggleEvent).newState === "open") {
-        selector = `.${styles.toast}`;
-        const toasts = document.querySelectorAll<HTMLDivElement>(selector);
-        if (!toasts.length) throw new Error(`${selector} does not exists.`);
-
-        toasts.forEach((element, index) => {
-          toast.textContent = `toast${index + 1}`;
-
-          if (element.classList.contains(`${styles.toast}new`)) {
-            element.style.top = "16px";
-            element.classList.remove(`${styles.toast}new`);
-          } else {
-            const previousTopValue = element.style.top.replace("px", "");
-            element.style.top = `${parseInt(previousTopValue) + 68}px`;
-          }
-        });
+    drawerFooterButton.addEventListener("click", () => {
+      if ("popover" in HTMLElement.prototype) {
+        drawer.hidePopover();
+      } else {
+        drawer.style.display = "none";
       }
     });
-  });
 
-  // https://bugs.webkit.org/show_bug.cgi?id=267688
-  document.body.addEventListener("pointerdown", () => {
-    //
-  });
-</script>
+    // toast
+    selector = "#toastButton";
+    const toastButton = document.querySelector<HTMLButtonElement>(selector);
+    if (!toastButton) throw new Error(`${selector} does not exists.`);
+
+    toastButton.addEventListener("click", () => {
+      const toast = document.createElement("div");
+      toast.popover = "manual";
+      toast.classList.add(styles.toast);
+      toast.classList.add(`${styles.toast}new`);
+
+      document.body.append(toast);
+      toast.showPopover();
+
+      setTimeout(() => {
+        toast.hidePopover();
+        toast.remove();
+      }, 4000);
+
+      toast.addEventListener("toggle", (event) => {
+        if ((event as ToggleEvent).newState === "open") {
+          selector = `.${styles.toast}`;
+          const toasts = document.querySelectorAll<HTMLDivElement>(selector);
+          if (!toasts.length) throw new Error(`${selector} does not exists.`);
+
+          toasts.forEach((element, index) => {
+            toast.textContent = `toast${index + 1}`;
+
+            if (element.classList.contains(`${styles.toast}new`)) {
+              element.style.top = "16px";
+              element.classList.remove(`${styles.toast}new`);
+            } else {
+              const previousTopValue = element.style.top.replace("px", "");
+              element.style.top = `${parseInt(previousTopValue) + 68}px`;
+            }
+          });
+        }
+      });
+    });
+
+    // https://bugs.webkit.org/show_bug.cgi?id=267688
+    document.body.addEventListener("pointerdown", () => {
+      //
+    });
+  </script>
+</Layout>

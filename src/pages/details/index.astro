@@ -140,51 +140,53 @@ const title = "<details>";
     />
   </PageSection>
   <BackToHomeLink />
-</Layout>
-
-<script>
-  const closeDropdownOnEscapeKeyDown = (
-    element: HTMLElement,
-    event: KeyboardEvent,
-  ) => {
-    if (event.key === "Escape") {
-      element.removeAttribute("open");
-    }
-  };
-
-  const closeDropdownOnFocusOut = (element: HTMLElement, event: FocusEvent) => {
-    if (!element.contains(event.relatedTarget as HTMLElement)) {
-      setTimeout(() => {
+  <script>
+    const closeDropdownOnEscapeKeyDown = (
+      element: HTMLElement,
+      event: KeyboardEvent,
+    ) => {
+      if (event.key === "Escape") {
         element.removeAttribute("open");
-      }, 100);
-    }
-  };
+      }
+    };
 
-  let selector = "";
+    const closeDropdownOnFocusOut = (
+      element: HTMLElement,
+      event: FocusEvent,
+    ) => {
+      if (!element.contains(event.relatedTarget as HTMLElement)) {
+        setTimeout(() => {
+          element.removeAttribute("open");
+        }, 100);
+      }
+    };
 
-  // dropdown1
-  selector = "#dropdown1";
-  const dropdown1 = document.querySelector<HTMLDetailsElement>(selector);
-  if (!dropdown1) throw new Error(`${selector} does not exists.`);
+    let selector = "";
 
-  dropdown1.addEventListener("keydown", (event) => {
-    closeDropdownOnEscapeKeyDown(dropdown1, event);
-  });
+    // dropdown1
+    selector = "#dropdown1";
+    const dropdown1 = document.querySelector<HTMLDetailsElement>(selector);
+    if (!dropdown1) throw new Error(`${selector} does not exists.`);
 
-  dropdown1.addEventListener("focusout", (event) => {
-    closeDropdownOnFocusOut(dropdown1, event);
-  });
+    dropdown1.addEventListener("keydown", (event) => {
+      closeDropdownOnEscapeKeyDown(dropdown1, event);
+    });
 
-  // dropdown2
-  selector = "#dropdown2";
-  const dropdown2 = document.querySelector<HTMLDetailsElement>(selector);
-  if (!dropdown2) throw new Error(`${selector} does not exists.`);
+    dropdown1.addEventListener("focusout", (event) => {
+      closeDropdownOnFocusOut(dropdown1, event);
+    });
 
-  dropdown2.addEventListener("keydown", (event) => {
-    closeDropdownOnEscapeKeyDown(dropdown2, event);
-  });
+    // dropdown2
+    selector = "#dropdown2";
+    const dropdown2 = document.querySelector<HTMLDetailsElement>(selector);
+    if (!dropdown2) throw new Error(`${selector} does not exists.`);
 
-  dropdown2.addEventListener("focusout", (event) => {
-    closeDropdownOnFocusOut(dropdown2, event);
-  });
-</script>
+    dropdown2.addEventListener("keydown", (event) => {
+      closeDropdownOnEscapeKeyDown(dropdown2, event);
+    });
+
+    dropdown2.addEventListener("focusout", (event) => {
+      closeDropdownOnFocusOut(dropdown2, event);
+    });
+  </script>
+</Layout>

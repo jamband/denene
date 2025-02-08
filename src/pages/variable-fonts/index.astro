@@ -86,56 +86,56 @@ const title = "variable fonts";
     />
   </PageSection>
   <BackToHomeLink />
+  <script>
+    import styles from "./_styles.module.css";
+
+    // weight
+    const weightTextSelector = `.${styles.weightText}`;
+    const weightText =
+      document.querySelector<HTMLDivElement>(weightTextSelector);
+    if (!weightText)
+      throw new Error(`${weightTextSelector} element does not exists.`);
+
+    const weightValueSelector = `.${styles.weightValue}`;
+    const weightValue =
+      document.querySelector<HTMLSpanElement>(weightValueSelector);
+    if (!weightValue)
+      throw new Error(`${weightValueSelector} element does not exists.`);
+
+    const weightInputSelector = `.${styles.weightInput}`;
+    const weightInput =
+      document.querySelector<HTMLInputElement>(weightInputSelector);
+    if (!weightInput)
+      throw new Error(`${weightInputSelector} element does not exists.`);
+
+    weightInput.addEventListener("input", (event) => {
+      weightText.style.fontWeight = (event.target as HTMLInputElement).value;
+      weightValue.textContent = weightText.style.fontWeight;
+    });
+
+    // width
+    const widthTextSelector = `.${styles.widthText}`;
+    const widthText = document.querySelector<HTMLDivElement>(widthTextSelector);
+    if (!widthText)
+      throw new Error(`${widthTextSelector} element does not exists.`);
+
+    const widthValueSelector = `.${styles.widthValue}`;
+    const widthValue =
+      document.querySelector<HTMLSpanElement>(widthValueSelector);
+    if (!widthValue)
+      throw new Error(`${widthValueSelector} element does not exists.`);
+
+    const widthInputSelector = `.${styles.widthInput}`;
+    const widthInput =
+      document.querySelector<HTMLInputElement>(widthInputSelector);
+    if (!widthInput)
+      throw new Error(`${widthInputSelector} element does not exists.`);
+
+    widthInput.addEventListener("input", (event) => {
+      widthText.style.fontStretch = `${(event.target as HTMLInputElement).value}%`;
+      widthValue.textContent = widthText.style.fontStretch
+        .replace("%", "")
+        .padStart(3, "0");
+    });
+  </script>
 </Layout>
-
-<script>
-  import styles from "./_styles.module.css";
-
-  // weight
-  const weightTextSelector = `.${styles.weightText}`;
-  const weightText = document.querySelector<HTMLDivElement>(weightTextSelector);
-  if (!weightText)
-    throw new Error(`${weightTextSelector} element does not exists.`);
-
-  const weightValueSelector = `.${styles.weightValue}`;
-  const weightValue =
-    document.querySelector<HTMLSpanElement>(weightValueSelector);
-  if (!weightValue)
-    throw new Error(`${weightValueSelector} element does not exists.`);
-
-  const weightInputSelector = `.${styles.weightInput}`;
-  const weightInput =
-    document.querySelector<HTMLInputElement>(weightInputSelector);
-  if (!weightInput)
-    throw new Error(`${weightInputSelector} element does not exists.`);
-
-  weightInput.addEventListener("input", (event) => {
-    weightText.style.fontWeight = (event.target as HTMLInputElement).value;
-    weightValue.textContent = weightText.style.fontWeight;
-  });
-
-  // width
-  const widthTextSelector = `.${styles.widthText}`;
-  const widthText = document.querySelector<HTMLDivElement>(widthTextSelector);
-  if (!widthText)
-    throw new Error(`${widthTextSelector} element does not exists.`);
-
-  const widthValueSelector = `.${styles.widthValue}`;
-  const widthValue =
-    document.querySelector<HTMLSpanElement>(widthValueSelector);
-  if (!widthValue)
-    throw new Error(`${widthValueSelector} element does not exists.`);
-
-  const widthInputSelector = `.${styles.widthInput}`;
-  const widthInput =
-    document.querySelector<HTMLInputElement>(widthInputSelector);
-  if (!widthInput)
-    throw new Error(`${widthInputSelector} element does not exists.`);
-
-  widthInput.addEventListener("input", (event) => {
-    widthText.style.fontStretch = `${(event.target as HTMLInputElement).value}%`;
-    widthValue.textContent = widthText.style.fontStretch
-      .replace("%", "")
-      .padStart(3, "0");
-  });
-</script>
