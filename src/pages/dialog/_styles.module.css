@@ -5,16 +5,26 @@
 }
 
 .dialog {
+  background: rgb(var(--gray-700));
+  border: 1px solid rgb(var(--gray-600));
   border-radius: var(--rounded);
+  color: rgb(var(--gray-400));
+  padding: 1rem 1.5rem 1.5rem;
 }
 
-.dialogInner {
+@media (min-width: 768px) {
+  .dialog {
+    width: 35rem;
+  }
+}
+
+.form {
   display: flex;
   flex-flow: column;
   gap: 1rem;
 }
 
-.dialogHeader {
+.formHeader {
   align-items: center;
   border-bottom: 1px solid rgb(var(--gray-400) / 25%);
   color: rgb(var(--gray-100));
@@ -24,14 +34,14 @@
   justify-content: space-between;
 }
 
-.dialogFooter {
+.formFooter {
   display: flex;
   gap: 0.75rem;
   justify-content: flex-end;
   margin-top: 1rem;
 }
 
-.dialogFooterButton {
+.formFooterButton {
   background: rgb(var(--gray-600));
   border: 1px solid rgb(var(--gray-400) / 10%);
   color: rgb(var(--gray-100));
