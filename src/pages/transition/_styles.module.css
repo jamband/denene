@@ -13,7 +13,7 @@
 }
 
 .checkbox {
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(0 0 100% 100%);
   position: absolute;
 }
 

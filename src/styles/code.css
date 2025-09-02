@@ -17,7 +17,7 @@ pre {
   color: rgb(var(--gray-100) / 90%);
   font-family: var(--font-mono);
   font-size: 0.85rem;
+  overflow-wrap: break-word;
   padding: 0.1rem 0.3rem 0.2rem;
   white-space: nowrap;
-  word-wrap: break-word;
 }
