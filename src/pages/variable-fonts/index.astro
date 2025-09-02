@@ -109,8 +109,9 @@ const title = "variable fonts";
       throw new Error(`${weightInputSelector} element does not exists.`);
 
     weightInput.addEventListener("input", (event) => {
-      weightText.style.fontWeight = (event.target as HTMLInputElement).value;
-      weightValue.textContent = weightText.style.fontWeight;
+      const fontWeight = (event.target as HTMLInputElement).value;
+      weightText.style.fontWeight = fontWeight;
+      weightValue.textContent = fontWeight;
     });
 
     // width
@@ -132,10 +133,11 @@ const title = "variable fonts";
       throw new Error(`${widthInputSelector} element does not exists.`);
 
     widthInput.addEventListener("input", (event) => {
-      widthText.style.fontStretch = `${(event.target as HTMLInputElement).value}%`;
-      widthValue.textContent = widthText.style.fontStretch
-        .replace("%", "")
-        .padStart(3, "0");
+      const fontWidth = (event.target as HTMLInputElement).value;
+      // `astro check` will output a warning message that fontStretch is deprecated, but ignore it.
+      // @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch}
+      widthText.style.fontStretch = `${fontWidth}%`;
+      widthValue.textContent = fontWidth.padStart(3, "0");
     });
   </script>
 </Layout>
