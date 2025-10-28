@@ -32,13 +32,13 @@
 .toolsSummaryIcon {
   height: 1.25rem;
   margin: 0 0 0 auto;
-  transform: rotate(-45deg);
-  transition: transform 0.1s;
+  rotate: -45deg;
+  transition: rotate 0.1s;
   width: 1.25rem;
 }
 
 .tools[open] .toolsSummaryIcon {
-  transform: rotate(0deg);
+  rotate: 0deg;
 }
 
 .toolsMain {

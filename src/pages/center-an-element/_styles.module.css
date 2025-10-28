@@ -36,7 +36,7 @@
   }
 }
 
-.withPositionAndTransform {
+.withPositionAndTranslate {
   aspect-ratio: 16 / 9;
   background: rgb(var(--gray-700));
   border-radius: var(--rounded);
@@ -45,14 +45,13 @@
 }
 
 @media (min-width: 768px) {
-  .withPositionAndTransform {
+  .withPositionAndTranslate {
     width: 75%;
   }
 }
 
-.withPositionAndTransformBox {
-  left: 50%;
+.withPositionAndTranslateBox {
+  inset: 50% auto auto 50%;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }

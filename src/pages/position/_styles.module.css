@@ -13,11 +13,10 @@
 .example1Text {
   font-family: var(--font-mono);
   font-weight: 700;
-  left: 50%;
+  inset: 50% auto auto 50%;
   position: absolute;
   text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
 }
 
 .account {

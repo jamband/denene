@@ -40,7 +40,7 @@
   border-left: 1px dashed rgb(var(--gray-400));
   content: "";
   height: 2rem;
-  transform: rotate(-30deg);
+  rotate: -30deg;
   width: 1rem;
 }
 
@@ -48,7 +48,7 @@
   border-right: 1px dashed rgb(var(--gray-400));
   content: "";
   height: 2rem;
-  transform: rotate(30deg);
+  rotate: 30deg;
   width: 1rem;
 }
 
@@ -104,7 +104,7 @@
   border-left: 1px dashed rgb(var(--gray-400));
   content: "";
   height: 2rem;
-  transform: rotate(-30deg);
+  rotate: -30deg;
   width: 1rem;
 }
 
@@ -112,7 +112,7 @@
   border-right: 1px dashed rgb(var(--gray-400));
   content: "";
   height: 2rem;
-  transform: rotate(30deg);
+  rotate: 30deg;
   width: 1rem;
 }
 
