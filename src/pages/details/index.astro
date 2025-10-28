@@ -8,10 +8,10 @@ import { MdnDoc } from "@/components/mdn-doc";
 import { PageHeader } from "@/components/page/header";
 import { PageSection } from "@/components/page/section";
 import { PageSubHeader } from "@/components/page/sub-header";
-import { IconChevronDown } from "@/icons/chevron-down";
-import { IconDotsHorizontal } from "@/icons/dots-horizontal";
-import { IconExternalLink } from "@/icons/external-link";
-import { IconX } from "@/icons/x";
+import { IconAngleDown } from "@/icons/angle-down";
+import { IconEllipsis } from "@/icons/ellipsis";
+import { IconUpRightFromSquare } from "@/icons/up-right-from-square";
+import { IconXMark } from "@/icons/x-mark";
 import { Layout } from "@/layouts/layout";
 import styles from "./_styles.module.css";
 
@@ -33,7 +33,7 @@ const title = "<details>";
     <div class={styles.toolsContainer}>
       <details class={styles.tools}>
         <summary class={styles.toolsSummary}
-          >hosting<IconX class={styles.toolsSummaryIcon} /></summary
+          >hosting<IconXMark class={styles.toolsSummaryIcon} /></summary
         >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>github pages</span> » you can use github
@@ -43,7 +43,7 @@ const title = "<details>";
       </details>
       <details class={styles.tools}>
         <summary class={styles.toolsSummary}
-          >building<IconX class={styles.toolsSummaryIcon} /></summary
+          >building<IconXMark class={styles.toolsSummaryIcon} /></summary
         >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>astro</span> » build faster websites with
@@ -52,7 +52,7 @@ const title = "<details>";
       </details>
       <details class={styles.tools}>
         <summary class={styles.toolsSummary}
-          >styling<IconX class={styles.toolsSummaryIcon} /></summary
+          >styling<IconXMark class={styles.toolsSummaryIcon} /></summary
         >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>css modules</span> » a css module is a css
@@ -62,7 +62,7 @@ const title = "<details>";
       </details>
       <details class={styles.tools}>
         <summary class={styles.toolsSummary}
-          >color palette<IconX class={styles.toolsSummaryIcon} /></summary
+          >color palette<IconXMark class={styles.toolsSummaryIcon} /></summary
         >
         <p class={styles.toolsMain}>
           <span class={styles.toolsTool}>tailwind css</span> » tailwind includes
@@ -83,9 +83,7 @@ const title = "<details>";
     <div class={styles.dropdowns}>
       <details id="dropdown1" class={styles.dropdown}>
         <summary class={styles.dropdownButton}
-          >press me<IconChevronDown
-            class={styles.dropdownButtonIcon}
-          /></summary
+          >press me<IconAngleDown class={styles.dropdownButtonIcon} /></summary
         >
         <div class={styles.dropdownContent}>
           <a href="/denene/" class={styles.dropdownLink}>home</a>
@@ -97,13 +95,13 @@ const title = "<details>";
             class={styles.dropdownLink}
             rel="noreferrer"
             target="_blank"
-            >github<IconExternalLink class={styles.dropdownLinkIcon} /></a
+            >github<IconUpRightFromSquare class={styles.dropdownLinkIcon} /></a
           >
         </div>
       </details>
       <details id="dropdown2" class={styles.dropdown}>
         <summary class={styles.dropdownButton}
-          ><IconDotsHorizontal class={styles.dropdownButtonIcon} /></summary
+          ><IconEllipsis class={styles.dropdownButtonIcon} /></summary
         >
         <div class={styles.dropdownContent}>
           <a href="/denene/" class={styles.dropdownLink}>home</a>
@@ -115,7 +113,7 @@ const title = "<details>";
             class={styles.dropdownLink}
             rel="noreferrer"
             target="_blank"
-            >github<IconExternalLink class={styles.dropdownLinkIcon} /></a
+            >github<IconUpRightFromSquare class={styles.dropdownLinkIcon} /></a
           >
         </div>
       </details>

@@ -1,5 +1,5 @@
 ---
-import { IconExternalLink } from "@/icons/external-link";
+import { IconUpRightFromSquare } from "@/icons/up-right-from-square";
 import styles from "./styles.module.css";
 
 type Props = {
@@ -10,5 +10,5 @@ const { href } = Astro.props;
 ---
 
 <a {href} class={styles.container} target="_blank" rel="noreferrer"
-  ><slot /><IconExternalLink class={styles.icon} /></a
+  ><slot /><IconUpRightFromSquare class={styles.icon} /></a
 >
