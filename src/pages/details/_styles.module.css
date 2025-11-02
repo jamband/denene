@@ -118,9 +118,9 @@
 
 .dropdownLinkIcon {
   color: rgb(var(--gray-400) / 75%);
-  height: 1.25rem;
+  height: 1.125rem;
   margin: 0 0 0.0475rem;
-  width: 1.25rem;
+  width: 1.125rem;
 }
 
 .dropdownDivider {
