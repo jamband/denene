@@ -3,7 +3,6 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "declaration-property-value-no-unknown": true,
-    "media-feature-range-notation": "prefix",
     "property-no-unknown": [
       true,
       { "ignoreProperties": ["position-try-fallbacks"] }

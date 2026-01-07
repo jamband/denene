@@ -7,7 +7,7 @@ main {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   main {
     max-width: 768px;
   }
