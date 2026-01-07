@@ -38,7 +38,7 @@
   z-index: 110;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .drawer {
     width: 20rem;
   }
@@ -66,7 +66,7 @@ html:has(.drawer:popover-open) {
   padding: 0 0 0.5rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .drawerHeader {
     font-size: 1.5rem;
   }
@@ -80,7 +80,7 @@ html:has(.drawer:popover-open) {
   gap: 1rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .drawerMain {
     font-size: 1.0625rem;
   }
@@ -95,7 +95,7 @@ html:has(.drawer:popover-open) {
   padding: 0.3rem 0.75rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .drawerFooterButton {
     font-size: 1.0625rem;
     padding: 0.5rem 1rem;
@@ -128,7 +128,7 @@ html:has(.drawer:popover-open) {
   width: 10rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .toast {
     font-size: 1.0625rem;
     width: 15rem;

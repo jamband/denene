@@ -13,26 +13,26 @@
   width: 100%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .anonymousContainer {
     display: flex;
     justify-content: space-between;
   }
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .anonymousBox {
     width: 100%;
   }
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .anonymousBox:first-child {
     padding-right: 1rem;
   }
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .anonymousBox:last-child {
     padding-left: 1rem;
   }

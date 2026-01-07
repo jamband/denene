@@ -14,7 +14,7 @@
   width: 50%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .withFlex {
     width: 25%;
   }
@@ -30,7 +30,7 @@
   width: 75%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .withGrid {
     width: 50%;
   }
@@ -44,7 +44,7 @@
   width: 100%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .withPositionAndTranslate {
     width: 75%;
   }

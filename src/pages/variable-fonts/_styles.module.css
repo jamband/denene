@@ -29,7 +29,7 @@
   line-height: 1.2;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .weightText {
     font-size: 4rem;
     gap: 1.5rem;
@@ -93,7 +93,7 @@
   line-height: 1.2;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .widthText {
     font-size: 4rem;
     gap: 1.5rem;
