@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.6",
-    "@astrojs/sitemap": "3.6.0",
-    "astro": "5.16.6",
+    "@astrojs/sitemap": "3.6.1",
+    "astro": "5.16.8",
     "prettier": "3.7.4",
     "prettier-plugin-astro": "0.14.1",
     "stylelint": "16.26.1",
