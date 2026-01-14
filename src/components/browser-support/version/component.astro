@@ -1,0 +1,31 @@
+---
+import styles from "./styles.module.css";
+
+type Props = {
+  version: string;
+};
+
+const { version } = Astro.props;
+---
+
+<td
+  class:list={[
+    styles.container,
+    { [styles.preview]: version.includes("preview") },
+    { [styles.partial]: version.includes("partial") },
+  ]}
+>
+  {
+    version.includes("preview") ? (
+      <abbr title="preview browser support">
+        {version.replace("preview", "").trim()}
+      </abbr>
+    ) : version.includes("partial") ? (
+      <abbr title="partial support">
+        {version.replace("partial", "").trim()}
+      </abbr>
+    ) : (
+      version
+    )
+  }
+</td>

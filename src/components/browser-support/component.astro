@@ -1,6 +1,7 @@
 ---
 import { PageSubHeader } from "../page/sub-header";
 import styles from "./styles.module.css";
+import { BrowserSupportVersion } from "./version";
 
 type Props = {
   items: Array<{
@@ -31,15 +32,9 @@ const { items } = Astro.props;
           <th scope="row" class={styles.dataHeader} tabindex="0">
             {item.value}
           </th>
-          <td class={styles.data}>{item.chrome}</td>
-          <td class={styles.data}>{item.firefox}</td>
-          {item.safari === "tp" ? (
-            <td class={styles.data}>
-              <abbr title="preview browser support">{item.safari}</abbr>
-            </td>
-          ) : (
-            <td class={styles.data}>{item.safari}</td>
-          )}
+          <BrowserSupportVersion version={item.chrome} />
+          <BrowserSupportVersion version={item.firefox} />
+          <BrowserSupportVersion version={item.safari} />
         </tr>
       ))
     }
