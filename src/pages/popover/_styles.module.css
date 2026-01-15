@@ -24,6 +24,8 @@
   background: rgb(var(--gray-700));
   border: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .drawer {

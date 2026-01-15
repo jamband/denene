@@ -177,6 +177,7 @@
   position: fixed;
   position-anchor: --dropdown1;
   position-area: bottom span-right;
+  position-try-fallbacks: flip-block;
 }
 
 @supports not (position-anchor: --dropdown1) {
@@ -233,6 +234,7 @@
   position: fixed;
   position-anchor: --dropdown2;
   position-area: bottom span-left;
+  position-try-fallbacks: flip-block;
 }
 
 @supports not (position-anchor: --dropdown2) {
