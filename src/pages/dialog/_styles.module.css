@@ -10,10 +10,8 @@
   border-radius: var(--rounded);
   color: rgb(var(--gray-400));
   padding: 1rem 1.5rem 1.5rem;
-}
 
-@media (width >= 48rem) {
-  .dialog {
+  @media (width >= 48rem) {
     width: 35rem;
   }
 }
@@ -51,12 +49,12 @@
 .actionResult {
   color: rgb(var(--pink-300));
   margin: 0.5rem 0;
-}
 
-.actionResult::before {
-  color: rgb(var(--gray-400));
-  content: "» ";
-  margin-left: 0.25rem;
+  &::before {
+    color: rgb(var(--gray-400));
+    content: "» ";
+    margin-left: 0.25rem;
+  }
 }
 
 .close {

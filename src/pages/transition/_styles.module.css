@@ -15,10 +15,10 @@
 .checkbox {
   clip-path: inset(0 0 100% 100%);
   position: absolute;
-}
 
-.checkbox:focus + .button {
-  box-shadow: var(--outline);
+  &:focus + .button {
+    box-shadow: var(--outline);
+  }
 }
 
 .example1 {

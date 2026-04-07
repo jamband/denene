@@ -5,12 +5,14 @@
   gap: 1.25rem;
 }
 
-.main::before {
-  color: rgb(var(--gray-100));
-  content: "\201C";
-}
+.main {
+  &::before {
+    color: rgb(var(--gray-100));
+    content: "\201C";
+  }
 
-.main::after {
-  color: rgb(var(--gray-100));
-  content: "\201D";
+  &::after {
+    color: rgb(var(--gray-100));
+    content: "\201D";
+  }
 }

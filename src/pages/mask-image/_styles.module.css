@@ -4,10 +4,8 @@
   border-radius: var(--rounded) var(--rounded) 0 0;
   margin: 1rem 0 0;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  .example1Container {
+  @media (width >= 48rem) {
     width: 50%;
   }
 }
@@ -17,15 +15,15 @@
   overscroll-behavior: contain auto;
   padding: 1rem 0 1rem 1rem;
   white-space: nowrap;
-}
 
-.example1:focus {
-  color: rgb(var(--gray-100));
-}
+  &:focus {
+    color: rgb(var(--gray-100));
+  }
 
-.example1::after {
-  content: "";
-  margin: 0 1rem 0 0;
+  &::after {
+    content: "";
+    margin: 0 1rem 0 0;
+  }
 }
 
 .example1Mask {
@@ -46,10 +44,8 @@
   border-radius: 0 var(--rounded) var(--rounded) 0;
   margin: 1rem 0 0;
   width: 85%;
-}
 
-@media (width >= 48rem) {
-  .example2Container {
+  @media (width >= 48rem) {
     width: 50%;
   }
 }
@@ -59,10 +55,10 @@
   overflow: scroll;
   overscroll-behavior: contain;
   padding: 1rem;
-}
 
-.example2:focus {
-  color: rgb(var(--gray-100));
+  &:focus {
+    color: rgb(var(--gray-100));
+  }
 }
 
 .example2Mask {

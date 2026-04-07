@@ -37,10 +37,10 @@ button {
 
 summary {
   list-style: none;
-}
 
-summary::-webkit-details-marker {
-  display: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
 svg {

@@ -27,29 +27,27 @@
   font-weight: 625;
   gap: 1rem;
   line-height: 1.2;
-}
 
-@media (width >= 48rem) {
-  .weightText {
+  @media (width >= 48rem) {
     font-size: 4rem;
     gap: 1.5rem;
   }
-}
 
-.weightText::before {
-  border-left: 1px dashed rgb(var(--gray-400));
-  content: "";
-  height: 2rem;
-  rotate: -30deg;
-  width: 1rem;
-}
+  &::before {
+    border-left: 1px dashed rgb(var(--gray-400));
+    content: "";
+    height: 2rem;
+    rotate: -30deg;
+    width: 1rem;
+  }
 
-.weightText::after {
-  border-right: 1px dashed rgb(var(--gray-400));
-  content: "";
-  height: 2rem;
-  rotate: 30deg;
-  width: 1rem;
+  &::after {
+    border-right: 1px dashed rgb(var(--gray-400));
+    content: "";
+    height: 2rem;
+    rotate: 30deg;
+    width: 1rem;
+  }
 }
 
 .weightValue {
@@ -91,29 +89,27 @@
   font-stretch: 90%;
   gap: 1rem;
   line-height: 1.2;
-}
 
-@media (width >= 48rem) {
-  .widthText {
+  @media (width >= 48rem) {
     font-size: 4rem;
     gap: 1.5rem;
   }
-}
 
-.widthText::before {
-  border-left: 1px dashed rgb(var(--gray-400));
-  content: "";
-  height: 2rem;
-  rotate: -30deg;
-  width: 1rem;
-}
+  &::before {
+    border-left: 1px dashed rgb(var(--gray-400));
+    content: "";
+    height: 2rem;
+    rotate: -30deg;
+    width: 1rem;
+  }
 
-.widthText::after {
-  border-right: 1px dashed rgb(var(--gray-400));
-  content: "";
-  height: 2rem;
-  rotate: 30deg;
-  width: 1rem;
+  &::after {
+    border-right: 1px dashed rgb(var(--gray-400));
+    content: "";
+    height: 2rem;
+    rotate: 30deg;
+    width: 1rem;
+  }
 }
 
 .widthValue {

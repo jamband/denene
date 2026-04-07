@@ -12,10 +12,8 @@
   display: flex;
   justify-content: center;
   width: 50%;
-}
 
-@media (width >= 48rem) {
-  .withFlex {
+  @media (width >= 48rem) {
     width: 25%;
   }
 }
@@ -28,10 +26,8 @@
   grid-template-rows: 1fr;
   place-items: center;
   width: 75%;
-}
 
-@media (width >= 48rem) {
-  .withGrid {
+  @media (width >= 48rem) {
     width: 50%;
   }
 }
@@ -42,10 +38,8 @@
   border-radius: var(--rounded);
   position: relative;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  .withPositionAndTranslate {
+  @media (width >= 48rem) {
     width: 75%;
   }
 }

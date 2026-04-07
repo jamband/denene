@@ -5,10 +5,8 @@ main {
   margin: 0 auto;
   padding: 7.25rem 1rem;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  main {
+  @media (width >= 48rem) {
     max-width: 48rem;
   }
 }

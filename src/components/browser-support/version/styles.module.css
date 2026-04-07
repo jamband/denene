@@ -8,20 +8,20 @@
   display: flex;
   flex-flow: column;
   line-height: 1.2;
-}
 
-.preview::after {
-  content: "preview";
-  font-size: 0.75rem;
+  &::after {
+    content: "preview";
+    font-size: 0.75rem;
+  }
 }
 
 .partial {
   display: flex;
   flex-flow: column;
   line-height: 1.2;
-}
 
-.partial::after {
-  content: "partial";
-  font-size: 0.75rem;
+  &::after {
+    content: "partial";
+    font-size: 0.75rem;
+  }
 }

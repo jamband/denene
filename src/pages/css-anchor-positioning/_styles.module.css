@@ -44,30 +44,24 @@
   position: fixed;
   position-anchor: --tooltip1;
   position-area: right;
-}
 
-@supports not (position-anchor: --tooltip1) {
-  .tooltip1 {
-    display: none;
+  &::before {
+    border: solid transparent;
+    border-color: transparent;
+    border-right-color: rgb(var(--gray-600));
+    border-width: 0.5rem;
+    content: "";
+    height: 0;
+    inset: 50% 100% auto auto;
+    margin: -0.6rem 0 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
   }
-}
 
-.tooltip1:popover-open {
-  animation: fade-in 0.1s;
-}
-
-.tooltip1::before {
-  border: solid transparent;
-  border-color: transparent;
-  border-right-color: rgb(var(--gray-600));
-  border-width: 0.5rem;
-  content: "";
-  height: 0;
-  inset: 50% 100% auto auto;
-  margin: -0.6rem 0 0;
-  pointer-events: none;
-  position: absolute;
-  width: 0;
+  &:popover-open {
+    animation: fade-in 0.1s;
+  }
 }
 
 .tooltip2Button {
@@ -90,16 +84,10 @@
   position-area: top;
   position-try-fallbacks: flip-block;
   width: 20rem;
-}
 
-@supports not (position-anchor: --tooltip2) {
-  .tooltip2 {
-    display: none;
+  &:popover-open {
+    animation: fade-in 0.1s;
   }
-}
-
-.tooltip2:popover-open {
-  animation: fade-in 0.1s;
 }
 
 .tooltip3Button {
@@ -120,30 +108,24 @@
   position: fixed;
   position-anchor: --tooltip3;
   position-area: left;
-}
 
-@supports not (position-anchor: --tooptip3) {
-  .tooltip3 {
-    display: none;
+  &::before {
+    border: solid transparent;
+    border-color: transparent;
+    border-left-color: rgb(var(--gray-600));
+    border-width: 0.5rem;
+    content: "";
+    height: 0;
+    inset: auto auto 50% 100%;
+    margin: 0 0 -0.4rem;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
   }
-}
 
-.tooltip3:popover-open {
-  animation: fade-in 0.1s;
-}
-
-.tooltip3::before {
-  border: solid transparent;
-  border-color: transparent;
-  border-left-color: rgb(var(--gray-600));
-  border-width: 0.5rem;
-  content: "";
-  height: 0;
-  inset: auto auto 50% 100%;
-  margin: 0 0 -0.4rem;
-  pointer-events: none;
-  position: absolute;
-  width: 0;
+  &:popover-open {
+    animation: fade-in 0.1s;
+  }
 }
 
 .dropdowns {
@@ -178,16 +160,10 @@
   position-anchor: --dropdown1;
   position-area: bottom span-right;
   position-try-fallbacks: flip-block;
-}
 
-@supports not (position-anchor: --dropdown1) {
-  .dropdown1 {
-    display: none;
+  &:popover-open {
+    animation: fade-in 0.1s;
   }
-}
-
-.dropdown1:popover-open {
-  animation: fade-in 0.1s;
 }
 
 .dropdown1Content {
@@ -201,12 +177,12 @@
 .dropdown1Link {
   border-radius: var(--rounded);
   padding: 0.3rem 0.5rem;
-}
 
-.dropdown1Link:active,
-.dropdown1Link:focus-visible {
-  background: rgb(var(--gray-600));
-  color: rgb(var(--gray-100));
+  &:active,
+  &:focus-visible {
+    background: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
 }
 
 .dropdown2Button {
@@ -235,16 +211,10 @@
   position-anchor: --dropdown2;
   position-area: bottom span-left;
   position-try-fallbacks: flip-block;
-}
 
-@supports not (position-anchor: --dropdown2) {
-  .dropdown2 {
-    display: none;
+  &:popover-open {
+    animation: fade-in 0.1s;
   }
-}
-
-.dropdown2:popover-open {
-  animation: fade-in 0.1s;
 }
 
 .dropdown2Content {
@@ -260,10 +230,10 @@
 .dropdown2Link {
   border-radius: var(--rounded);
   padding: 0.3rem 0.5rem;
-}
 
-.dropdown2Link:active,
-.dropdown2Link:focus-visible {
-  background: rgb(var(--gray-600));
-  color: rgb(var(--gray-100));
+  &:active,
+  &:focus-visible {
+    background: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
 }
