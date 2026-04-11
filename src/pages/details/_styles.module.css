@@ -12,10 +12,6 @@
 
   &[open] {
     padding-bottom: 0.5rem;
-
-    .toolsSummaryIcon {
-      rotate: 0deg;
-    }
   }
 }
 
@@ -39,6 +35,10 @@
   rotate: -45deg;
   transition: rotate 0.1s;
   width: 1.25rem;
+
+  .tools[open] & {
+    rotate: 0deg;
+  }
 }
 
 .toolsMain {
