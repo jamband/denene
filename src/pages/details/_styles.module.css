@@ -75,8 +75,7 @@
   user-select: none;
   white-space: nowrap;
 
-  &:active,
-  &:focus-visible {
+  &:is(:active, :focus-visible) {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
   }
@@ -109,8 +108,7 @@
   line-height: 1.2;
   padding: 0.5rem;
 
-  &:active,
-  &:focus-visible {
+  &:is(:active, :focus-visible) {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
   }

@@ -178,8 +178,7 @@
   border-radius: var(--rounded);
   padding: 0.3rem 0.5rem;
 
-  &:active,
-  &:focus-visible {
+  &:is(:active, :focus-visible) {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
   }
@@ -231,8 +230,7 @@
   border-radius: var(--rounded);
   padding: 0.3rem 0.5rem;
 
-  &:active,
-  &:focus-visible {
+  &:is(:active, :focus-visible) {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
   }
