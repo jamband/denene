@@ -15,7 +15,6 @@
   background: rgb(var(--gray-700));
   border-radius: var(--rounded);
   display: grid;
-  font-weight: 600;
   place-items: center;
 }
 

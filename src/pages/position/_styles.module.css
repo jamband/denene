@@ -11,8 +11,6 @@
 }
 
 .example1Text {
-  font-family: var(--font-mono);
-  font-weight: 700;
   inset: 50% auto auto 50%;
   position: absolute;
   text-align: center;
@@ -21,7 +19,6 @@
 
 .account {
   color: rgb(var(--gray-100));
-  font-size: 0.85rem;
 }
 
 .repository {
@@ -38,8 +35,6 @@
 .example2Main {
   background: rgb(var(--gray-700));
   border-radius: var(--rounded);
-  font-family: var(--font-mono);
-  font-weight: 600;
   height: 100vh;
   padding: 1rem;
   width: 100%;
@@ -48,8 +43,6 @@
 .example2Side {
   background: rgb(var(--gray-700));
   border-radius: var(--rounded);
-  font-family: var(--font-mono);
-  font-weight: 600;
   height: 3.5em;
   padding: 1rem;
   position: sticky;

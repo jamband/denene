@@ -28,7 +28,6 @@
   color: rgb(var(--gray-100));
   display: flex;
   font-size: 1.5rem;
-  font-weight: 600;
   justify-content: space-between;
 }
 

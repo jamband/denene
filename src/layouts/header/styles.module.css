@@ -15,13 +15,11 @@
 
 .link {
   border-radius: var(--rounded);
-  font-weight: 700;
   padding: 0.25rem 1.5rem;
 }
 
 .account {
   color: rgb(var(--gray-100));
-  font-size: 0.95rem;
 }
 
 .repository {

@@ -62,7 +62,6 @@
   border-bottom: 1px solid rgb(var(--gray-600));
   color: rgb(var(--gray-100));
   font-size: 1.25rem;
-  font-weight: 600;
   padding: 0 0 0.5rem;
 
   @media (width >= 48rem) {
@@ -111,7 +110,6 @@
   border-radius: var(--rounded);
   color: rgb(var(--gray-100));
   font-size: 0.925rem;
-  font-weight: 600;
   height: fit-content;
   inset: auto 16px auto auto;
   overflow: scroll;

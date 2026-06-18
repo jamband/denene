@@ -1,7 +1,7 @@
 :root {
   /* font family */
-  /* stylelint-disable-next-line value-keyword-case */
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: var(--font-ubuntu);
+  --font-mono: var(--font-ubuntu-mono);
 
   /* color */
   --gray-100: 236 239 244;

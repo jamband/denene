@@ -10,7 +10,6 @@
 .link {
   border-radius: var(--rounded);
   color: rgb(var(--pink-300));
-  font-weight: 600;
   padding: 0.25rem 0 0.5rem;
   text-decoration-color: rgb(var(--pink-300) / 50%);
   text-decoration-line: underline;
