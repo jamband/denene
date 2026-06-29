@@ -31,16 +31,20 @@ const title = "css anchor positioning";
       <button
         type="button"
         class={styles.tooltip1Button}
-        popovertarget="tooltip1target">tooltip1</button
+        popovertarget="tooltip1target"
       >
+        tooltip1
+      </button>
       <div id="tooltip1target" class={styles.tooltip1} popover>
         tooltip1 content
       </div>
       <button
         type="button"
         class={styles.tooltip2Button}
-        popovertarget="tooltip2target">tooltip2</button
+        popovertarget="tooltip2target"
       >
+        tooltip2
+      </button>
       <div id="tooltip2target" class={styles.tooltip2} popover>
         this tooltip will automatically flip from top to bottom when it goes
         offscreen.
@@ -48,8 +52,10 @@ const title = "css anchor positioning";
       <button
         type="button"
         class={styles.tooltip3Button}
-        popovertarget="tooltip3target">tooltip3</button
+        popovertarget="tooltip3target"
       >
+        tooltip3
+      </button>
       <div id="tooltip3target" class={styles.tooltip3} popover>
         tooltip3 content
       </div>
@@ -62,8 +68,10 @@ const title = "css anchor positioning";
         type="button"
         class={styles.dropdown1Button}
         popovertarget="dropdown1target"
-        >dropdown1<IconAngleDown class={styles.dropdown1ButtonIcon} /></button
       >
+        dropdown1
+        <IconAngleDown class={styles.dropdown1ButtonIcon} />
+      </button>
       <div id="dropdown1target" class={styles.dropdown1} popover>
         <div class={styles.dropdown1Content}>
           <a href="/denene/" class={styles.dropdown1Link}>home</a>
@@ -75,8 +83,10 @@ const title = "css anchor positioning";
         type="button"
         class={styles.dropdown2Button}
         popovertarget="dropdown2target"
-        >dropdown2<IconAngleDown class={styles.dropdown2ButtonIcon} /></button
       >
+        dropdown2
+        <IconAngleDown class={styles.dropdown2ButtonIcon} />
+      </button>
       <div id="dropdown2target" class={styles.dropdown2} popover>
         <div class={styles.dropdown2Content}>
           {

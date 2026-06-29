@@ -36,7 +36,8 @@ const title = "<dialog>";
               class={styles.close}
               aria-label="close"
               autofocus
-              ><IconXMark class={styles.closeIcon} />
+            >
+              <IconXMark class={styles.closeIcon} />
             </button>
           </div>
           <div>
@@ -64,13 +65,17 @@ const title = "<dialog>";
               type="submit"
               class={styles.formFooterButton}
               value="it was canceled."
-              autofocus>cancel</button
+              autofocus
             >
+              cancel
+            </button>
             <button
               type="submit"
               class={styles.formFooterButton}
-              value="it was ok.">ok</button
+              value="it was ok."
             >
+              ok
+            </button>
           </footer>
         </form>
       </div>

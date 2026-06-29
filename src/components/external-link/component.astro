@@ -9,6 +9,7 @@ type Props = {
 const { href } = Astro.props;
 ---
 
-<a {href} class={styles.container} target="_blank" rel="noreferrer"
-  ><slot /><IconUpRightFromSquare class={styles.icon} /></a
->
+<a {href} class={styles.container} target="_blank" rel="noreferrer">
+  <slot />
+  <IconUpRightFromSquare class={styles.icon} />
+</a>
