@@ -12,10 +12,10 @@
     "clean": "node scripts/clean.js"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.9",
+    "@astrojs/check": "0.9.10",
     "@astrojs/sitemap": "3.7.3",
-    "astro": "7.1.1",
-    "prettier": "3.9.5",
+    "astro": "7.2.4",
+    "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "stylelint": "17.14.1",
     "stylelint-config-standard": "40.0.0",
