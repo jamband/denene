@@ -4,13 +4,11 @@ import styles from "./styles.module.css";
 ---
 
 <ul class={styles.container}>
-  {
-    links.map((link) => (
-      <li>
-        <a class={styles.link} href={`/denene/${link.href}/`}>
-          {link.text}
-        </a>
-      </li>
-    ))
-  }
+  {links.map((link) => (
+    <li>
+      <a class={styles.link} href={`/denene/${link.href}/`}>
+        {link.text}
+      </a>
+    </li>
+  ))}
 </ul>

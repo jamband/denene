@@ -15,17 +15,13 @@ const { version } = Astro.props;
     { [styles.partial]: version.includes("partial") },
   ]}
 >
-  {
-    version.includes("preview") ? (
-      <abbr title="preview browser support">
-        {version.replace("preview", "").trim()}
-      </abbr>
-    ) : version.includes("partial") ? (
-      <abbr title="partial support">
-        {version.replace("partial", "").trim()}
-      </abbr>
-    ) : (
-      version
-    )
-  }
+  {version.includes("preview") ? (
+    <abbr title="preview browser support">
+      {version.replace("preview", "").trim()}
+    </abbr>
+  ) : version.includes("partial") ? (
+    <abbr title="partial support">{version.replace("partial", "").trim()}</abbr>
+  ) : (
+    version
+  )}
 </td>

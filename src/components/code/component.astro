@@ -7,11 +7,9 @@ type Props = {
 const { code, inline } = Astro.props;
 ---
 
-{
-  inline ? (
-    <code>{code}</code>
-  ) : (
-    // prettier-ignore
-    <pre><code>{code}</code></pre>
-  )
-}
+{inline ? (
+  <code>{code}</code>
+) : (
+  // prettier-ignore
+  <pre><code>{code}</code></pre>
+)}

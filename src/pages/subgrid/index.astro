@@ -19,20 +19,22 @@ const title = "subgrid";
   <PageHeader title={title} />
   <PageSection>
     <MdnDoc path="Web/CSS/CSS_grid_layout/Subgrid" text={title}>
-      when you add <Code code="display: grid" inline /> to a grid container, only
-      the direct children become grid items and can then be placed on the grid you
-      created. the children of these items display in normal flow.<br /><br />
-      you can "nest" grids by making a grid item a grid container. these grids, however,
-      are independent of the parent grid and of each other, meaning that they do not
-      take their track sizing from the parent grid. this makes it difficult to line
-      nested grid items up with the main grid.<br /><br />
+      when you add <Code code="display: grid" inline /> to a grid container,
+      only the direct children become grid items and can then be placed on the
+      grid you created. the children of these items display in normal flow.
+      <br />
+      <br />
+      you can "nest" grids by making a grid item a grid container. these grids,
+      however, are independent of the parent grid and of each other, meaning
+      that they do not take their track sizing from the parent grid. this makes
+      it difficult to line nested grid items up with the main grid.
+      <br />
+      <br />
       if you set the value <Code code="subgrid" inline /> on
-      <Code code="grid-template-columns" inline />, <Code
-        code="grid-template-rows"
-        inline
-      />
-      or both, instead of creating a new track listing the nested grid uses the tracks
-      defined on the parent.
+      <Code code="grid-template-columns" inline />,{" "}
+      <Code code="grid-template-rows" inline />
+      or both, instead of creating a new track listing the nested grid uses the
+      tracks defined on the parent.
     </MdnDoc>
   </PageSection>
   <PageSection>
@@ -79,7 +81,11 @@ const title = "subgrid";
           background="#35333c"
           class={styles.boxImage}
         />
-        <div class={styles.boxDescription}>description<br />description</div>
+        <div class={styles.boxDescription}>
+          description
+          <br />
+          description
+        </div>
       </div>
       <div class:list={[styles.box, styles.boxSubgrid]}>
         <div class={styles.boxTitle}>

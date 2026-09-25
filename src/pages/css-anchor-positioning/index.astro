@@ -74,9 +74,15 @@ const title = "css anchor positioning";
       </button>
       <div id="dropdown1target" class={styles.dropdown1} popover>
         <div class={styles.dropdown1Content}>
-          <a href="/denene/" class={styles.dropdown1Link}>home</a>
-          <a href="/denene/about/" class={styles.dropdown1Link}>about</a>
-          <a href="/denene/contact/" class={styles.dropdown1Link}>contact</a>
+          <a href="/denene/" class={styles.dropdown1Link}>
+            home
+          </a>
+          <a href="/denene/about/" class={styles.dropdown1Link}>
+            about
+          </a>
+          <a href="/denene/contact/" class={styles.dropdown1Link}>
+            contact
+          </a>
         </div>
       </div>
       <button
@@ -89,13 +95,11 @@ const title = "css anchor positioning";
       </button>
       <div id="dropdown2target" class={styles.dropdown2} popover>
         <div class={styles.dropdown2Content}>
-          {
-            links.map((link) => (
-              <a href={`/denene/${link.href}/`} class={styles.dropdown2Link}>
-                {link.text}
-              </a>
-            ))
-          }
+          {links.map((link) => (
+            <a href={`/denene/${link.href}/`} class={styles.dropdown2Link}>
+              {link.text}
+            </a>
+          ))}
         </div>
       </div>
     </div>
